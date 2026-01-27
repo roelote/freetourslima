@@ -1,0 +1,86 @@
+/* Estilos para el menú superior */
+#menu-menu-superior-header li {
+    display: inline;
+}
+
+#menu-menu-superior-header li:not(:last-child)::after {
+    content: "|";
+    margin: 0 0.75rem;
+    color: #5c5c5c;
+}
+
+#menu-menu-superior-header a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #5c5c5c;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#menu-menu-superior-header a:hover {
+    color: #333;
+}
+
+/* Estilos para el menú principal */
+#mobileMenu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobileMenu li {
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    #mobileMenu li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    #mobileMenu li:last-child {
+        border-bottom: none;
+    }
+    
+    #mobileMenu li:hover {
+        background-color: #f9f9f9;
+    }
+}
+
+#mobileMenu a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5c5c5c;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: block;
+    text-transform: uppercase   ;
+}
+
+#mobileMenu a:hover {
+    color: #333;
+}
+
+/* Estado activo del menú */
+#menu-menu-superior-header .current-menu-item a,
+#mobileMenu .current-menu-item a {
+    color: #6e6d6d;
+    font-weight: 700;
+}
+
+/* Animación del botón hamburguesa */
+#menuToggle.active .hamburger-line:first-child {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+#menuToggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+#menuToggle.active .hamburger-line:last-child {
+    transform: rotate(-45deg) translate(6px, -6px);
+}

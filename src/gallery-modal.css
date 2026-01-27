@@ -1,0 +1,45 @@
+.gallerySwiper .swiper-button-next,
+.gallerySwiper .swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.gallerySwiper .swiper-button-next:hover,
+.gallerySwiper .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallerySwiper .swiper-button-next::after,
+.gallerySwiper .swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.gallerySwiper .swiper-button-next.swiper-button-disabled,
+.gallerySwiper .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.gallerySwiper .swiper-pagination {
+    bottom: 20px;
+}
+
+.gallerySwiper .swiper-pagination-fraction {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,97 @@
+/* Estilos personalizados para el calendario */
+.calendar-wrapper {
+    background-color: #4a5568;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Contenedor del calendario Air Datepicker */
+.air-datepicker {
+    background: #4a5568 !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+.air-datepicker-nav--title i {
+  font-style: normal;
+  color: #232020 !important;
+  margin-left: .3em;
+}
+/* Navegación del calendario */
+.air-datepicker-nav {
+    background: #e2e8f0 !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    margin-bottom: 12px !important;
+}
+
+.air-datepicker-nav--title,
+.air-datepicker-nav--action {
+    color: #2d3748 !important;
+}
+
+/* Días de la semana */
+.air-datepicker-body--day-name {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+/* Celdas de días */
+.air-datepicker-cell {
+    background: #e2e8f0 !important;
+    color: #2d3748 !important;
+    border-radius: 8px !important;
+    margin: 2px !important;
+    font-weight: 500 !important;
+}
+
+.air-datepicker-cell:hover {
+    background: #cbd5e0 !important;
+}
+
+/* Día seleccionado */
+.air-datepicker-cell.-selected- {
+    background: #1ab6b6 !important;
+    color: #ffffff !important;
+}
+
+/* Día actual */
+.air-datepicker-cell.-current- {
+    border: 2px solid #1ab6b6 !important;
+}
+
+/* Días de otros meses */
+.air-datepicker-cell.-other-month- {
+    opacity: 0.3 !important;
+}
+
+/* Días deshabilitados */
+.air-datepicker-cell.-disabled- {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+}
+
+/* Inputs personalizados */
+.calendar-wrapper input[type="text"],
+.calendar-wrapper input[type="number"] {
+    background-color: #e2e8f0 !important;
+    border: none !important;
+    color: #4a5568 !important;
+    font-weight: 500 !important;
+}
+
+.calendar-wrapper input[type="text"]::placeholder,
+.calendar-wrapper input[type="number"]::placeholder {
+    color: #718096 !important;
+}
+
+/* Botón Reservar personalizado */
+.calendar-wrapper button[type="submit"] {
+    background-color: #1ab6b6 !important;
+    border: none !important;
+}
+
+.calendar-wrapper button[type="submit"]:hover {
+    background-color: #159999 !important;
+}

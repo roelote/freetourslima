@@ -1,0 +1,16 @@
+{
+  "name": "freewalkingtemplate",
+  "version": "1.0.0",
+  "description": "<section class=\"w-full px-4 sm:px-6 lg:px-8 mt-[80px]\" id=\"590_548_360_1491_1200_1910\">\r         <div class=\"w-full max-w-[1200px] mx-auto\">\r             <div class=\"bg-[#f5f5f5] border border-[#dad9d6] rounded-[8px] p-[28px]\" id=\"590_548_360_1491_1200_208\">\r                 <div class=\"flex flex-col gap-[14px]\">\r                     <h2 class=\"text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center\"\r                         id=\"590:614\">Comentarios</h2>\r                     <div class=\"w-full h-[1px] bg-[#e5e9eb] mb-[8px]\" id=\"590:832\"></div>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

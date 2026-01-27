@@ -1,0 +1,70 @@
+<?php
+
+get_header();
+
+?>
+
+<main>
+    <div class="container mx-auto px-5 md:px-0 content-blogs mb-[88px]">
+        <div class="flex flex-col md:flex-row gap-[81px]">
+            <div>
+                <?php
+                if (function_exists('yoast_breadcrumb')) {
+                    yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
+                }
+                the_title('<h1>', '</h1>');
+                if (has_post_thumbnail()) {
+                    the_post_thumbnail('large', ['class' => 'mb-4 w-full h-auto rounded-[16px] mb-[40px]']);
+                }
+
+                if (have_posts()) :
+                    while (have_posts()) : the_post();
+                        the_content();
+                    endwhile;
+                endif;
+                ?>
+                <p class="capitalize text-[14px] text-[#A49D9D] my-[32px]"><?php echo get_the_date('F j, Y'); ?></p>
+                <div class="w-full">
+                    <?php
+                    //  agregar shortcode
+                    echo do_shortcode('[contact-form-7 id="7ea28fc" title="Formulario de Blog"]');
+                    ?>
+                </div>
+            </div>
+            <div class="w-full">
+                <div class="sticky top-0 right-0">
+                    <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
+                    <h2 class="!mb-[16px]">Blog Categories</h2>
+                    <ul>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Gastronomía</a></li>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Historia</a></li>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Turismo</a></li>
+                    </ul>
+                </div>
+                <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
+                    <h2 class="!mb-[16px]">Free tour por Cusco</h2>
+                    <ul>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
+                    </ul>
+                </div>
+                <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
+                    <h2 class="!mb-[16px]">¿Qué hacer en Cusco?</h2>
+                    <ul>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">City tour Cusco: Huellas de un Imperio</a></li>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Caminata a Laguna Humantay</a></li>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Caminata a Siete Lagunas con guía en español</a></li>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Free tour por San Blas Bohemio</a></li>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Catacumas del Cusco Peru con guía profesional</a></li>
+                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Free tour por San Blas Bohemio</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<?php get_footer(); ?>
+
+
+
