@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <main>
-    <div class="container mx-auto px-5 md:px-0 content-blogs mb-[88px]">
+    <div class="container mx-auto px-5 md:px-0 content-blogs mb-[88px] mt-[48px]">
         <div class="flex flex-col md:flex-row gap-[81px]">
             <div>
                 <?php

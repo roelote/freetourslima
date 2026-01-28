@@ -17,7 +17,7 @@
 get_header();
 ?>
 
-<main class="container mx-auto px-4 md:px-0">
+<main class="container mx-auto px-4 md:px-0 mt-[20px] md:mt-[48px]">
     <section class="w-full">
         <div class="flex flex-col lg:flex-row gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
