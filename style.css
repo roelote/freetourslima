@@ -230,9 +230,16 @@ h4 {
     width: max-content;
 }
 
+
 .content-blogs .wp-block-image img{
     margin-bottom: 40px !important;
     border-radius: 16px;
+}
+
+@media (max-width: 767px) {
+    .content-blogs .wp-block-image img:first-child{
+        margin-bottom: 16px !important;
+    }
 }
 
 .from-blog-content input{
