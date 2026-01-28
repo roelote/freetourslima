@@ -35,10 +35,25 @@ get_header();
                 <div class="w-full flex flex-col-reverse md:flex-col gap-[32px] md:gap-[40px]">
                     <div class="w-full">
                         <div class="calendar-wrapper">
-                            <form action="#" method="post" class="flex flex-col gap-[16px]">
+                            <form class="flex flex-col gap-[16px]" action="<?php the_field('ruta_tours_free')?>" method="get" id="bookingForm">
+                                <input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
+							    <input type="hidden" name="nametour" value="<?=the_title() ; ?>">
                                 <div id="calendar-inline" class="w-full"></div>
-                                <input type="text" id="date-selected" name="date" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
-                                <input type="number" name="personas" class="w-full p-3 rounded-[8px]" min="0" max="30" placeholder="Personas">
+                                <input type="text" id="date-selected" name="fechat" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
+
+                                <select name="paxs" id="paxs" class="w-full p-3 rounded-[8px]">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+
                                 <button type="submit" class="w-full rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-white">Reservar</button>
                             </form>
                         </div>
