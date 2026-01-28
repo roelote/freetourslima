@@ -4,7 +4,7 @@
     <section class="w-full">
         <div class="flex flex-col lg:flex-row gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
-              
+            
                 <div class="main-content-tour">
                     <?php
                     while (have_posts()):
@@ -15,152 +15,143 @@
                 </div>
             </div>
             <div class="w-full md:w-[374px] sticky top-0 right-0 self-start">
-                <?php get_template_part('aside'); ?>
+                <div class="w-full flex flex-col-reverse md:flex-col gap-[32px] md:gap-[40px]">
+                    <div class="w-full">
+                        <div class="calendar-wrapper">
+                            <form action="#" method="post" class="flex flex-col gap-[16px]">
+                                <div id="calendar-inline" class="w-full"></div>
+                                <input type="text" id="date-selected" name="date" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
+                                <input type="number" name="personas" class="w-full p-3 rounded-[8px]" min="0" max="30" placeholder="Personas">
+                                <button type="submit" class="w-full rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-white">Reservar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[44px]">
+                            <!-- Details Card -->
+                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
+                                <div class="flex flex-col gap-[12px]">
+                                    <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
+                                        <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Details</h4>
+                                    <?php } else { ?>
+                                        <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Detalles</h4>
+                                    <?php } ?>
+                                    <div class="w-full h-[1px] bg-[#dad9d6]"></div>
+
+                                    <?php 
+                                    $details = get_field('details');
+                                    if ($details) {
+                                        // Precio
+                                        if (!empty($details['title_price']) || !empty($details['price'])) {
+                                    ?>
+                                    <div class="flex flex-row items-center gap-[8px]">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/sistema-de-comentarios-FWTC-12.png"
+                                            class="w-[20px] h-[20px]" alt="price icon" />
+                                        <div>
+                                            <?php if (!empty($details['title_price'])) { ?>
+                                                <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_price']); ?></p>
+                                            <?php } ?>
+                                            <?php if (!empty($details['price'])) { ?>
+                                                <p class="!mb-0"><?php echo esc_html($details['price']); ?></p>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <?php 
+                                        }
+                                        // Duración
+                                        if (!empty($details['title_duration']) || !empty($details['duration'])) {
+                                    ?>
+                                    <div class="flex flex-row items-center gap-[8px]">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png" class="w-[20px] h-[20px]"
+                                            alt="duration icon" />
+                                        <div>
+                                            <?php if (!empty($details['title_duration'])) { ?>
+                                                <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_duration']); ?></p>
+                                            <?php } ?>
+                                            <?php if (!empty($details['duration'])) { ?>
+                                                <p class="!mb-0"><?php echo esc_html($details['duration']); ?></p>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <?php 
+                                        }
+                                        // Idioma
+                                        if (!empty($details['title_lang']) || !empty($details['lang'])) {
+                                    ?>
+                                    <div class="flex flex-row items-center gap-[8px]">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/2-4.png" class="w-[20px] h-[20px]"
+                                            alt="language icon" />
+                                        <div>
+                                            <?php if (!empty($details['title_lang'])) { ?>
+                                                <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_lang']); ?></p>
+                                            <?php } ?>
+                                            <?php if (!empty($details['lang'])) { ?>
+                                                <p class="!mb-0"><?php echo esc_html($details['lang']); ?></p>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <?php 
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+
+                            <!-- Contact Card -->
+                            <?php 
+                            $details2 = get_field('details_2');
+                            if ($details2) {
+                            ?>
+                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
+                                <div class="flex flex-col gap-[10px]">
+                                    <?php if (!empty($details2['consult'])) { ?>
+                                        <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
+                                            <?php echo esc_html($details2['consult']); ?></h4>
+                                    <?php } ?>
+                                    <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
+                                    <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
+                                    <div class="flex flex-row items-center gap-[8px]">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/fd7236a2c69ae4d83a21f84343e60db85f3d05b7.png"
+                                            class="w-[20px] h-[20px]" alt="contact icon" />
+                                        <?php if (!empty($details2['link'])) { ?>
+                                            <a href="<?php echo esc_url($details2['link']); ?>" class="!mb-0 text-[#1ab6b6] hover:underline font-semibold">
+                                                <?php echo esc_html($details2['question']); ?>
+                                            </a>
+                                        <?php } else { ?>
+                                            <p class="!mb-0"><?php echo esc_html($details2['question']); ?></p>
+                                        <?php } ?>
+                                    </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
 
-    <section class="w-full mt-[48px] md:mt-[80px]">
-        <div class="text-start mb-[20px] md:mb-[32px]">
-            <h2 class="!mb-0">Qué hacer en Cusco</h2>
-        </div>
-        <div class="w-full mb-[88px]">
-            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-                <div class="w-full flex flex-col justify-start items-center mb-[24px]">
-                    <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
-                        class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
-                    <div class="bg-white rounded-b-[8px] py-0 md:py-[20px] px-[8px] md:px-[24px] w-full">
-                        <h2 class="text-center !text-[20px] my-[16px] md:my-0">Free tour por San Blas Bohemio</h2>
-                        <ul class="flex flex-col gap-[12px] my-[24px]">
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png"
-                                    class="w-[20px] h-[20px]" alt="duration" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:846">4h</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/2-4.png"
-                                    class="w-[20px] h-[20px]" alt="language" id="590:844" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:847">inglés, español</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/3-4.png"
-                                    class="w-[20px] h-[20px]" alt="time" id="590:845" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[6px]"
-                                    id="590:848">10:00 a. m.</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/sistema-de-comentarios-FWTC-12.png"
-                                    class="w-[20px] h-[20px]" alt="price" id="590:852" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:851">¡gratis!</p>
-                            </li>
 
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/4-4.png"
-                                    class="w-[20px] h-[20px]" alt="rating" id="590:849" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:850">5.0 (3 reseñas)</p>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[28px] md:mb-[20px] font-nunito self-start hover:bg-[#159999] transition-colors">
-                            ¡Reserva ya!
-                        </button>
-                    </div>
-                </div>
-                <div class="w-full flex flex-col justify-start items-center mb-[24px]">
-                    <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
-                        class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
-                    <div class="bg-white rounded-b-[8px] py-0 md:py-[20px] px-[8px] md:px-[24px] w-full">
-                        <h2 class="text-center !text-[20px] my-[16px] md:my-0">Free tour por San Blas Bohemio</h2>
-                        <ul class="flex flex-col gap-[12px] my-[24px]">
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png"
-                                    class="w-[20px] h-[20px]" alt="duration" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:846">4h</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/2-4.png"
-                                    class="w-[20px] h-[20px]" alt="language" id="590:844" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:847">inglés, español</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/3-4.png"
-                                    class="w-[20px] h-[20px]" alt="time" id="590:845" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[6px]"
-                                    id="590:848">10:00 a. m.</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/sistema-de-comentarios-FWTC-12.png"
-                                    class="w-[20px] h-[20px]" alt="price" id="590:852" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:851">¡gratis!</p>
-                            </li>
-
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/4-4.png"
-                                    class="w-[20px] h-[20px]" alt="rating" id="590:849" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:850">5.0 (3 reseñas)</p>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[28px] md:mb-[20px] font-nunito self-start hover:bg-[#159999] transition-colors">
-                            ¡Reserva ya!
-                        </button>
-                    </div>
-                </div>
-                <div class="w-full flex flex-col justify-start items-center mb-[24px]">
-                    <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
-                        class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
-                    <div class="bg-white rounded-b-[8px] py-0 md:py-[20px] px-[8px] md:px-[24px] w-full">
-                        <h2 class="text-center !text-[20px] my-[16px] md:my-0">Free tour por San Blas Bohemio</h2>
-                        <ul class="flex flex-col gap-[12px] my-[24px]">
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png"
-                                    class="w-[20px] h-[20px]" alt="duration" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:846">4h</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/2-4.png"
-                                    class="w-[20px] h-[20px]" alt="language" id="590:844" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:847">inglés, español</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/3-4.png"
-                                    class="w-[20px] h-[20px]" alt="time" id="590:845" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[6px]"
-                                    id="590:848">10:00 a. m.</p>
-                            </li>
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/sistema-de-comentarios-FWTC-12.png"
-                                    class="w-[20px] h-[20px]" alt="price" id="590:852" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:851">¡gratis!</p>
-                            </li>
-
-                            <li class="flex">
-                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/4-4.png"
-                                    class="w-[20px] h-[20px]" alt="rating" id="590:849" />
-                                <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]"
-                                    id="590:850">5.0 (3 reseñas)</p>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[28px] md:mb-[20px] font-nunito self-start hover:bg-[#159999] transition-colors">
-                            ¡Reserva ya!
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
+
+<section>
+	<div class="container">
+		<?php echo do_shortcode( '[comentarios_free]' ); ?>
+	</div>
+</section>
+
+                                       <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
+											<section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
+														<a href="#datepicker2" class="text-2xl text-white font-semibold ">Check availability</a>
+											</section>
+										<?php }
+										if (ICL_LANGUAGE_CODE == 'es') { ?>
+										<section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
+													<a href="#datepicker2" class="text-2xl text-white font-semibold ">Ver disponibilidad</a>
+										</section>
+									
+										<?php }
+										?>
+										
 
 <?php get_footer(); ?>

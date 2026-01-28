@@ -13,9 +13,6 @@ get_header();
                     yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
                 }
                 the_title('<h1>', '</h1>');
-                if (has_post_thumbnail()) {
-                    the_post_thumbnail('large', ['class' => 'mb-4 w-full h-auto rounded-[16px] mb-[40px]']);
-                }
 
                 if (have_posts()) :
                     while (have_posts()) : the_post();
