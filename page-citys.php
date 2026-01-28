@@ -21,16 +21,16 @@ get_header();
 
  
 
-<div class="container mx-auto px-5 md:px-0 mt-[20px] md:mt-[48px]">
+<div class="container mx-auto px-5 md:px-0 mt-[48px]">
     <?php
     if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px] md:mb-0">', '</nav>');
     }
     ?>
-    <h1 class="!mb-[24px] md:mb-0"><?= the_title(); ?></h1>
+    <h1 class="!mb-[24px] md:!mb-[32px]"><?= the_title(); ?></h1>
 
     <div class="w-full">
-        <div class="w-full grid grid-cols-1 gap-y-[32px] md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] mb-[48px] md:mb-[32px]">
+        <div class="w-full grid grid-cols-1 gap-y-[32px] md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] mb-[32px]">
             <?php
             $page_id = get_the_ID();
 
@@ -56,7 +56,7 @@ get_header();
                     $lang = isset($details['lang']) ? $details['lang'] : '';
                     $hours_tour = isset($details['hours_tour']) ? $details['hours_tour'] : '';
             ?>
-                    <div class="w-full flex flex-col justify-start items-center mb-[24px]">
+                    <div class="w-full flex flex-col justify-start items-center">
                         <?php 
                         echo get_the_post_thumbnail($child->ID, 'boxst', array(
                             'alt' => get_the_title($child->ID), 
@@ -64,9 +64,9 @@ get_header();
                             'class' => 'w-full h-[252px] rounded-t-[8px] object-cover'
                         )); 
                         ?>
-                        <div class="bg-white rounded-b-[8px] px-[12px] py-[20px] md:px-[24px] w-full">
+                        <div class="bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px] w-full">
                             <h2 class="text-center"><?php echo get_the_title($child->ID); ?></h2>
-                            <ul class="flex flex-col gap-[12px] my-[1px] md:my-[24px]">
+                            <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
                                 <?php if ($duration) : ?>
                                 <li class="flex">
                                     <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png"
@@ -146,10 +146,9 @@ get_header();
         endwhile;
         ?>
     </div>
-    <div class="w-full mb-[88px]">
-
+    <div class="w-full mt-[48px] md:mt-[80px] mb-[48px] md:mb-[88px]">
+        <h2 class="!text-[22px] md:!text-[24px] !mb-[20px] md:!mb-[32px]">Guía de viaje Cusco</h2>
 		<?php echo do_shortcode( '[EntradasRecientes]' ); ?>
-
     </div>
 
 </div>

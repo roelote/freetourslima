@@ -3,17 +3,17 @@ get_header();
 
 
 ?>
-<div class="container mx-auto px-5 md:px-0 content-main-blog mb-[88px] mt-[48px]">
+<div class="container mx-auto px-[12px] md:px-0 content-main-blog mb-[48px] md:mb-[88px] mt-[48px]">
     <?php
     if (function_exists('yoast_breadcrumb')) {
-        yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D]">', '</nav>');
+        yoast_breadcrumb('<nav class="breadcrumbs text-[14px] mb-[16px] text-[#A49D9D]">', '</nav>');
     }
     ?>
-    <h1><?php single_post_title(); ?></h1>
+    <h1 class="!mb-[24px] md:!mb-[32px]"><?php single_post_title(); ?></h1>
 
-    <div class="flex flex-col md:flex-row gap-[43px]">
+    <div class="flex flex-col md:flex-row gap-[40px] md:gap-[43px]">
         <div class="">
-            <div class="w-full lg:w-[783px] h-auto flex flex-col gap-[32px] mb-[40px]">
+            <div class="w-full lg:w-[783px] h-auto flex flex-col gap-[32px]  mb-[32px] md:mb-[40px]">
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
@@ -40,9 +40,9 @@ get_header();
                                 </a>
                             </div>
                         </div>
-                        <div class="p-[20px]">
-                            <h2 class="!mb-0 text-[16px] md:text-[24px]">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        <div class="pt-[16px] px-[12px] pb-[24px] md:p-[20px]">
+                            <h2 class="!mb-0">
+                                <a class="text-[18px] font-bold md:text-[24px]" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
                             <p class="!my-[16px]"><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
                             <span class="text-[14px] text-[#A49D9D] font-nunito"><?php echo get_the_date('F j, Y'); ?></span>
@@ -97,7 +97,7 @@ get_header();
             <?php endif; ?>
         </div>
         <div>
-            <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
+            <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
                 <h2 class="!mb-[16px]">Blog Categories</h2>
                 <ul>
                     <?php
@@ -116,13 +116,13 @@ get_header();
                     <?php endforeach; ?>
                 </ul>
             </div>
-            <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
+            <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
                 <h2 class="!mb-[16px]">Free tour por Cusco</h2>
                 <ul>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
                 </ul>
             </div>
-            <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
+            <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px]">
                 <h2 class="!mb-[16px]">¿Qué hacer en Cusco?</h2>
                 <ul>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">City tour Cusco: Huellas de un Imperio</a></li>
