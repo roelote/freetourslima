@@ -21,12 +21,7 @@ get_header();
                 endif;
                 ?>
                 <p class="capitalize text-[14px] text-[#A49D9D] my-[32px]"><?php echo get_the_date('F j, Y'); ?></p>
-                <div class="w-full">
-                    <?php
-                    //  agregar shortcode
-                    echo do_shortcode('[contact-form-7 id="7ea28fc" title="Formulario de Blog"]');
-                    ?>
-                </div>
+                
             </div>
             <div class="w-full">
                 <div class="sticky top-0 right-0">

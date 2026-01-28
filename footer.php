@@ -1,31 +1,44 @@
-<!-- Footer -->
+
 <footer class="w-full bg-[#373435] pt-[24px] md:py-[32px]" id="590_548_0_4323_1920_224">
     <div class="container mx-auto flex flex-col gap-[6px] justify-start items-start w-full">
         <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
 
+            <?php
+            $group1 = get_field('colum_01', 'option');
+            
+            if ($group1) :
+                $repeater = $group1['list'];
+            ?>
             <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
                 <div class="flex flex-col justify-center md:justify-start items-start">
                     <h4 class="w-full text-[14px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]">Compañía</h4>
                     <ul class="w-full text-center md:text-start">
-                        <li><a href="" class="text-white font-normal text-[14px]">Nosotros</a></li>
-                        <li><a href="" class="text-white font-normal text-[14px]">Háblanos</a></li>
-                        <li><a href="" class="text-white font-normal text-[14px]">Términos</a></li>
+                        <?php foreach ($repeater as $value) { ?>
+                            <li><a href="<?php echo esc_url($value['url']); ?>" class="text-white font-normal text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
+            <?php endif; ?>
 
+            <?php
+            $group2 = get_field('colum_02', 'option');
+            
+            if ($group2) :
+                $repeater2 = $group2['list'];
+            ?>
             <!-- Tours Section -->
             <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
                 <div class="flex flex-col justify-start items-start">
                     <h4 class="w-full text-[14px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]">Tours</h4>
                     <ul class="w-full text-center md:text-start">
-                        <li><a href="" class="text-white font-normal text-[14px]">Free tour por Cusco</a></li>
-                        <li><a href="" class="text-white font-normal text-[14px]">Qué hacer por Cisco</a></li>
-                        <li><a href="" class="text-white font-normal text-[14px]">Free tour por Lima</a></li>
-                        <li><a href="" class="text-white font-normal text-[14px]">Información de Viaje</a></li>
+                        <?php foreach ($repeater2 as $value) { ?>
+                            <li><a href="<?php echo esc_url($value['url']); ?>" class="text-white font-normal text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
+            <?php endif; ?>
 
             <!-- TrustPilot Section -->
             <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
