@@ -6,3 +6,80 @@
 {
     @apply bg-[#ff8110]
 }
+
+/* Contact Form 7 Styles */
+.formcss {
+    @apply w-full;
+}
+
+.formcss p:first-child {
+    @apply text-lg font-semibold mb-6 text-gray-800;
+}
+
+.formcss .wpcf7-form-control-wrap {
+    @apply block w-full mb-4;
+}
+
+.formcss select,
+.formcss input[type="text"],
+.formcss input[type="email"],
+.formcss input[type="tel"],
+.formcss textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff8110] focus:border-transparent transition-all;
+}
+
+.formcss textarea {
+    @apply min-h-[120px] resize-y;
+}
+
+.formcss .wpcf7-radio {
+    @apply flex flex-col gap-3 mb-4;
+}
+
+.formcss .wpcf7-radio .wpcf7-list-item {
+    @apply flex items-center gap-2;
+}
+
+.formcss .wpcf7-radio input[type="radio"] {
+    @apply w-5 h-5 text-[#ff8110] border-gray-300 focus:ring-[#ff8110] cursor-pointer;
+}
+
+.formcss .wpcf7-radio label {
+    @apply text-base text-gray-700 cursor-pointer;
+}
+
+.formcss .wpcf7-acceptance {
+    @apply mb-4;
+}
+
+.formcss .wpcf7-acceptance .wpcf7-list-item {
+    @apply flex items-start gap-2;
+}
+
+.formcss .wpcf7-acceptance input[type="checkbox"] {
+    @apply w-5 h-5 mt-1 text-[#ff8110] border-gray-300 rounded focus:ring-[#ff8110] cursor-pointer;
+}
+
+.formcss .wpcf7-acceptance label {
+    @apply text-sm text-gray-600;
+}
+
+.formcss .btnsendf {
+    @apply w-full bg-[#ff8110] hover:bg-[#e67410] text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 cursor-pointer text-lg;
+}
+
+.formcss .wpcf7-not-valid-tip {
+    @apply text-red-600 text-sm mt-1 block;
+}
+
+.formcss .wpcf7-response-output {
+    @apply border-2 p-4 mt-4 rounded-lg;
+}
+
+.formcss .wpcf7-validation-errors {
+    @apply border-red-500 bg-red-50 text-red-700;
+}
+
+.formcss .wpcf7-mail-sent-ok {
+    @apply border-green-500 bg-green-50 text-green-700;
+}

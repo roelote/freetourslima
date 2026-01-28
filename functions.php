@@ -228,5 +228,7 @@ function limit_words($string, $word_limit) {
 	$words = explode(' ', $string);
 
 	return implode(' ', array_slice($words, 0, $word_limit));
-
 }
+
+add_filter('wpcf7_autop_or_not', '__return_false');
+
