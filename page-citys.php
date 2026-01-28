@@ -21,7 +21,7 @@ get_header();
 
  
 
-<div class="container mx-auto px-5 md:px-0">
+<div class="container mx-auto px-5 md:px-0 mt-[20px] md:mt-[48px]">
     <?php
     if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px] md:mb-0">', '</nav>');
