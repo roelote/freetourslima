@@ -1,6 +1,6 @@
                 
                 <div class="flex flex-col-reverse md:flex-col md:mb-[40px]">
-                    <div class="flex flex-col items-start mb-[24px] md:mb-[15px]">
+                    <div class="flex flex-col items-start mb-[24px] md:mb-[32px]">
                    
                         <h1
                             class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">

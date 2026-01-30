@@ -1,5 +1,6 @@
 <?php
-/** * Template Name: Tours Pagados */ 
+
+/** * Template Name: Tours Pagados */
 
 /**
  * The template for displaying all pages
@@ -15,28 +16,28 @@
  */
 
 
- 
+
 get_header();
 ?>
 
-<?php 
+<?php
 
-  // Asignación del valor de $ruta según el idioma
-  if (ICL_LANGUAGE_CODE == 'en') {
-	$ruta = '/bookpayment';
+// Asignación del valor de $ruta según el idioma
+if (ICL_LANGUAGE_CODE == 'en') {
+    $ruta = '/bookpayment';
 } elseif (ICL_LANGUAGE_CODE == 'es') {
-	$ruta = '/es/bookpayment';
+    $ruta = '/es/bookpayment';
 }
 
 
 ?>
 
-				
+
 <main class="container mx-auto px-4 md:px-0">
     <section class="w-full">
         <div class="flex flex-col lg:flex-row gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
-            
+
                 <div class="main-content-tour">
                     <?php
                     while (have_posts()):
@@ -46,8 +47,8 @@ get_header();
                     ?>
                 </div>
             </div>
-            <div class="w-full md:w-[374px] sticky top-0 right-0 self-start">
-                <div class="w-full flex flex-col-reverse md:flex-col gap-[32px] md:gap-[40px]">
+            <div class="w-full md:w-[374px]">
+                <div class="w-full mt-[7.5em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[90px]">
                     <div class="w-full">
                         <div class="calendar-wrapper">
                             <form action="#" method="post" class="flex flex-col gap-[16px]">
@@ -70,59 +71,59 @@ get_header();
                                     <?php } ?>
                                     <div class="w-full h-[1px] bg-[#dad9d6]"></div>
 
-                                    <?php 
+                                    <?php
                                     $details = get_field('details');
                                     if ($details) {
                                         // Precio
                                         if (!empty($details['title_price']) || !empty($details['price'])) {
                                     ?>
-                                    <div class="flex flex-row items-center gap-[8px]">
-                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/sistema-de-comentarios-FWTC-12.png"
-                                            class="w-[20px] h-[20px]" alt="price icon" />
-                                        <div>
-                                            <?php if (!empty($details['title_price'])) { ?>
-                                                <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_price']); ?></p>
-                                            <?php } ?>
-                                            <?php if (!empty($details['price'])) { ?>
-                                                <p class="!mb-0"><?php echo esc_html($details['price']); ?></p>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                    <?php 
+                                            <div class="flex flex-row items-center gap-[8px]">
+                                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/sistema-de-comentarios-FWTC-12.png"
+                                                    class="w-[20px] h-[20px]" alt="price icon" />
+                                                <div class="flex flex-nowrap gap-2">
+                                                    <?php if (!empty($details['title_price'])) { ?>
+                                                        <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_price']); ?></p>
+                                                    <?php } ?>
+                                                    <?php if (!empty($details['price'])) { ?>
+                                                        <p class="!mb-0"><?php echo esc_html($details['price']); ?></p>
+                                                    <?php } ?>
+                                                </div>
+                                            </div>
+                                        <?php
                                         }
                                         // Duración
                                         if (!empty($details['title_duration']) || !empty($details['duration'])) {
-                                    ?>
-                                    <div class="flex flex-row items-center gap-[8px]">
-                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png" class="w-[20px] h-[20px]"
-                                            alt="duration icon" />
-                                        <div>
-                                            <?php if (!empty($details['title_duration'])) { ?>
-                                                <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_duration']); ?></p>
-                                            <?php } ?>
-                                            <?php if (!empty($details['duration'])) { ?>
-                                                <p class="!mb-0"><?php echo esc_html($details['duration']); ?></p>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                    <?php 
+                                        ?>
+                                            <div class="flex flex-row items-center gap-[8px]">
+                                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png" class="w-[20px] h-[20px]"
+                                                    alt="duration icon" />
+                                                <div class="flex flex-nowrap gap-2">
+                                                    <?php if (!empty($details['title_duration'])) { ?>
+                                                        <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_duration']); ?></p>
+                                                    <?php } ?>
+                                                    <?php if (!empty($details['duration'])) { ?>
+                                                        <p class="!mb-0"><?php echo esc_html($details['duration']); ?></p>
+                                                    <?php } ?>
+                                                </div>
+                                            </div>
+                                        <?php
                                         }
                                         // Idioma
                                         if (!empty($details['title_lang']) || !empty($details['lang'])) {
-                                    ?>
-                                    <div class="flex flex-row items-center gap-[8px]">
-                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/2-4.png" class="w-[20px] h-[20px]"
-                                            alt="language icon" />
-                                        <div>
-                                            <?php if (!empty($details['title_lang'])) { ?>
-                                                <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_lang']); ?></p>
-                                            <?php } ?>
-                                            <?php if (!empty($details['lang'])) { ?>
-                                                <p class="!mb-0"><?php echo esc_html($details['lang']); ?></p>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                    <?php 
+                                        ?>
+                                            <div class="flex flex-row items-center gap-[8px]">
+                                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/2-4.png" class="w-[20px] h-[20px]"
+                                                    alt="language icon" />
+                                                <div class="flex flex-nowrap gap-2">
+                                                    <?php if (!empty($details['title_lang'])) { ?>
+                                                        <p class="!mb-0 font-semibold"><?php echo esc_html($details['title_lang']); ?></p>
+                                                    <?php } ?>
+                                                    <?php if (!empty($details['lang'])) { ?>
+                                                        <p class="!mb-0"><?php echo esc_html($details['lang']); ?></p>
+                                                    <?php } ?>
+                                                </div>
+                                            </div>
+                                    <?php
                                         }
                                     }
                                     ?>
@@ -130,63 +131,63 @@ get_header();
                             </div>
 
                             <!-- Contact Card -->
-                            <?php 
+                            <?php
                             $details2 = get_field('details_2');
                             if ($details2) {
                             ?>
-                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
-                                <div class="flex flex-col gap-[10px]">
-                                    <?php if (!empty($details2['consult'])) { ?>
-                                        <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
-                                            <?php echo esc_html($details2['consult']); ?></h4>
-                                    <?php } ?>
-                                    <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
-                                    <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
-                                    <div class="flex flex-row items-center gap-[8px]">
-                                        <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/fd7236a2c69ae4d83a21f84343e60db85f3d05b7.png"
-                                            class="w-[20px] h-[20px]" alt="contact icon" />
-                                        <?php if (!empty($details2['link'])) { ?>
-                                            <a href="<?php echo esc_url($details2['link']); ?>" class="!mb-0 text-[#1ab6b6] hover:underline font-semibold">
-                                                <?php echo esc_html($details2['question']); ?>
-                                            </a>
-                                        <?php } else { ?>
-                                            <p class="!mb-0"><?php echo esc_html($details2['question']); ?></p>
+                                <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
+                                    <div class="flex flex-col gap-[10px]">
+                                        <?php if (!empty($details2['consult'])) { ?>
+                                            <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
+                                                <?php echo esc_html($details2['consult']); ?></h4>
+                                        <?php } ?>
+                                        <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
+                                        <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
+                                            <div class="flex flex-row items-center gap-[8px]">
+                                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/fd7236a2c69ae4d83a21f84343e60db85f3d05b7.png"
+                                                    class="w-[20px] h-[20px]" alt="contact icon" />
+                                                <?php if (!empty($details2['link'])) { ?>
+                                                    <a href="<?php echo esc_url($details2['link']); ?>" class="!mb-0 text-[#1ab6b6] hover:underline font-semibold">
+                                                        <?php echo esc_html($details2['question']); ?>
+                                                    </a>
+                                                <?php } else { ?>
+                                                    <p class="!mb-0"><?php echo esc_html($details2['question']); ?></p>
+                                                <?php } ?>
+                                            </div>
                                         <?php } ?>
                                     </div>
-                                    <?php } ?>
                                 </div>
-                            </div>
                             <?php } ?>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
     </section>
 
 
 </main>
 
 <section>
-	<div class="container">
-		<?php echo do_shortcode( '[comentarios_free]' ); ?>
-	</div>
+    <div class="container continer-reviews">
+        <?php echo do_shortcode('[comentarios_free]'); ?>
+    </div>
 </section>
 
 
 
 <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-											<section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
-														<a href="#datepicker2" class="text-2xl text-white font-semibold ">Check availability</a>
-											</section>
-										<?php }
-										if (ICL_LANGUAGE_CODE == 'es') { ?>
-										<section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
-													<a href="#datepicker2" class="text-2xl text-white font-semibold ">Ver disponibilidad</a>
-										</section>
-									
-										<?php }
-										?>
-										
+    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
+        <a href="#datepicker2" class="text-2xl text-white font-semibold ">Check availability</a>
+    </section>
+<?php }
+if (ICL_LANGUAGE_CODE == 'es') { ?>
+    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
+        <a href="#datepicker2" class="text-2xl text-white font-semibold ">Ver disponibilidad</a>
+    </section>
+
+<?php }
+?>
+
 <?php
 
 get_footer();
