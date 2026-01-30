@@ -96,7 +96,9 @@ h4 {
 }
 
 @media (max-width: 767px) {
-    h2 {
+
+    .responsive-tabs h2 {
+        margin-bottom: 16px !important;
         font-size: 18px !important;
     }
 }
@@ -116,6 +118,7 @@ h4 {
 .responsive-tabs .responsive-tabs__list__item {
     padding: 12px !important;
     border-bottom: 2px solid #5C5C5C !important;
+    font-size: 16px !important;
 }
 
 
@@ -128,7 +131,7 @@ h4 {
 
 .responsive-tabs .responsive-tabs__panel {
     border: none !important;
-    padding: 24px 0 0 0 !important;
+    padding: 20px 0 32px 0 !important;
     background-color: transparent !important;
 }
 
@@ -313,4 +316,80 @@ h4 {
 .dayContainer{
     width: 100%;
     max-width: 100% !important;
+}
+
+
+/* Reviews  */
+
+.continer-reviews .cf-filters-stats-bar{
+    padding: 32px 32px 38px 32px;
+}
+
+.continer-reviews .cf-filter-group label{
+    margin-bottom: 8px;
+}
+
+.continer-reviews .cf-comment{
+    padding: 28px 28px 32px 28px !important;
+    margin: 0 !important;
+}
+
+.continer-reviews .cf-comment-wrapper{
+    margin-bottom: 32px !important;
+}
+
+.continer-reviews .cf-date{
+    font-size: 14px !important;
+}
+
+.continer-reviews .cf-companion-text{
+    font-size: 14px !important;
+    color: #5C5C5C;
+    text-wrap: nowrap;
+}
+
+.continer-reviews .cf-comment-layout{
+    padding: 0 !important;
+}
+
+.continer-reviews .cf-right-column{
+    font-family: var(--font-nunito-sans);
+}
+
+.continer-reviews .cf-center-column{
+    font-family: var(--font-nunito-sans);
+}
+
+.continer-reviews .cf-comment-text{
+    font-size: 16px !important;
+}
+
+.continer-reviews .cf-comment .cf-comment-text{
+    margin: 0 !important;
+}
+
+.continer-reviews .cf-comment-content h5{
+    font-family: var(--font-nunito-sans) !important;
+    font-weight: bold;
+}
+
+.continer-reviews .cf-comment-content{
+    gap: 8px !important;
+}
+
+.continer-reviews .cf-comment-title{
+    font-size: 16px;
+}
+
+.continer-reviews .cf-right-column{
+    gap: 8px !important;
+}
+
+.continer-reviews .cf-left-column{
+    gap: 8px !important;
+}
+
+.continer-reviews .cf-no-comments-message{
+    line-height: 30px;
+    margin-bottom: 16px;
 }
