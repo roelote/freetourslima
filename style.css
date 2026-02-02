@@ -393,3 +393,12 @@ h4 {
     line-height: 30px;
     margin-bottom: 16px;
 }
+
+.wpml-ls-legacy-dropdown-click {
+  
+  max-width: 130px !important;
+}
+.wpml-ls-legacy-dropdown-click > ul {
+
+  width: 130px !important;
+}

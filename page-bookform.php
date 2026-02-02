@@ -22,8 +22,8 @@ get_header();
 			
 			$nametour = isset($_GET['nametour']) ? $_GET['nametour'] : '';
             $urlfoto = isset($_GET['urlfoto']) ? $_GET['urlfoto'] : '';
-            $fechat = isset($_GET['fechat']) ? $_GET['fechat'] : '';
-            $paxs = isset($_GET['paxs']) ? $_GET['paxs'] : '';
+            $fechat = isset($_GET['date']) ? $_GET['date'] : '';
+            $paxs = isset($_GET['personas']) ? $_GET['personas'] : '';
 
 			$paxss = str_replace("/", "", $paxs);
 ?>

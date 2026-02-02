@@ -33,27 +33,6 @@ function enqueue_custom_scripts()
     // Calendar Init
     wp_enqueue_script('calendar-init', get_template_directory_uri() . '/src/calendar-init.js', array('air-datepicker-js'), filemtime(get_template_directory() . '/src/calendar-init.js'), true);
 
-    // Rocket Scripts
-    wp_enqueue_script(
-        'rocket-web',
-        'https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcuscowalk9884back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.14',
-        array(),
-        null,
-        false
-    );
-    wp_script_add_data('rocket-web', 'type', 'module');
-    wp_script_add_data('rocket-web', 'async', true);
-
-    wp_enqueue_script(
-        'rocket-shot',
-        'https://static.rocket.new/rocket-shot.js?v=0.0.2',
-        array(),
-        null,
-        false
-    );
-    wp_script_add_data('rocket-shot', 'type', 'module');
-    wp_script_add_data('rocket-shot', 'defer', true);
-
     // Script personalizado para el menú móvil
     wp_add_inline_script(
         'jquery',

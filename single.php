@@ -26,30 +26,78 @@ get_header();
             <div>
                 <div class="sticky top-0 right-0">
                     <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                    <h2 class="!mb-[16px]">Blog Categories</h2>
-                    <ul>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Gastronomía</a></li>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Historia</a></li>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Turismo</a></li>
-                    </ul>
-                </div>
-                <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                    <h2 class="!mb-[16px]">Free tour por Cusco</h2>
-                    <ul>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
-                    </ul>
-                </div>
-                <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px]">
-                    <h2 class="!mb-[16px]">¿Qué hacer en Cusco?</h2>
-                    <ul>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">City tour Cusco: Huellas de un Imperio</a></li>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Caminata a Laguna Humantay</a></li>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Caminata a Siete Lagunas con guía en español</a></li>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Free tour por San Blas Bohemio</a></li>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Catacumas del Cusco Peru con guía profesional</a></li>
-                        <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Free tour por San Blas Bohemio</a></li>
-                    </ul>
-                </div>
+                        <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
+                        <ul>
+                            <?php
+                            $categories = get_categories(array(
+                                'orderby' => 'name',
+                                'order' => 'ASC',
+                                'hide_empty' => true
+                            ));
+                            foreach ($categories as $category) :
+                            ?>
+                                <li>
+                                    <a href="<?php echo get_category_link($category->term_id); ?>" class="underline inline-block mb-[8px] text-[#5C5C5C]">
+                                        <?php echo esc_html($category->name); ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+
+                    <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
+                        <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+                            <h2 class="!mb-[16px]">Free tour in Cusco</h2>
+                            <ul>
+                                <li><a href="/en/things-to-do-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
+                            </ul>
+                        </div>
+                    <?php }
+                    if (ICL_LANGUAGE_CODE == 'es') { ?>
+                        <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+                            <h2 class="!mb-[16px]">Free tour por Cusco</h2>
+                            <ul>
+                                <li><a href="/es/que-hacer-en-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
+                            </ul>
+                        </div>
+                    <?php } ?>
+
+                    <!-- seccion hijos de paginas -->
+                    <?php
+                    // Obtener todas las páginas padre (páginas sin parent)
+                    $parent_pages = get_pages(array(
+                        'parent' => 0,
+                        'sort_column' => 'menu_order',
+                        'sort_order' => 'ASC'
+                    ));
+                    
+                    // Recorrer cada página padre
+                    foreach ($parent_pages as $parent) {
+                        // Obtener las páginas hijas de este padre
+                        $child_pages = get_pages(array(
+                            'child_of' => $parent->ID,
+                            'parent' => $parent->ID,
+                            'sort_column' => 'menu_order',
+                            'sort_order' => 'ASC'
+                        ));
+                        
+                        // Solo mostrar si tiene hijos
+                        if ($child_pages) : ?>
+                            <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+                                <h2 class="!mb-[16px]"><?php echo esc_html($parent->post_title); ?></h2>
+                                <ul>
+                                    <?php foreach ($child_pages as $child) : ?>
+                                        <li>
+                                            <a href="<?php echo get_permalink($child->ID); ?>" class="underline inline-block mb-[8px] text-[#5C5C5C]">
+                                                <?php echo esc_html($child->post_title); ?>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif;
+                    }
+                    ?>
                 </div>
             </div>
         </div>

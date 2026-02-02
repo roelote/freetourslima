@@ -37,6 +37,8 @@ get_header();
                     <div class="w-full">
                         <div class="calendar-wrapper">
                             <form  class="flex flex-col gap-[16px]" action="<?php the_field('ruta_tours_free')?>" method="get" id="bookingForm">
+                                <input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
+							     <input type="hidden" name="nametour" value="<?=the_title() ; ?>">
                                 <div id="calendar-inline" class="w-full"></div>
                                 <input type="text" id="date-selected" name="date" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
                                 <input type="number" name="personas" class="w-full p-3 rounded-[8px]" min="0" max="30" placeholder="Personas">

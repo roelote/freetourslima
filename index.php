@@ -65,7 +65,7 @@ get_header();
         </div>
         <div>
             <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px]">Blog Categories</h2>
+                <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
                 <ul>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Gastronomía</a></li>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Historia</a></li>
@@ -73,13 +73,13 @@ get_header();
                 </ul>
             </div>
             <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px]">Free tour por Cusco</h2>
+                <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Free tour in Cusco' : 'Free tour por Cusco'; ?></h2>
                 <ul>
-                    <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
+                    <li><a href="<?php echo (ICL_LANGUAGE_CODE == 'en') ? '/en/things-to-do-cusco/' : '/es/que-hacer-en-cusco/'; ?>" class="underline inline-block mb-[8px] text-[#5C5C5C]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Book Now!' : '¡Reserva aquí!'; ?></a></li>
                 </ul>
             </div>
             <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px]">¿Qué hacer en Cusco?</h2>
+                <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Things to do in Cusco?' : '¿Qué hacer en Cusco?'; ?></h2>
                 <ul>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">City tour Cusco: Huellas de un Imperio</a></li>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Caminata a Laguna Humantay</a></li>
