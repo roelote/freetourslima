@@ -232,3 +232,300 @@ function limit_words($string, $word_limit) {
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 
+/**
+ * AJAX: Verificar si el email existe en el sistema
+ */
+function fwt_check_email_ajax() {
+	check_ajax_referer('fwt_login_nonce', 'nonce');
+	
+	$email = sanitize_email($_POST['email']);
+	
+	if (!is_email($email)) {
+		wp_send_json_error(array('message' => __('Email inválido', 'freewalking')));
+	}
+	
+	$user = get_user_by('email', $email);
+	
+	wp_send_json_success(array(
+		'exists' => $user !== false,
+		'email' => $email
+	));
+}
+add_action('wp_ajax_fwt_check_email', 'fwt_check_email_ajax');
+add_action('wp_ajax_nopriv_fwt_check_email', 'fwt_check_email_ajax');
+
+/**
+ * AJAX: Registrar nuevo usuario
+ */
+function fwt_register_user_ajax() {
+	check_ajax_referer('fwt_login_nonce', 'nonce');
+	
+	$email = sanitize_email($_POST['email']);
+	$full_name = sanitize_text_field($_POST['full_name']);
+	$password = $_POST['password'];
+	
+	// Validaciones
+	if (!is_email($email)) {
+		wp_send_json_error(array('message' => __('Email inválido', 'freewalking')));
+	}
+	
+	if (empty($full_name)) {
+		wp_send_json_error(array('message' => __('El nombre es requerido', 'freewalking')));
+	}
+	
+	if (strlen($password) < 6) {
+		wp_send_json_error(array('message' => __('La contraseña debe tener al menos 6 caracteres', 'freewalking')));
+	}
+	
+	// Verificar si el email ya existe
+	if (email_exists($email)) {
+		wp_send_json_error(array('message' => __('Este email ya está registrado', 'freewalking')));
+	}
+	
+	// Crear usuario
+	$username = sanitize_user(current(explode('@', $email)));
+	
+	// Si el username ya existe, agregar números
+	if (username_exists($username)) {
+		$username = $username . rand(100, 999);
+	}
+	
+	$user_id = wp_create_user($username, $password, $email);
+	
+	if (is_wp_error($user_id)) {
+		wp_send_json_error(array('message' => $user_id->get_error_message()));
+	}
+	
+	// Actualizar nombre completo
+	wp_update_user(array(
+		'ID' => $user_id,
+		'display_name' => $full_name,
+		'first_name' => $full_name
+	));
+	
+	// Enviar email de verificación (si el plugin loginfree lo requiere)
+	// Esto debería integrarse con el sistema de verificación de loginfree
+	
+	wp_send_json_success(array(
+		'message' => __('Usuario registrado exitosamente', 'freewalking'),
+		'user_id' => $user_id
+	));
+}
+add_action('wp_ajax_fwt_register_user', 'fwt_register_user_ajax');
+add_action('wp_ajax_nopriv_fwt_register_user', 'fwt_register_user_ajax');
+
+
+
+/**
+ * Código para agregar en functions.php de tu tema de WordPress
+ * Expone los menús en la REST API sin necesidad de plugins
+ */
+
+// Registrar endpoint personalizado para obtener menús
+add_action('rest_api_init', function () {
+    register_rest_route('menus/v1', '/menus/(?P<location>[a-zA-Z0-9-_]+)', array(
+        'methods' => 'GET',
+        'callback' => 'get_menu_by_location',
+        'permission_callback' => '__return_true',
+    ));
+});
+
+/**
+ * Obtener menú por ubicación (location)
+ * Endpoint: /wp-json/menus/v1/menus/{location}
+ * Ejemplo: /wp-json/menus/v1/menus/primary
+ */
+function get_menu_by_location($request) {
+    $location = $request->get_param('location');
+    
+    // Obtener todas las ubicaciones de menú registradas
+    $locations = get_nav_menu_locations();
+    
+    // Verificar si existe la ubicación solicitada
+    if (!isset($locations[$location])) {
+        return new WP_Error('menu_not_found', 'Menú no encontrado en esa ubicación', array('status' => 404));
+    }
+    
+    // Obtener el ID del menú asignado a esa ubicación
+    $menu_id = $locations[$location];
+    
+    // Obtener los items del menú
+    $menu_items = wp_get_nav_menu_items($menu_id);
+    
+    if (!$menu_items) {
+        return new WP_Error('no_menu_items', 'No hay items en este menú', array('status' => 404));
+    }
+    
+    // Formatear los items del menú
+    $formatted_items = array();
+    
+    foreach ($menu_items as $item) {
+        $formatted_items[] = array(
+            'ID' => $item->ID,
+            'title' => $item->title,
+            'url' => $item->url,
+            'menu_order' => $item->menu_order,
+            'parent' => $item->menu_item_parent,
+            'target' => $item->target,
+            'classes' => implode(' ', $item->classes),
+            'description' => $item->description,
+            'object_id' => $item->object_id,
+            'object' => $item->object,
+            'type' => $item->type,
+        );
+    }
+    
+    // Construir jerarquía de menú (items con hijos)
+    $menu_tree = build_menu_tree($formatted_items);
+    
+    return array(
+        'id' => $menu_id,
+        'location' => $location,
+        'count' => count($formatted_items),
+        'items' => $menu_tree,
+    );
+}
+
+/**
+ * Construir estructura jerárquica del menú
+ */
+function build_menu_tree($items, $parent_id = 0) {
+    $branch = array();
+    
+    foreach ($items as $item) {
+        if ($item['parent'] == $parent_id) {
+            $children = build_menu_tree($items, $item['ID']);
+            if ($children) {
+                $item['children'] = $children;
+            }
+            $branch[] = $item;
+        }
+    }
+    
+    return $branch;
+}
+
+/**
+ * OPCIONAL: Endpoint para listar todas las ubicaciones de menú disponibles
+ * Endpoint: /wp-json/menus/v1/locations
+ */
+add_action('rest_api_init', function () {
+    register_rest_route('menus/v1', '/locations', array(
+        'methods' => 'GET',
+        'callback' => 'get_menu_locations',
+        'permission_callback' => '__return_true',
+    ));
+});
+
+function get_menu_locations() {
+    $locations = get_nav_menu_locations();
+    $registered_menus = get_registered_nav_menus();
+    
+    $result = array();
+    
+    foreach ($registered_menus as $location => $description) {
+        $menu_id = isset($locations[$location]) ? $locations[$location] : null;
+        $menu_obj = $menu_id ? wp_get_nav_menu_object($menu_id) : null;
+        
+        $result[] = array(
+            'location' => $location,
+            'description' => $description,
+            'menu_id' => $menu_id,
+            'menu_name' => $menu_obj ? $menu_obj->name : null,
+        );
+    }
+    
+    return $result;
+}
+
+/**
+ * OPCIONAL: Endpoint para obtener todos los menús (sin ubicación específica)
+ * Endpoint: /wp-json/menus/v1/all
+ */
+add_action('rest_api_init', function () {
+    register_rest_route('menus/v1', '/all', array(
+        'methods' => 'GET',
+        'callback' => 'get_all_menus',
+        'permission_callback' => '__return_true',
+    ));
+});
+
+function get_all_menus() {
+    $menus = wp_get_nav_menus();
+    $result = array();
+    
+    foreach ($menus as $menu) {
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+        
+        $formatted_items = array();
+        foreach ($menu_items as $item) {
+            $formatted_items[] = array(
+                'ID' => $item->ID,
+                'title' => $item->title,
+                'url' => $item->url,
+                'menu_order' => $item->menu_order,
+                'parent' => $item->menu_item_parent,
+            );
+        }
+        
+        $result[] = array(
+            'id' => $menu->term_id,
+            'name' => $menu->name,
+            'slug' => $menu->slug,
+            'count' => $menu->count,
+            'items' => build_menu_tree($formatted_items),
+        );
+    }
+    
+    return $result;
+}
+
+/**
+ * Helper simple para traducciones usando ICL_LANGUAGE_CODE de WPML
+ */
+function fw_trans($key) {
+    $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'es';
+    
+    $translations = array(
+        'login_title' => array(
+            'es' => 'Iniciar sesión',
+            'en' => 'Log in',
+            'pt-br' => 'Entrar',
+            'fr' => 'Se connecter',
+            'it' => 'Accedi'
+        ),
+        'register_title' => array(
+            'es' => 'Registrarse',
+            'en' => 'Sign up',
+            'pt-br' => 'Registrar',
+            'fr' => 'S\'inscrire',
+            'it' => 'Registrati'
+        ),
+        'my_bookings' => array(
+            'es' => 'Mis reservas',
+            'en' => 'My bookings',
+            'pt-br' => 'Minhas reservas',
+            'fr' => 'Mes réservations',
+            'it' => 'Le mie prenotazioni'
+        ),
+        'auth_welcome_message' => array(
+            'es' => '👋 Inicia sesión o crea una cuenta para continuar.',
+            'en' => '👋 Log in or create an account to continue.',
+            'pt-br' => '👋 Entre ou crie uma conta para continuar.',
+            'fr' => '👋 Connectez-vous ou créez un compte pour continuer.',
+            'it' => '👋 Accedi o crea un account per continuare.'
+        ),
+    );
+    
+    if (isset($translations[$key][$lang])) {
+        return $translations[$key][$lang];
+    }
+    
+    // Fallback a español
+    if (isset($translations[$key]['es'])) {
+        return $translations[$key]['es'];
+    }
+    
+    return $key;
+}
+

@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php get_header(); 
+if (ICL_LANGUAGE_CODE == 'en') {
+	$ruta = '/bookfwt';
+} elseif (ICL_LANGUAGE_CODE == 'es') {
+	$ruta = '/es/bookfwt';
+}
+
+?>
+
 
 <main class="container mx-auto px-4 mt-[20px] md:mt-[48px] md:px-0">
     <section class="w-full">
@@ -17,7 +25,9 @@
                 <div class="w-full mt-0 md:mt-[6.5em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[90px]">
                     <div class="w-full">
                         <div class="calendar-wrapper">
-                            <form action="#" method="post" class="flex flex-col gap-[16px]">
+                            <form class="flex flex-col gap-[16px]" action="<?=$ruta?>" method="get" id="bookingForm">
+							<input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
+							<input type="hidden" name="nametour" value="<?=the_title() ; ?>">
                                 <div id="calendar-inline" class="w-full"></div>
                                 <input type="text" id="date-selected" name="date" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
                                 <input type="number" name="personas" class="w-full p-3 rounded-[8px]" min="0" max="30" placeholder="Personas">
