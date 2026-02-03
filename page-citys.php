@@ -21,7 +21,7 @@ get_header();
 
  
 
-<div class="container mx-auto px-5 md:px-0 mt-[48px]">
+<div class="container mx-auto px-5 md:px-0 mt-[48px] page-citys">
     <?php
     if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
@@ -64,7 +64,7 @@ get_header();
                             'class' => 'w-full h-[252px] rounded-t-[8px] object-cover'
                         )); 
                         ?>
-                        <div class=" w-full h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
+                        <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
                             <h2 class="text-center"><?php echo get_the_title($child->ID); ?></h2>
                             <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
                                 <?php if ($duration) : ?>
@@ -147,7 +147,7 @@ get_header();
         ?>
     </div>
     <div class="w-full mt-[48px] md:mt-[80px] mb-[48px] md:mb-[88px]">
-        <h2 class="!text-[22px] md:!text-[24px] !mb-[20px] md:!mb-[32px]">Guía de viaje Cusco</h2>
+        <h3 class="!text-[24px] !mb-[20px] md:!mb-[32px]">Guía de viaje Cusco</h3>
 		<?php echo do_shortcode( '[EntradasRecientes]' ); ?>
     </div>
 

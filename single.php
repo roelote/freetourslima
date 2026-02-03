@@ -5,8 +5,8 @@ get_header();
 ?>
 
 <main>
-    <div class="container mx-auto px-5 md:px-0 content-blogs mb-[88px] mt-[48px]">
-        <div class="flex flex-col md:flex-row gap-[81px]">
+    <div class="container mx-auto px-5 md:px-0 content-blogs md-[48px] md:mb-[88px] mt-[48px]">
+        <div class="flex flex-col md:flex-row gap-[40px] md:gap-[81px]">
             <div class="w-full md:w-[640px]">
                 <?php
                 if (function_exists('yoast_breadcrumb')) {
@@ -24,7 +24,7 @@ get_header();
                 
             </div>
             <div>
-                <div class="sticky top-0 right-0">
+                <div class="md:sticky top-0 right-0">
                     <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
                         <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
                         <ul>

@@ -9,7 +9,7 @@ get_header();
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] mb-[16px] text-[#A49D9D]">', '</nav>');
     }
     ?>
-    <h1 class="!mb-[24px] md:!mb-[32px]"><?php single_post_title(); ?></h1>
+    <h1 class="!text-[26px] md:!text-[32px] !mb-[24px] md:!mb-[32px]"><?php single_post_title(); ?></h1>
 
     <div class="flex flex-col md:flex-row gap-[40px] md:gap-[43px]">
         <div class="">
