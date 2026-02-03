@@ -68,7 +68,7 @@
         </div>
     </div>
     <div class="w-full mt-[40px] mb-[32px] md:mb-0 md:mt-[32px]">
-        <p class="text-[14px] text-center font-normal md:!m-0 leading-[20px] text-[#f5f5f5] font-['Nunito_Sans']">FreeWalkingTourCusco.Org <span class="block md:inline"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Copyright © 2026 - 2026, All Rights Reserved' : 'Copyright © 2006 - 2026, Todos los derechos reservados'; ?></span></p>
+        <p class="text-[14px] text-center font-normal md:!m-0 leading-[20px] text-[#f5f5f5] font-['Nunito_Sans']">FreeWalkingTourCusco.Org <span class="block md:inline"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Copyright © 2023 - 2026, All Rights Reserved' : 'Copyright © 2023 - 2026, Todos los derechos reservados'; ?></span></p>
     </div>
     <div class="block md:hidden w-full bg-[#FF8110] p-3">
         <div class="bg-[#1AB6B6] p-2 text-center">
