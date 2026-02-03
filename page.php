@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -15,61 +16,108 @@
 get_header();
 ?>
 
-<section style="background-image: url(<?php the_post_thumbnail_url() ?>);" class="h-96 bg-center bg-cover"> 
-    <div class="flex h-full w-full items-center justify-center bg-black bg-opacity-70"> 
-        <div>
-            <h1 class="text-2xl xl:text-4xl font-bold uppercase text-white  mb-2"><?php the_title() ?></h1> 
-        </div>
-        
-        
-    </div> 
-</section>
+<section class="mt-[48px] mb-[88px] content-pages">
+	<div class="container px-5 md:px-0">
+		<main id="primary" class="site-main">
+			<div class="flex items-start gap-[40px] md:gap-[81px] flex-col lg:flex-row">
+				<div class="w-full md:w-[640px]">
+					<?php
+					if (function_exists('yoast_breadcrumb')) {
+						yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
+					}
+					the_title("<h1 class=\"!mb-[24px] md:!mb-[32px]\">", '</h1>');
+					while (have_posts()):
+					?>
+					<?php
+						the_post();
+						the_content();
+					endwhile;
+					?>
+				</div>
+				<div>
+					<div>
+						<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+							<h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
+							<ul>
+								<?php
+								$categories = get_categories(array(
+									'orderby' => 'name',
+									'order' => 'ASC',
+									'hide_empty' => true
+								));
+								foreach ($categories as $category) :
+								?>
+									<li>
+										<a href="<?php echo get_category_link($category->term_id); ?>" class="underline inline-block mb-[8px] text-[#5C5C5C]">
+											<?php echo esc_html($category->name); ?>
+										</a>
+									</li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
 
-<section class="py-8 px-3 xl:px-0">
-	<div class="container">
+						<?php if (ICL_LANGUAGE_CODE == 'en') { ?>
+							<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+								<h2 class="!mb-[16px]">Free tour in Cusco</h2>
+								<ul>
+									<li><a href="/en/things-to-do-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
+								</ul>
+							</div>
+						<?php }
+						if (ICL_LANGUAGE_CODE == 'es') { ?>
+							<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+								<h2 class="!mb-[16px]">Free tour por Cusco</h2>
+								<ul>
+									<li><a href="/es/que-hacer-en-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
+								</ul>
+							</div>
 
-			<main id="primary" class="site-main">
+						<?php }
+						?>
 
-				 <?php
-        while (have_posts()):
-        ?>
-        <?php
-            the_post();
-            the_content();
-        endwhile;
-        ?>
+						<!-- seccion hijos de paginas -->
+						<?php
+						// Obtener todas las páginas padre (páginas sin parent)
+						$parent_pages = get_pages(array(
+							'parent' => 0,
+							'sort_column' => 'menu_order',
+							'sort_order' => 'ASC'
+						));
 
-			</main><!-- #main -->
-			
+						// Recorrer cada página padre
+						foreach ($parent_pages as $parent) {
+							// Obtener las páginas hijas de este padre
+							$child_pages = get_pages(array(
+								'child_of' => $parent->ID,
+								'parent' => $parent->ID,
+								'sort_column' => 'menu_order',
+								'sort_order' => 'ASC'
+							));
 
+							// Solo mostrar si tiene hijos
+							if ($child_pages) : ?>
+								<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+									<h2 class="!mb-[16px]"><?php echo esc_html($parent->post_title); ?></h2>
+									<ul>
+										<?php foreach ($child_pages as $child) : ?>
+											<li>
+												<a href="<?php echo get_permalink($child->ID); ?>" class="underline inline-block mb-[8px] text-[#5C5C5C]">
+													<?php echo esc_html($child->post_title); ?>
+												</a>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+						<?php endif;
+						}
+						?>
+
+					</div>
+				</div>
+			</div>
+		</main>
 	</div>
 </section>
-
-
-<?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-	<section class="bg-fwt">
-		<div class="container py-10">
-					<h3 class="text-center text-xl xl:text-3xl text-white font-bold uppercase ">Book your vacations in Cusco with us</h3>
-					<a href="/" class="uppercase bg-white font-bold px-4 text-xl xl:text-base py-1 table mx-auto mt-5 rounded hover:bg-gray-800 hover:text-white transition-all delay-150">Book your tour</a>
-		</div>
-</section>	
-										<?php }
-										if (ICL_LANGUAGE_CODE == 'es') { ?>
-										<section class="bg-fwt">
-		<div class="container py-10">
-					<h3 class="text-center text-xl xl:text-3xl text-white font-bold uppercase ">Reserva tus vacaciones en Cusco con nosotros</h3>
-					<a href="/es/" class="uppercase bg-white font-bold px-4 text-xl xl:text-base py-1 table mx-auto mt-5 rounded hover:bg-gray-800 hover:text-white transition-all delay-150">Reserva tu tour</a>
-		</div>
-</section>	
-									
-										<?php }
-?>
-
-
-
-
-	
-
 <?php
 
 get_footer();
