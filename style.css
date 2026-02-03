@@ -448,7 +448,7 @@ h4 {
     }
 }
 
-.content-form {
+.formcss {
     margin-top: 40px;
     border: 1px solid #ddd;
     padding: 0 32px 26px 32px;
@@ -456,15 +456,16 @@ h4 {
 }
 
 
-.content-form h2 {
+.formcss h2 {
     margin: 32px 0 !important;
+    text-align: center;
 }
 
-.content-form .wpcf7-form-control-wrap {
+.formcss .wpcf7-form-control-wrap {
     margin-bottom: 24px;
 }
 
-.content-form .formcss .btnsendf {
+.formcss .btnsendf {
     width: 157px;
     height: 64px;
     font-size: 16px !important;
@@ -481,21 +482,21 @@ h4 {
 }
 
 @media (max-width: 767px) {
-    .content-form {
+    .formcss {
         margin-top: 32px;
         padding: 0 24px 32px 24px;
     }
 
-    .content-form h2 {
+    .formcss h2 {
         text-align: start;
         margin: 24px 0 !important;
     }
 
-    .content-form .wpcf7-form-control-wrap {
+    .formcss .wpcf7-form-control-wrap {
         margin-bottom: 20px;
     }
 
-    .content-form .formcss .btnsendf {
+    .formcss .btnsendf {
         width: 141px;
         height: 64px;
     }
