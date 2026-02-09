@@ -53,12 +53,12 @@
                                 $user_initial = mb_strtoupper(mb_substr($user_name, 0, 1));
                             ?>
                                 <!-- Usuario logueado -->
-                                <div class="relative ml-3" id="user-dropdown-container">
-                                    <button id="user-dropdown-trigger" class="flex items-center gap-2 hover:bg-[#f57921] hover:text-white bg-[#5c5c5c] text-white rounded px-3 py-1 transition-all">
+                                <div class="relative ml-3 border border-[#5c5c5c] rounded-[8px]" id="user-dropdown-container">
+                                    <button id="user-dropdown-trigger" class="flex items-center gap-2 hover:bg-[#f57921] hover:text-white text-white rounded px-3 py-1 transition-all">
                                         <div class="w-5 h-5 rounded-full bg-[#f57921] flex items-center justify-center text-white font-bold text-sm">
                                             <?php echo esc_html($user_initial); ?>
                                         </div>
-                                        <svg class="w-4 h-4 transition-transform" id="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg class="w-4 h-4 transition-transform" id="dropdown-arrow" fill="#f57921" stroke="#f57921" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                         </svg>
                                     </button>
@@ -130,7 +130,7 @@
                 'theme_location' => 'header-main-menu',
                 'container' => false,
                 'menu_id' => 'mobileMenu',
-                'menu_class' => 'w-full hidden top-3 left-0 z-50 flex-col md:flex-row items-center justify-center bg-white py-4 gap-5 md:static md:flex shadow-lg md:shadow-none rounded-lg md:rounded-none md:w-auto',
+                'menu_class' => 'w-full hidden top-3 left-0 z-50 flex-col md:flex-row items-center justify-center bg-white md:h-[56px] font-inter gap-5 md:static md:flex shadow-lg md:shadow-none rounded-lg md:rounded-none md:w-auto',
                 'fallback_cb' => false,
             ]);
             ?>
