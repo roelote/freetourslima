@@ -166,7 +166,7 @@ h4 {
 
 .responsive-tabs-wrapper .responsive-tabs__panel--active {
     padding: 20px 12px !important;
-    outline: 1px solid #ddd;
+    outline: none;
     border-bottom-left-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
     margin-bottom: 8px !important;
@@ -180,6 +180,10 @@ h4 {
 @media (max-width: 767px) {
     .responsive-tabs .responsive-tabs__heading:after {
         border-top: 6px solid #f16334 !important;
+    }
+
+    .responsive-tabs-wrapper .responsive-tabs__panel--active {
+        outline: 1px solid #ddd;
     }
 
     .responsive-tabs-wrapper {
@@ -508,4 +512,25 @@ h4 {
     font-size: 16px !important;
     font-family: var(--font-nunito-sans);
 
+}
+
+.cf-filter-group{
+    gap: 0 !important;
+    font-family: var(--font-nunito-sans);
+}
+
+.cf-rating-summary{
+    font-family: var(--font-nunito-sans);
+}
+
+.comentarios-free-container{
+    padding: 0 !important;
+}
+
+.cf-load-more-container .cf-btn-secondary {
+    background: transparent !important;
+    color: #5C5C5C !important;
+    font-weight: bold;
+    font-family: var(--font-nunito-sans);
+    text-decoration: underline  ;
 }
