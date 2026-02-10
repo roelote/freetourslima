@@ -174,7 +174,6 @@ get_header();
             ?>
 
         </div>
-
     </div>
 </div>
 <?php

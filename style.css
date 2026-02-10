@@ -501,3 +501,11 @@ h4 {
         height: 64px;
     }
 }
+
+/* shorcode reviews starts */
+
+.comentarios-resumen-widget span{
+    font-size: 16px !important;
+    font-family: var(--font-nunito-sans);
+
+}
