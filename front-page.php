@@ -10,7 +10,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
 
 <main class="container mx-auto px-4 mt-[20px] md:mt-[48px] md:px-0">
     <section class="w-full">
-        <div class="flex flex-col lg:flex-row gap-0 md:gap-[40px] items-start">
+        <div class="flex flex-col lg:flex-row justify-between gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
                 <div class="main-content-tour">
                     <?php
