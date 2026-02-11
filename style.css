@@ -534,3 +534,8 @@ h4 {
     font-family: var(--font-nunito-sans);
     text-decoration: underline  ;
 }
+
+.container-blog .content-card h2 a{
+    font-size: 20px !important;
+    font-family: var(--font-inter);
+}

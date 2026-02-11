@@ -3,7 +3,7 @@ get_header();
 
 
 ?>
-<div class="container mx-auto px-[12px] md:px-0 content-main-blog mb-[48px] md:mb-[88px] mt-[48px]">
+<div class="container mx-auto px-[12px] md:px-0 content-main-blog mb-[48px] md:mb-[88px] mt-[48px] container-blog">
     <?php
     if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] mb-[16px] text-[#A49D9D]">', '</nav>');
@@ -13,7 +13,7 @@ get_header();
 
     <div class="flex flex-col md:flex-row gap-[40px] md:gap-[43px]">
         <div class="">
-            <div class="w-full lg:w-[783px] h-auto flex flex-col gap-[32px]  mb-[32px] md:mb-[40px]">
+            <div class="w-full lg:w-[784px] h-auto flex flex-col gap-[32px]  mb-[32px] md:mb-[40px]">
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
@@ -28,9 +28,9 @@ get_header();
                 if ($blog_query->have_posts()) :
                     while ($blog_query->have_posts()) : $blog_query->the_post();
                 ?>
-                    <div class="w-full flex flex-col md:flex-row rounded-[8px] overflow-hidden bg-white">
+                    <div class="w-full flex flex-col md:flex-row rounded-[8px] overflow-hidden bg-white content-card">
                         <div>
-                            <div class="w-full md:w-[286px] h-[194px]">
+                            <div class="w-full md:w-[286px] h-[214px]">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium', array('class' => 'w-full h-full object-cover object-center', 'alt' => get_the_title())); ?>
