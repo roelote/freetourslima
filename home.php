@@ -77,15 +77,15 @@ get_header();
                         foreach ($pagination as $page) {
                             if (strpos($page, 'current') !== false) {
                                 // Página actual
-                                $page = str_replace('page-numbers current', 'py-2 px-4 rounded-[8px] !text-white bg-orange text-center inline-block', $page);
+                                $page = str_replace('page-numbers current', 'h-[40px] w-[40px] flex items-center justify-center rounded-[8px] !text-white bg-orange text-center inline-block', $page);
                             } elseif (strpos($page, '<a') !== false) {
                                 // Enlaces
-                                $page = str_replace('class="page-numbers"', 'class="py-2 px-4 rounded-[8px] !text-white bg-orange hover:bg-orange-500 text-center inline-block no-underline"', $page);
-                                $page = str_replace('class="next page-numbers"', 'class="py-2 px-4 rounded-[8px] !text-white bg-orange hover:bg-orange-500 text-center inline-block no-underline"', $page);
-                                $page = str_replace('class="prev page-numbers"', 'class="py-2 px-4 rounded-[8px] !text-white bg-orange hover:bg-orange-500 text-center inline-block no-underline"', $page);
+                                $page = str_replace('class="page-numbers"', 'class="h-[40px] w-[40px] flex items-center justify-center rounded-[8px] !text-white bg-orange hover:bg-orange-500 text-center inline-block no-underline"', $page);
+                                $page = str_replace('class="next page-numbers"', 'class="h-[40px] w-[40px] flex items-center justify-center rounded-[8px] !text-white bg-orange hover:bg-orange-500 text-center inline-block no-underline"', $page);
+                                $page = str_replace('class="prev page-numbers"', 'class="h-[40px] w-[40px] flex items-center justify-center rounded-[8px] !text-white bg-orange hover:bg-orange-500 text-center inline-block no-underline"', $page);
                             } elseif (strpos($page, 'dots') !== false) {
                                 // Puntos suspensivos
-                                $page = str_replace('page-numbers dots', 'py-2 px-4 text-center inline-block text-orange', $page);
+                                $page = str_replace('page-numbers dots', 'h-[40px] w-[40px] flex items-center justify-center text-center inline-block text-orange', $page);
                             }
                             echo $page;
                         }

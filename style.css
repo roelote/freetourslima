@@ -261,6 +261,17 @@ h4 {
 .content-blogs .wp-block-image img {
     margin-bottom: 40px !important;
     border-radius: 16px;
+    width: 640px;
+    height: 395px;
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+
+    .content-blogs .wp-block-image img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 767px) {
@@ -508,22 +519,22 @@ h4 {
 
 /* shorcode reviews starts */
 
-.comentarios-resumen-widget span{
+.comentarios-resumen-widget span {
     font-size: 16px !important;
     font-family: var(--font-nunito-sans);
 
 }
 
-.cf-filter-group{
+.cf-filter-group {
     gap: 0 !important;
     font-family: var(--font-nunito-sans);
 }
 
-.cf-rating-summary{
+.cf-rating-summary {
     font-family: var(--font-nunito-sans);
 }
 
-.comentarios-free-container{
+.comentarios-free-container {
     padding: 0 !important;
 }
 
@@ -532,10 +543,10 @@ h4 {
     color: #5C5C5C !important;
     font-weight: bold;
     font-family: var(--font-nunito-sans);
-    text-decoration: underline  ;
+    text-decoration: underline;
 }
 
-.container-blog .content-card h2 a{
+.container-blog .content-card h2 a {
     font-size: 20px !important;
     font-family: var(--font-inter);
 }
