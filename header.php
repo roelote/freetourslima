@@ -28,7 +28,7 @@
                             <?php endif; ?>
                         </div>
 
-                        <div class="hidden md:flex flex-row items-center gap-4">
+                        <div class="hidden lg:flex flex-row items-center">
                             <div class="flex items-center gap-3">
                                 <a href="<?php the_field('whatsapp_link', 'option'); ?>" class="text-[14px] font-bold leading-[20px] text-[#5c5c5c] hover:text-[#f57921] transition-colors"><?php the_field('whatsapp_numero', 'option'); ?></a>
                                 
@@ -53,7 +53,7 @@
                                 $user_initial = mb_strtoupper(mb_substr($user_name, 0, 1));
                             ?>
                                 <!-- Usuario logueado -->
-                                <div class="relative ml-3 border border-[#5c5c5c] rounded-[8px]" id="user-dropdown-container">
+                                <div class="relative border border-[#5c5c5c] rounded-[8px] ml-[20px]" id="user-dropdown-container">
                                     <button id="user-dropdown-trigger" class="flex items-center gap-2 hover:bg-[#f57921] hover:text-white text-white rounded px-3 py-1 transition-all">
                                         <div class="w-5 h-5 rounded-full bg-[#f57921] flex items-center justify-center text-white font-bold text-sm">
                                             <?php echo esc_html($user_initial); ?>
@@ -112,7 +112,7 @@
                                 </div>
                             <?php endif; ?>
                         </div>
-                        <div class="block md:hidden">
+                        <div class="block lg:hidden">
                             <button id="menuToggle" class="inline-flex flex-col justify-center items-center p-2 w-10 h-10 rounded-md hover:bg-gray-100 transition-colors">
                                 <span class="hamburger-line w-6 h-0.5 bg-[#5c5c5c] transition-all duration-300 ease-in-out"></span>
                                 <span class="hamburger-line w-6 h-0.5 bg-[#5c5c5c] my-1 transition-all duration-300 ease-in-out"></span>

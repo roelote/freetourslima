@@ -60,6 +60,10 @@
     text-transform: uppercase   ;
 }
 
+@media (max-width: 900px){
+    #mobileMenu a {font-size: 14px;}
+}
+
 #mobileMenu a:hover {
     color: #333;
 }
