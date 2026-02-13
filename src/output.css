@@ -971,16 +971,16 @@ video {
   width: 20px;
 }
 
+.w-\[40px\] {
+  width: 40px;
+}
+
 .w-\[44px\] {
   width: 44px;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[40px\] {
-  width: 40px;
 }
 
 .max-w-5xl {

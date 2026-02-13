@@ -96,7 +96,7 @@ get_header();
             </div>
             <?php endif; ?>
         </div>
-        <div>
+        <div class="aside-blog">
             <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
                 <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
                 <ul>
