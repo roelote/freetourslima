@@ -319,6 +319,30 @@ if (ICL_LANGUAGE_CODE == 'en') {
         </div>
     </div>
     
+    <style>
+        .toursRelatedSwiper .swiper-button-next,
+        .toursRelatedSwiper .swiper-button-prev {
+            background: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            top: 35%;
+        }
+        
+        .toursRelatedSwiper .swiper-button-next:after,
+        .toursRelatedSwiper .swiper-button-prev:after {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff8800;
+        }
+        
+        .toursRelatedSwiper .swiper-button-next:hover,
+        .toursRelatedSwiper .swiper-button-prev:hover {
+            background: #f5f5f5;
+        }
+    </style>
+    
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const swiper = new Swiper('.toursRelatedSwiper', {
