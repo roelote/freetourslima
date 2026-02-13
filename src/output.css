@@ -838,6 +838,14 @@ video {
   margin-top: 8px;
 }
 
+.ml-\[15px\] {
+  margin-left: 15px;
+}
+
+.ml-\[20px\] {
+  margin-left: 20px;
+}
+
 .block {
   display: block;
 }
@@ -2161,6 +2169,14 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:w-\[783px\] {
     width: 783px;
   }

@@ -427,15 +427,20 @@ h4 {
     margin-bottom: 16px;
 }
 
-.wpml-ls-legacy-dropdown-click {
-
+/* .wpml-ls-legacy-dropdown-click {
     max-width: 130px !important;
-}
+} */
 
-.wpml-ls-legacy-dropdown-click>ul {
+/* .wpml-ls-legacy-dropdown-click>ul {
 
     width: 130px !important;
+} */
+
+.wpml-ls-legacy-dropdown-click{
+
+    width: max-content !important;
 }
+
 
 .comentarios-free-container {
     margin: 80px auto 88px auto !important;
@@ -572,4 +577,37 @@ h4 {
 
 .aside-blog-page{
     margin-top: 8rem;
+}
+
+.wpml-ls-legacy-dropdown-click a{
+    background-color: transparent !important;
+    border: none;
+    width: max-content;
+    font-weight: 700;
+    color: #5C5C5C;
+    font-size: 14px !important;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover>a, .wpml-ls-legacy-dropdown-click a:focus, .wpml-ls-legacy-dropdown-click a:hover{
+    color: #5C5C5C !important;
+}
+
+.wpml-ls-legacy-dropdown-click img{
+    display: none !important;
+}
+
+.wpml-ls-legacy-dropdown-click a{
+    padding: 0 ;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-flag+span{
+    margin-left: 0 ;
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after{
+    font-size: 18px;
+}
+
+.wpml-ls-slot-shortcode_actions{
+ padding: .5em 0 !important;   
 }
