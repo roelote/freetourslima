@@ -150,7 +150,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
 </section>
 
 <!-- Related Tours Section -->
-<section class="py-[32px] md:py-[48px]">
+<section class="mb-[88px] container-related-tours">
     <div class="container">
         <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
             <h2 class="text-center text-[28px] md:text-[36px] font-bold mb-[32px] text-[#5c5c5c]">Related Tours</h2>
