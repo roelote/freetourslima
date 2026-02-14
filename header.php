@@ -53,12 +53,12 @@
                                 $user_initial = mb_strtoupper(mb_substr($user_name, 0, 1));
                             ?>
                                 <!-- Usuario logueado -->
-                                <div class="relative border border-[#5c5c5c] rounded-[8px] ml-[20px]" id="user-dropdown-container">
-                                    <button id="user-dropdown-trigger" class="flex items-center gap-2 hover:bg-[#f57921] hover:text-white text-white rounded px-3 py-1 transition-all">
+                                <div class="relative ml-[20px]" id="user-dropdown-container">
+                                    <button id="user-dropdown-trigger" class="flex items-center gap-2 hover:bg-[#f57921] bg-[#5c5c5c] text-white rounded-[8px] px-3 py-1 transition-all border border-[#5c5c5c]">
                                         <div class="w-5 h-5 rounded-full bg-[#f57921] flex items-center justify-center text-white font-bold text-sm">
                                             <?php echo esc_html($user_initial); ?>
                                         </div>
-                                        <svg class="w-4 h-4 transition-transform" id="dropdown-arrow" fill="#f57921" stroke="#f57921" viewBox="0 0 24 24">
+                                        <svg class="w-4 h-4 transition-transform" id="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                         </svg>
                                     </button>
@@ -137,6 +137,26 @@
         </div>
     </header>
 
+<!-- Script del dropdown de usuario (debe estar fuera del condicional para funcionar con usuarios logueados) -->
+<script>
+jQuery(document).ready(function($) {
+    // Funcionalidad del dropdown de usuario
+    $('#user-dropdown-trigger').on('click', function(e) {
+        e.stopPropagation();
+        $('#user-dropdown-menu').toggleClass('hidden');
+        $('#dropdown-arrow').toggleClass('rotate-180');
+    });
+    
+    // Cerrar dropdown al hacer clic fuera
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('#user-dropdown-container').length) {
+            $('#user-dropdown-menu').addClass('hidden');
+            $('#dropdown-arrow').removeClass('rotate-180');
+        }
+    });
+});
+</script>
+
 <!-- Modal de Login/Registro -->
 <?php if (!is_user_logged_in()) : ?>
 <!-- Modal de autenticación compartido -->
@@ -168,21 +188,6 @@
 
 <script>
 jQuery(document).ready(function($) {
-    // Funcionalidad del dropdown de usuario
-    $('#user-dropdown-trigger').on('click', function(e) {
-        e.stopPropagation();
-        $('#user-dropdown-menu').toggleClass('hidden');
-        $('#dropdown-arrow').toggleClass('rotate-180');
-    });
-    
-    // Cerrar dropdown al hacer clic fuera
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('#user-dropdown-container').length) {
-            $('#user-dropdown-menu').addClass('hidden');
-            $('#dropdown-arrow').removeClass('rotate-180');
-        }
-    });
-    
     // Abrir modal cuando se hace clic en login/registro del header
     $('#header-login-btn, #header-register-btn, #open-login-modal, #open-register-modal').on('click', function(e) {
         e.preventDefault();
