@@ -515,8 +515,8 @@ function fw_trans($key) {
 function cf7_set_hidden_fields() {
     // Recuperar datos usando PHP
     $nametour = isset($_GET['nametour']) ? $_GET['nametour'] : '';
-    $fechat = isset($_GET['fechat']) ? $_GET['fechat'] : '';
-    $paxs = isset($_GET['paxs']) ? $_GET['paxs'] : '';
+    $fechat = isset($_GET['date']) ? $_GET['date'] : '';
+    $paxs = isset($_GET['personas']) ? $_GET['personas'] : '';
 	$paxss = str_replace("/", "", $paxs);
 
     // Pasar los datos a JavaScript
