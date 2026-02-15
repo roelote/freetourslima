@@ -112,6 +112,8 @@ if (function_exists('acf_register_block_type')) {
 }
 
 
+
+
 // Función para generar el contenido con botón de "Leer más" y "Ocultar"
 function leer_mas_func($atts, $content = null)
 {
@@ -508,3 +510,35 @@ function fw_trans($key) {
     return $key;
 }
 
+
+
+function cf7_set_hidden_fields() {
+    // Recuperar datos usando PHP
+    $nametour = isset($_GET['nametour']) ? $_GET['nametour'] : '';
+    $fechat = isset($_GET['fechat']) ? $_GET['fechat'] : '';
+    $paxs = isset($_GET['paxs']) ? $_GET['paxs'] : '';
+	$paxss = str_replace("/", "", $paxs);
+
+    // Pasar los datos a JavaScript
+    ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Establecer valores de los campos ocultos solo si los elementos existen
+            var nametourEl = document.getElementById('nametour');
+            var fechatEl = document.getElementById('fechat');
+            var paxsEl = document.getElementById('paxs');
+            
+            if (nametourEl) {
+                nametourEl.value = "<?php echo esc_js($nametour); ?>";
+            }
+            if (fechatEl) {
+                fechatEl.value = "<?php echo esc_js($fechat); ?>";
+            }
+            if (paxsEl) {
+                paxsEl.value = "<?php echo esc_js($paxss); ?>";
+            }
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'cf7_set_hidden_fields');
