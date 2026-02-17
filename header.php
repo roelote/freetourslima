@@ -38,7 +38,7 @@
                                     <?php if( get_row_index() > 1 ): ?>
                                         <span class="text-[#5c5c5c]">|</span>
                                     <?php endif; ?>
-                                    <a href="<?php echo get_sub_field('url'); ?>" class="text-[14px] font-bold leading-[20px] text-[#5c5c5c] hover:text-[#f57921] transition-colors"><?php echo get_sub_field('texto'); ?></a>
+                                    <a href="<?php echo get_sub_field('url'); ?>" class="text-[14px] font-bold leading-[20px] text-[#5c5c5c] hover:text-[#f57921] transition-colors !no-underline"><?php echo get_sub_field('texto'); ?></a>
                                 <?php
                                 endwhile;
                                 endif;
