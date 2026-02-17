@@ -28,6 +28,16 @@
     @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff8110] focus:border-transparent transition-all;
 }
 
+.responsive-tabs .responsive-tabs__list__item:hover {
+  color: #ff8110 !important;
+  border-bottom: 2px solid #ff8110 !important;
+}
+
+.responsive-tabs .responsive-tabs__list__item--active, .responsive-tabs .responsive-tabs__list__item--active:hover
+{
+    @apply text-[#ff8110] !important;
+}
+
 .formcss textarea {
     @apply min-h-[120px] resize-y;
 }

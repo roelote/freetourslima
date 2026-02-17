@@ -638,6 +638,10 @@ video {
   top: 1rem;
 }
 
+.top-\[20px\] {
+  top: 20px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1738,6 +1742,16 @@ video {
   --tw-ring-color: rgb(255 129 16 / var(--tw-ring-opacity, 1));
 }
 
+.responsive-tabs .responsive-tabs__list__item:hover {
+  color: #ff8110 !important;
+  border-bottom: 2px solid #ff8110 !important;
+}
+
+.responsive-tabs .responsive-tabs__list__item--active, .responsive-tabs .responsive-tabs__list__item--active:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 129 16 / var(--tw-text-opacity, 1)) !important;
+}
+
 .formcss textarea {
   min-height: 120px;
   resize: vertical;
@@ -1920,14 +1934,6 @@ video {
     position: sticky;
   }
 
-  .md\:top-\[20px\] {
-    top: 20px;
-  }
-
-  .md\:z-10 {
-    z-index: 10;
-  }
-
   .md\:\!m-0 {
     margin: 0px !important;
   }
@@ -2097,10 +2103,6 @@ video {
 
   .md\:gap-\[90px\] {
     gap: 90px;
-  }
-
-  .md\:self-start {
-    align-self: flex-start;
   }
 
   .md\:rounded-none {
