@@ -778,6 +778,10 @@ video {
   margin-left: 0.75rem;
 }
 
+.ml-\[20px\] {
+  margin-left: 20px;
+}
+
 .ml-\[6px\] {
   margin-left: 6px;
 }
@@ -836,10 +840,6 @@ video {
 
 .mt-\[8px\] {
   margin-top: 8px;
-}
-
-.ml-\[20px\] {
-  margin-left: 20px;
 }
 
 .block {
