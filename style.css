@@ -44,7 +44,7 @@ a {
     color: var(--color-secondary);
     line-height: 27.2px;
     font-family: var(--font-nunito-sans);
-    font-weight: 400;
+    font-weight: 400 !important;
     text-decoration: underline;
 
 }
