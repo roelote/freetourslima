@@ -40,6 +40,14 @@ p {
     font-size: 16px;
 }
 
+.advgb-list
+{
+    color: var(--color-secondary) !important;
+    line-height: 27.2px !important;
+    font-family: var(--font-nunito-sans) !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+}
 a {
     color: var(--color-secondary);
     line-height: 27.2px;
