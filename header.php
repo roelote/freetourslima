@@ -139,6 +139,31 @@
         </div>
     </header>
 
+    <style>
+        /* Estilos para el menú */
+        #mobileMenu .menu-item a {
+            padding: 12px 20px;
+          
+            transition: all 0.3s ease;
+            display: block;
+            color: #5c5c5c;
+            font-weight: 500;
+        }
+
+        /* Hover */
+        #mobileMenu .menu-item a:hover {
+            background-color: #5c5c5c;
+            color: #ffffff;
+        }
+
+        /* Active - página actual */
+        #mobileMenu .menu-item.current-menu-item a,
+        #mobileMenu .menu-item.current_page_item a {
+            background-color: #5c5c5c;
+            color: #ffffff;
+        }
+    </style>
+
 <!-- Script del dropdown de usuario (debe estar fuera del condicional para funcionar con usuarios logueados) -->
 <script>
 jQuery(document).ready(function($) {
