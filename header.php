@@ -14,7 +14,7 @@
 <!-- header nuevo -->
 
     <header class="w-full">
-        <div class="container mx-auto mt-[8px] md:my-[10px] px-5 md:px-0 relative">
+        <div class="container mx-auto mt-[8px] md:my-[16px] px-5 md:px-0 relative">
             <div class="flex flex-col gap-[18px] justify-start items-center">
                 <div class="w-full">
                     <div class="flex flex-row justify-between items-center w-full h-[52px]">
