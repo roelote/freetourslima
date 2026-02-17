@@ -846,6 +846,14 @@ video {
   margin-top: 8px;
 }
 
+.mt-\[3\.6em\] {
+  margin-top: 3.6em;
+}
+
+.mt-\[2em\] {
+  margin-top: 2em;
+}
+
 .block {
   display: block;
 }
@@ -2042,6 +2050,10 @@ video {
 
   .md\:mt-\[3\.5em\] {
     margin-top: 3.5em;
+  }
+
+  .md\:mt-\[3\.6em\] {
+    margin-top: 3.6em;
   }
 
   .md\:inline {

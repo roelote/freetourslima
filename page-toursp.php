@@ -59,7 +59,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                 </div>
             </div>
             <div class="w-full md:w-[374px]">
-                <div class="w-full mt-[7.5em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[90px]">
+                <div class="w-full mt-[2em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[90px]">
                     <div class="w-full">
                         <div class="calendar-wrapper">
                            <form class="flex flex-col gap-[16px]" action="<?=$ruta?>" method="get" id="bookingForm">
