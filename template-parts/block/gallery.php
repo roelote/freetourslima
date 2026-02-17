@@ -52,7 +52,15 @@
                                                 class="w-full h-full rounded-[8px] object-cover" alt="<?php echo esc_attr($images[$i]['alt']); ?>" />
                                             <?php if ($i === 3 && $has_more): ?>
                                                 <div class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center">
-                                                    <span class="text-white text-[18px] font-bold">+<?php echo $total_images - 4; ?> Ver más</span>
+                                                    <span class="text-white text-[18px] font-bold">
+                                                        <?php 
+                                                        if (ICL_LANGUAGE_CODE == 'en') {
+                                                            echo 'See more +' . ($total_images - 4);
+                                                        } else {
+                                                            echo 'Ver más +' . ($total_images - 4);
+                                                        }
+                                                        ?>
+                                                    </span>
                                                 </div>
                                             <?php endif; ?>
                                         </div>
