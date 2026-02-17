@@ -86,11 +86,11 @@
                             <?php else : ?>
                                 <!-- Usuario no logueado -->
                                 <div class="relative ml-3" id="user-dropdown-container">
-                                    <button id="user-dropdown-trigger" class="flex items-center gap-2 hover:bg-[#f57921] hover:text-white bg-[#5c5c5c] text-white rounded px-3 py-1 transition-all">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <button id="user-dropdown-trigger" class="flex items-center gap-2  border-[#5c5c5c] border-2 rounded-full hover:text-white  text-white  px-3 py-1 transition-all">
+                                        <svg class="w-4 h-4" fill="none" stroke="#f57921" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                                         </svg>
-                                        <svg class="w-4 h-4 transition-transform" id="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg class="w-4 h-4 transition-transform" id="dropdown-arrow" fill="none" stroke="#f57921" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                         </svg>
                                     </button>
