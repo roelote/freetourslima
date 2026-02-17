@@ -35,6 +35,17 @@ if (ICL_LANGUAGE_CODE == 'en') {
 
 <main class="container mx-auto px-4 md:px-0">
     <section class="w-full">
+          <?php
+    if (function_exists('yoast_breadcrumb')) {
+        yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
+    }
+    ?>
+                    <h1
+                            class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
+                            <?php the_title(); ?>
+
+                        </h1>
+                        
         <div class="flex flex-col lg:flex-row gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
 
