@@ -57,6 +57,9 @@ a {
     text-decoration: underline;
 
 }
+.toursRelatedSwiper .swiper-button-next, .toursRelatedSwiper .swiper-button-prev {
+    top: 18% !important;
+}
 
 h1 {
     font-size: 32px !important;
