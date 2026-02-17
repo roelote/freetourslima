@@ -1920,6 +1920,14 @@ video {
     position: sticky;
   }
 
+  .md\:top-\[20px\] {
+    top: 20px;
+  }
+
+  .md\:z-10 {
+    z-index: 10;
+  }
+
   .md\:\!m-0 {
     margin: 0px !important;
   }
@@ -1973,6 +1981,10 @@ video {
 
   .md\:mr-auto {
     margin-right: auto;
+  }
+
+  .md\:mt-\[105px\] {
+    margin-top: 105px;
   }
 
   .md\:mt-\[32px\] {
@@ -2085,6 +2097,10 @@ video {
 
   .md\:gap-\[90px\] {
     gap: 90px;
+  }
+
+  .md\:self-start {
+    align-self: flex-start;
   }
 
   .md\:rounded-none {
