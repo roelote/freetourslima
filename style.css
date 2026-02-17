@@ -45,6 +45,7 @@ a {
     line-height: 27.2px;
     font-family: var(--font-nunito-sans);
     font-weight: 400;
+    text-decoration: underline;
 
 }
 

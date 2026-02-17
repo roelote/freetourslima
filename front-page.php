@@ -123,7 +123,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                                 <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/fd7236a2c69ae4d83a21f84343e60db85f3d05b7.png"
                                                     class="w-[20px] h-[20px]" alt="contact icon" />
                                                 <?php if (!empty($details2['link'])) { ?>
-                                                    <a href="<?php echo esc_url($details2['link']); ?>" class="!mb-0 text-[#1ab6b6] hover:underline font-semibold">
+                                                    <a href="<?php echo esc_url($details2['link']); ?>" class="!mb-0 hover:underline font-semibold">
                                                         <?php echo esc_html($details2['question']); ?>
                                                     </a>
                                                 <?php } else { ?>
