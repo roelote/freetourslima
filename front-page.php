@@ -1,8 +1,8 @@
-<?php get_header(); 
+<?php get_header();
 if (ICL_LANGUAGE_CODE == 'en') {
-	$ruta = '/bookfwt';
+    $ruta = '/bookfwt';
 } elseif (ICL_LANGUAGE_CODE == 'es') {
-	$ruta = '/es/bookfwt';
+    $ruta = '/es/bookfwt';
 }
 
 ?>
@@ -11,11 +11,11 @@ if (ICL_LANGUAGE_CODE == 'en') {
 <main class="container mx-auto px-4 mt-[20px] md:mt-[48px] md:px-0">
     <section class="w-full">
 
-    <h1
-                            class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
-                            <?php the_title(); ?>
+        <h1
+            class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
+            <?php the_title(); ?>
 
-                        </h1>
+        </h1>
 
         <div class="flex flex-col lg:flex-row justify-between gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
@@ -32,9 +32,9 @@ if (ICL_LANGUAGE_CODE == 'en') {
                 <div class="w-full mt-0 md:mt-[3.6em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[100px]">
                     <div class="w-full">
                         <div class="calendar-wrapper">
-                            <form class="flex flex-col gap-[16px]" action="<?=$ruta?>" method="get" id="bookingForm">
-							<input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
-							<input type="hidden" name="nametour" value="<?=the_title() ; ?>">
+                            <form class="flex flex-col gap-[16px]" action="<?= $ruta ?>" method="get" id="bookingForm">
+                                <input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
+                                <input type="hidden" name="nametour" value="<?= the_title(); ?>">
                                 <div id="calendar-inline" class="w-full"></div>
                                 <input type="text" id="date-selected" name="date" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
                                 <input type="number" name="personas" class="w-full p-3 rounded-[8px]" min="0" max="30" placeholder="Personas">
@@ -42,7 +42,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             </form>
                         </div>
                     </div>
-                    <div >
+                    <div class="sticky top-0">
                         <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[105px] sticky top-[20px]">
                             <!-- Details Card -->
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
@@ -127,8 +127,9 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                         <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
                                         <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
                                             <div class="flex flex-row items-center gap-[8px]">
-                                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/fd7236a2c69ae4d83a21f84343e60db85f3d05b7.png"
-                                                    class="w-[20px] h-[20px]" alt="contact icon" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0C13.7543 0 15.9163 0.86051 17.5104 2.39223C19.1045 3.92395 20 6.0014 20 8.16758C20 10.3338 19.1045 12.4112 17.5104 13.9429C15.9163 15.4746 13.7543 16.3352 11.5 16.3352H11V17.2864C11 17.414 10.9738 17.5402 10.923 17.6581C10.8722 17.7759 10.7977 17.8829 10.7038 17.973C10.6099 18.0632 10.4985 18.1346 10.3758 18.1833C10.2532 18.2321 10.1217 18.2571 9.989 18.2569C7.529 18.255 5.037 17.4661 3.146 15.8509C1.238 14.2193 0.002 11.7949 0 8.65667V8.16758C0 6.0014 0.895533 3.92395 2.48959 2.39223C4.08365 0.86051 6.24566 0 8.5 0H11.5ZM6.5 6.72624C6.10218 6.72624 5.72064 6.8781 5.43934 7.1484C5.15804 7.4187 5 7.78531 5 8.16758C5 8.54985 5.15804 8.91646 5.43934 9.18676C5.72064 9.45706 6.10218 9.60892 6.5 9.60892C6.89782 9.60892 7.27936 9.45706 7.56066 9.18676C7.84196 8.91646 8 8.54985 8 8.16758C8 7.78531 7.84196 7.4187 7.56066 7.1484C7.27936 6.8781 6.89782 6.72624 6.5 6.72624ZM13.5 6.72624C13.1022 6.72624 12.7206 6.8781 12.4393 7.1484C12.158 7.4187 12 7.78531 12 8.16758C12 8.54985 12.158 8.91646 12.4393 9.18676C12.7206 9.45706 13.1022 9.60892 13.5 9.60892C13.8978 9.60892 14.2794 9.45706 14.5607 9.18676C14.842 8.91646 15 8.54985 15 8.16758C15 7.78531 14.842 7.4187 14.5607 7.1484C14.2794 6.8781 13.8978 6.72624 13.5 6.72624Z" fill="#FF8110" />
+                                                </svg>
                                                 <?php if (!empty($details2['link'])) { ?>
                                                     <a href="<?php echo esc_url($details2['link']); ?>" class="!mb-0 hover:underline font-semibold">
                                                         <?php echo esc_html($details2['question']); ?>
@@ -173,7 +174,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                     $page_id = get_the_ID();
                     $parent_id = wp_get_post_parent_id($page_id);
                     $current_lang = ICL_LANGUAGE_CODE;
-                    
+
                     if ($parent_id) {
                         $args = array(
                             'post_parent' => $parent_id,
@@ -197,7 +198,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             'suppress_filters' => false,
                         );
                         $children = get_children($args);
-                        
+
                         if (empty($children)) {
                             $args = array(
                                 'post_type'   => 'page',
@@ -212,120 +213,135 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             $children = get_posts($args);
                         }
                     }
-                    
+
                     // Filtrar por idioma actual
                     if (!empty($children) && function_exists('icl_object_id')) {
-                        $children = array_filter($children, function($child) use ($current_lang) {
+                        $children = array_filter($children, function ($child) use ($current_lang) {
                             $lang_info = apply_filters('wpml_post_language_details', NULL, $child->ID);
                             return $lang_info && $lang_info['language_code'] === $current_lang;
                         });
                     }
 
-            if ($children) {
-                foreach ($children as $child) {
-                    $details = get_field('details', $child->ID);
+                    if ($children) {
+                        foreach ($children as $child) {
+                            $details = get_field('details', $child->ID);
 
-                    $price = isset($details['price']) ? $details['price'] : '';
-                    $duration = isset($details['duration']) ? $details['duration'] : '';
-                    $lang = isset($details['lang']) ? $details['lang'] : '';
-                    $hours_tour = isset($details['hours_tour']) ? $details['hours_tour'] : '';
-            ?>
-                    <div class="swiper-slide">
-                        <div class="w-full flex flex-col justify-start items-center">
-                        <?php 
-                        echo get_the_post_thumbnail($child->ID, 'boxst', array(
-                            'alt' => get_the_title($child->ID), 
-                            'title' => get_the_title($child->ID),
-                            'class' => 'w-full h-[252px] rounded-t-[8px] object-cover'
-                        )); 
-                        ?>
-                        <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
-                            <h2 class="text-center font-inter !text-[20px]"><?php echo get_the_title($child->ID); ?></h2>
-                            <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
-                                <?php if ($duration) : ?>
-                                <li class="flex">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/1-4.png"
-                                        class="w-[20px] h-[20px]" alt="duration" />
-                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
-                                        <?php echo esc_html($duration); ?>
-                                    </p>
-                                </li>
-                                <?php endif; ?>
-                                
-                                <?php if ($lang) : ?>
-                                <li class="flex">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/2-4.png"
-                                        class="w-[20px] h-[20px]" alt="language" />
-                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
-                                        <?php echo esc_html($lang); ?>
-                                    </p>
-                                </li>
-                                <?php endif; ?>
-                                
-                                <?php if ($hours_tour) : ?>
-                                <li class="flex">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/3-4.png"
-                                        class="w-[20px] h-[20px]" alt="time" />
-                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[6px]">
-                                        <?php echo esc_html($hours_tour); ?>
-                                    </p>
-                                </li>
-                                <?php endif; ?>
-                                
-                                <?php if ($price) : ?>
-                                <li class="flex">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/sistema-de-comentarios-FWTC-12.png"
-                                        class="w-[20px] h-[20px]" alt="price" />
-                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
-                                        <?php echo esc_html($price); ?>
-                                    </p>
-                                </li>
-                                <?php endif; ?>
+                            $price = isset($details['price']) ? $details['price'] : '';
+                            $duration = isset($details['duration']) ? $details['duration'] : '';
+                            $lang = isset($details['lang']) ? $details['lang'] : '';
+                            $hours_tour = isset($details['hours_tour']) ? $details['hours_tour'] : '';
+                    ?>
+                            <div class="swiper-slide">
+                                <div class="w-full flex flex-col justify-start items-center">
+                                    <?php
+                                    echo get_the_post_thumbnail($child->ID, 'boxst', array(
+                                        'alt' => get_the_title($child->ID),
+                                        'title' => get_the_title($child->ID),
+                                        'class' => 'w-full h-[252px] rounded-t-[8px] object-cover'
+                                    ));
+                                    ?>
+                                    <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
+                                        <h2 class="text-center font-inter !text-[20px]"><?php echo get_the_title($child->ID); ?></h2>
+                                        <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
+                                            <?php if ($duration) : ?>
+                                                <li class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20C4.477 20 0 15.523 0 10ZM11 6C11 5.73478 10.8946 5.48043 10.7071 5.29289C10.5196 5.10536 10.2652 5 10 5C9.73478 5 9.48043 5.10536 9.29289 5.29289C9.10536 5.48043 9 5.73478 9 6V10C9.00006 10.2652 9.10545 10.5195 9.293 10.707L12.293 13.707C12.4816 13.8892 12.7342 13.99 12.9964 13.9877C13.2586 13.9854 13.5094 13.8802 13.6948 13.6948C13.8802 13.5094 13.9854 13.2586 13.9877 12.9964C13.99 12.7342 13.8892 12.4816 13.707 12.293L11 9.586V6Z" fill="#FF8110" />
+                                                    </svg>
+                                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
+                                                        <?php echo esc_html($duration); ?>
+                                                    </p>
+                                                </li>
+                                            <?php endif; ?>
 
-                                <li class="flex">
-                                    <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/4-4.png"
-                                        class="w-[20px] h-[20px]" alt="rating" />
-                                    <div class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
-                                        <?php echo do_shortcode('[comentarios_resumen_simple post_id="' . $child->ID . '"]'); ?>
+                                            <?php if ($lang) : ?>
+                                                <li class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path d="M6.61111 11.5556H3.97778C3.70938 10.5359 3.70938 9.46412 3.97778 8.44445H6.61111C6.54376 8.96035 6.50666 9.47976 6.5 10C6.50666 10.5202 6.54376 11.0396 6.61111 11.5556ZM4.62222 6.88889H6.88889C7.14757 5.92896 7.5128 5.00097 7.97778 4.12222C6.56039 4.60634 5.36763 5.58976 4.62222 6.88889ZM15.3778 6.88889C14.6257 5.591 13.4301 4.60849 12.0111 4.12222C12.4815 4.99722 12.8434 5.92629 13.0889 6.88889M10 16.1889C10.6603 15.2507 11.1631 14.2111 11.4889 13.1111H8.51111C8.83685 14.2111 9.33975 15.2507 10 16.1889ZM10 3.8C9.33867 4.7416 8.83573 5.78499 8.51111 6.88889H11.4889C11.1643 5.78499 10.6613 4.7416 10 3.8ZM4.62222 13.1111C5.37154 14.4069 6.56288 15.3892 7.97778 15.8778C7.5128 14.999 7.14757 14.071 6.88889 13.1111M20 2.22222V17.7778C20 18.3671 19.7659 18.9324 19.3491 19.3491C18.9324 19.7659 18.3671 20 17.7778 20H2.22222C1.63285 20 1.06762 19.7659 0.650874 19.3491C0.234126 18.9324 0 18.3671 0 17.7778V2.22222C0 1.63285 0.234126 1.06762 0.650874 0.650874C1.06762 0.234126 1.63285 0 2.22222 0H17.7778C18.3671 0 18.9324 0.234126 19.3491 0.650874C19.7659 1.06762 20 1.63285 20 2.22222ZM17.7778 10C17.7778 8.4617 17.3216 6.95795 16.467 5.6789C15.6124 4.39985 14.3976 3.40295 12.9764 2.81427C11.5552 2.22559 9.99137 2.07156 8.48263 2.37167C6.97389 2.67178 5.58802 3.41254 4.50028 4.50028C3.41254 5.58802 2.67178 6.97389 2.37167 8.48263C2.07156 9.99137 2.22559 11.5552 2.81427 12.9764C3.40295 14.3976 4.39985 15.6124 5.6789 16.467C6.95795 17.3216 8.4617 17.7778 10 17.7778C12.0628 17.7778 14.0411 16.9583 15.4997 15.4997C16.9583 14.0411 17.7778 12.0628 17.7778 10ZM13.5 10C13.4933 10.5202 13.4562 11.0396 13.3889 11.5556H16.0222C16.2906 10.5359 16.2906 9.46412 16.0222 8.44445H13.3889C13.4562 8.96035 13.4933 9.47976 13.5 10ZM12.0111 15.8778C13.4291 15.3897 14.6242 14.4077 15.3778 13.1111H13.0889C12.8434 14.0737 12.4815 15.0028 12.0111 15.8778ZM8.17778 8.44445C8.01174 9.47484 8.01174 10.5252 8.17778 11.5556H11.8222C11.8994 11.0405 11.9402 10.5207 11.9444 10C11.9402 9.47926 11.8994 8.95946 11.8222 8.44445H8.17778Z" fill="#FF8110" />
+                                                    </svg>
+                                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
+                                                        <?php echo esc_html($lang); ?>
+                                                    </p>
+                                                </li>
+                                            <?php endif; ?>
+
+                                            <?php if ($hours_tour) : ?>
+                                                <li class="flex">
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <mask id="mask0_1397_32" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                                                            <path d="M0 0H20V20H0V0Z" fill="white" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99981 7.30769C9.28577 7.30769 8.60097 7.59134 8.09606 8.09625C7.59116 8.60115 7.3075 9.28595 7.3075 10C7.3075 10.714 7.59116 11.3988 8.09606 11.9037C8.60097 12.4086 9.28577 12.6923 9.99981 12.6923C10.7139 12.6923 11.3987 12.4086 11.9036 11.9037C12.4085 11.3988 12.6921 10.714 12.6921 10C12.6921 9.28595 12.4085 8.60115 11.9036 8.09625C11.3987 7.59134 10.7139 7.30769 9.99981 7.30769ZM5.76904 10C5.76904 8.87793 6.21478 7.80181 7.00821 7.00839C7.80163 6.21497 8.87774 5.76923 9.99981 5.76923C11.1219 5.76923 12.198 6.21497 12.9914 7.00839C13.7848 7.80181 14.2306 8.87793 14.2306 10C14.2306 11.1221 13.7848 12.1982 12.9914 12.9916C12.198 13.785 11.1219 14.2308 9.99981 14.2308C8.87774 14.2308 7.80163 13.785 7.00821 12.9916C6.21478 12.1982 5.76904 11.1221 5.76904 10Z" fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99977 8.26923C10.1528 8.26923 10.2995 8.33001 10.4077 8.4382C10.5159 8.5464 10.5767 8.69314 10.5767 8.84615V10C10.5767 10.153 10.5159 10.2997 10.4077 10.4079C10.2995 10.5161 10.1528 10.5769 9.99977 10.5769C9.84677 10.5769 9.70002 10.5161 9.59183 10.4079C9.48363 10.2997 9.42285 10.153 9.42285 10V8.84615C9.42285 8.69314 9.48363 8.5464 9.59183 8.4382C9.70002 8.33001 9.84677 8.26923 9.99977 8.26923Z" fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.731 10C11.731 10.153 11.6702 10.2998 11.562 10.408C11.4538 10.5161 11.3071 10.5769 11.1541 10.5769H10.0002C9.84722 10.5769 9.70047 10.5161 9.59228 10.408C9.48409 10.2998 9.4233 10.153 9.4233 10C9.4233 9.847 9.48409 9.70026 9.59228 9.59206C9.70047 9.48387 9.84722 9.42309 10.0002 9.42309H11.1541C11.3071 9.42309 11.4538 9.48387 11.562 9.59206C11.6702 9.70026 11.731 9.847 11.731 10ZM8.07715 4.23078C8.07715 4.02677 8.15819 3.83111 8.30245 3.68685C8.44671 3.54259 8.64237 3.46155 8.84638 3.46155H11.1541C11.3581 3.46155 11.5537 3.54259 11.698 3.68685C11.8423 3.83111 11.9233 4.02677 11.9233 4.23078C11.9233 4.43479 11.8423 4.63045 11.698 4.77471C11.5537 4.91897 11.3581 5.00001 11.1541 5.00001H8.84638C8.64237 5.00001 8.44671 4.91897 8.30245 4.77471C8.15819 4.63045 8.07715 4.43479 8.07715 4.23078Z" fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05754 3.49077C9.15475 3.5185 9.24554 3.56512 9.32472 3.62796C9.40389 3.6908 9.46991 3.76864 9.51899 3.85701C9.56807 3.94538 9.59925 4.04256 9.61075 4.14299C9.62225 4.24342 9.61384 4.34513 9.586 4.44231L8.81677 7.13461C8.78899 7.23179 8.74234 7.32255 8.67949 7.4017C8.61664 7.48085 8.53881 7.54684 8.45045 7.59592C8.36209 7.64499 8.26493 7.67618 8.16452 7.6877C8.06411 7.69922 7.96241 7.69086 7.86523 7.66308C7.76805 7.6353 7.6773 7.58865 7.59815 7.52579C7.519 7.46294 7.453 7.38511 7.40393 7.29675C7.35486 7.2084 7.32367 7.11124 7.31215 7.01083C7.30062 6.91041 7.30899 6.80872 7.33677 6.71154L8.106 4.01923C8.13373 3.92202 8.18035 3.83123 8.24319 3.75205C8.30604 3.67288 8.38387 3.60686 8.47224 3.55778C8.56061 3.5087 8.65779 3.47752 8.75822 3.46602C8.85865 3.45452 8.96036 3.46293 9.05754 3.49077ZM9.05754 16.5092C9.15475 16.4815 9.24554 16.4349 9.32472 16.372C9.40389 16.3092 9.46991 16.2314 9.51899 16.143C9.56807 16.0546 9.59925 15.9574 9.61075 15.857C9.62225 15.7566 9.61384 15.6549 9.586 15.5577L8.81677 12.8654C8.78899 12.7682 8.74234 12.6775 8.67949 12.5983C8.61664 12.5192 8.53881 12.4532 8.45045 12.4041C8.36209 12.355 8.26493 12.3238 8.16452 12.3123C8.06411 12.3008 7.96241 12.3091 7.86523 12.3369C7.76805 12.3647 7.6773 12.4113 7.59815 12.4742C7.519 12.5371 7.453 12.6149 7.40393 12.7032C7.35486 12.7916 7.32367 12.8888 7.31215 12.9892C7.30062 13.0896 7.30899 13.1913 7.33677 13.2885L8.106 15.9808C8.13373 16.078 8.18035 16.1688 8.24319 16.2479C8.30604 16.3271 8.38387 16.3931 8.47224 16.4422C8.56061 16.4913 8.65779 16.5225 8.75822 16.534C8.85865 16.5455 8.96036 16.5371 9.05754 16.5092ZM10.9422 16.5092C10.845 16.4814 10.7543 16.4347 10.6752 16.3719C10.5961 16.309 10.5302 16.2311 10.4812 16.1428C10.4322 16.0544 10.4011 15.9573 10.3896 15.8569C10.3782 15.7565 10.3866 15.6548 10.4145 15.5577L11.1837 12.8654C11.2115 12.7683 11.2581 12.6776 11.3209 12.5984C11.3838 12.5193 11.4616 12.4534 11.5499 12.4044C11.6382 12.3553 11.7353 12.3242 11.8357 12.3127C11.9361 12.3012 12.0377 12.3095 12.1348 12.3373C12.232 12.3651 12.3227 12.4117 12.4018 12.4746C12.4809 12.5374 12.5468 12.6152 12.5959 12.7035C12.6449 12.7918 12.6761 12.889 12.6876 12.9893C12.6991 13.0897 12.6907 13.1913 12.6629 13.2885L11.8937 15.9808C11.866 16.078 11.8193 16.1688 11.7565 16.2479C11.6937 16.3271 11.6158 16.3931 11.5275 16.4422C11.4391 16.4913 11.3419 16.5225 11.2415 16.534C11.141 16.5455 11.0393 16.5371 10.9422 16.5092ZM10.9422 3.49077C10.845 3.51858 10.7543 3.56526 10.6752 3.62814C10.5961 3.69101 10.5302 3.76886 10.4812 3.85722C10.4322 3.94558 10.4011 4.04273 10.3896 4.14313C10.3782 4.24352 10.3866 4.34518 10.4145 4.44231L11.1837 7.13461C11.2115 7.23174 11.2581 7.32245 11.3209 7.40155C11.3838 7.48065 11.4616 7.54661 11.5499 7.59564C11.6382 7.64468 11.7353 7.67584 11.8357 7.68734C11.9361 7.69885 12.0377 7.69047 12.1348 7.66269C12.232 7.63491 12.3227 7.58827 12.4018 7.52544C12.4809 7.4626 12.5468 7.38481 12.5959 7.29648C12.6449 7.20816 12.6761 7.11104 12.6876 7.01068C12.6991 6.91031 12.6907 6.80867 12.6629 6.71154L11.8937 4.01923C11.866 3.92202 11.8193 3.83123 11.7565 3.75205C11.6937 3.67288 11.6158 3.60686 11.5275 3.55778C11.4391 3.5087 11.3419 3.47752 11.2415 3.46602C11.141 3.45452 11.0393 3.46293 10.9422 3.49077Z" fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07715 15.7692C8.07715 15.5652 8.15819 15.3696 8.30245 15.2253C8.44671 15.081 8.64237 15 8.84638 15H11.1541C11.3581 15 11.5537 15.081 11.698 15.2253C11.8423 15.3696 11.9233 15.5652 11.9233 15.7692C11.9233 15.9732 11.8423 16.1689 11.698 16.3132C11.5537 16.4574 11.3581 16.5385 11.1541 16.5385H8.84638C8.64237 16.5385 8.44671 16.4574 8.30245 16.3132C8.15819 16.1689 8.07715 15.9732 8.07715 15.7692Z" fill="black" />
+                                                        </mask>
+                                                        <g mask="url(#mask0_1397_32)">
+                                                            <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#FF8110" />
+                                                        </g>
+                                                    </svg>
+                                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[6px]">
+                                                        <?php echo esc_html($hours_tour); ?>
+                                                    </p>
+                                                </li>
+                                            <?php endif; ?>
+
+                                            <?php if ($price) : ?>
+                                                <li class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.137 2.72821L15.967 4.55819C18.656 7.24816 20 8.59214 20 10.2621C20 11.9331 18.656 13.2771 15.967 15.966C13.277 18.656 11.9329 20 10.2619 20C8.59192 20 7.24691 18.656 4.5579 15.967L2.72788 14.1371C1.18287 12.5911 0.409869 11.8191 0.122867 10.8161C-0.165135 9.81312 0.0808668 8.74814 0.57287 6.61916L0.855872 5.39118C1.26887 3.5992 1.47588 2.70321 2.08888 2.08922C2.70188 1.47523 3.59889 1.26923 5.3909 0.856235L6.61891 0.572238C8.74893 0.0812444 9.81293 -0.164753 10.8159 0.122244C11.8189 0.41024 12.5919 1.18323 14.137 2.72821ZM9.14593 12.3281C8.47292 11.6561 8.47792 10.6901 8.88093 9.92512C8.78116 9.78102 8.73501 9.60652 8.7505 9.43194C8.76599 9.25735 8.84213 9.09371 8.96571 8.96942C9.08929 8.84513 9.2525 8.76804 9.427 8.75155C9.60149 8.73506 9.77625 8.7802 9.92093 8.87914C10.2609 8.69914 10.6339 8.60314 11.0059 8.60714C11.2049 8.609 11.3949 8.68979 11.5342 8.83176C11.6736 8.97372 11.7508 9.16522 11.7489 9.36413C11.7471 9.56304 11.6663 9.75307 11.5243 9.8924C11.3824 10.0317 11.1909 10.109 10.9919 10.1071C10.7604 10.1157 10.5416 10.2152 10.3829 10.3841C9.99593 10.7711 10.0969 11.1591 10.2059 11.2681C10.3159 11.3771 10.7029 11.4781 11.0899 11.0911C11.8739 10.3071 13.228 10.0471 14.095 10.9141C14.768 11.5871 14.763 12.5531 14.36 13.3181C14.4591 13.4622 14.5047 13.6365 14.489 13.8107C14.4732 13.9849 14.397 14.1482 14.2736 14.2722C14.1502 14.3961 13.9873 14.4731 13.8132 14.4897C13.639 14.5063 13.4646 14.4615 13.32 14.3631C12.8712 14.6093 12.3507 14.6913 11.8479 14.5951C11.653 14.555 11.482 14.4392 11.3724 14.273C11.2629 14.1069 11.2239 13.904 11.2639 13.7091C11.304 13.5141 11.4198 13.3431 11.586 13.2336C11.7522 13.1241 11.955 13.085 12.1499 13.1251C12.3269 13.1621 12.613 13.1041 12.858 12.8591C13.245 12.4711 13.144 12.0841 13.035 11.9751C12.925 11.8661 12.538 11.7651 12.1509 12.1521C11.3669 12.9361 10.0129 13.1961 9.14593 12.3281ZM8.01992 8.29314C8.20561 8.10739 8.35289 7.88688 8.45336 7.64421C8.55383 7.40154 8.60552 7.14146 8.60548 6.87881C8.60543 6.61616 8.55365 6.35609 8.45309 6.11346C8.35254 5.87082 8.20518 5.65037 8.01942 5.46468C7.83366 5.27899 7.61315 5.13171 7.37048 5.03124C7.1278 4.93077 6.86771 4.87909 6.60506 4.87913C6.3424 4.87918 6.08233 4.93096 5.83969 5.03151C5.59705 5.13207 5.37659 5.27943 5.1909 5.46518C4.81588 5.84032 4.60525 6.34907 4.60535 6.87951C4.60544 7.40995 4.81625 7.91863 5.1914 8.29364C5.56655 8.66865 6.07531 8.87928 6.60576 8.87919C7.13621 8.87909 7.6449 8.66829 8.01992 8.29314Z" fill="#FF8110" />
+                                                    </svg>
+                                                    <p class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
+                                                        <?php echo esc_html($price); ?>
+                                                    </p>
+                                                </li>
+                                            <?php endif; ?>
+
+                                            <li class="flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M18 0H2C0.9 0 0 0.968054 0 2.15123V18.9201C0 19.8774 1.08 20.3614 1.71 19.6838L4 17.2098H18C19.1 17.2098 20 16.2418 20 15.0586V2.15123C20 0.968054 19.1 0 18 0ZM11.57 10.2936L10.45 12.9181C10.4102 13.012 10.3462 13.0916 10.2655 13.1475C10.1848 13.2033 10.0909 13.233 9.995 13.233C9.89907 13.233 9.80517 13.2033 9.72449 13.1475C9.64382 13.0916 9.57977 13.012 9.54 12.9181L8.42 10.2936L5.98 9.08895C5.89271 9.04617 5.8187 8.97728 5.7668 8.8905C5.7149 8.80373 5.6873 8.70272 5.6873 8.59954C5.6873 8.49636 5.7149 8.39536 5.7668 8.30858C5.8187 8.2218 5.89271 8.15292 5.98 8.11014L8.42 6.90545L9.54 4.28095C9.57977 4.18705 9.64382 4.10745 9.72449 4.05162C9.80517 3.9958 9.89907 3.96612 9.995 3.96612C10.0909 3.96612 10.1848 3.9958 10.2655 4.05162C10.3462 4.10745 10.4102 4.18705 10.45 4.28095L11.57 6.90545L14.01 8.11014C14.0973 8.15292 14.1713 8.2218 14.2232 8.30858C14.2751 8.39536 14.3027 8.49636 14.3027 8.59954C14.3027 8.70272 14.2751 8.80373 14.2232 8.8905C14.1713 8.97728 14.0973 9.04617 14.01 9.08895L11.57 10.2936Z" fill="#FF8110" />
+                                                </svg>
+                                                <div class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
+                                                    <?php echo do_shortcode('[comentarios_resumen_simple post_id="' . $child->ID . '"]'); ?>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
+                                            <a href="<?php echo esc_url(get_permalink($child->ID)); ?>"
+                                                class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
+                                                Book Now!
+                                            </a>
+                                        <?php } else { ?>
+                                            <a href="<?php echo esc_url(get_permalink($child->ID)); ?>"
+                                                class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
+                                                ¡Reserva ya!
+                                            </a>
+                                        <?php } ?>
                                     </div>
-                                </li>
-                            </ul>
-                            <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-                                <a href="<?php echo esc_url(get_permalink($child->ID)); ?>" 
-                                   class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
-                                    Book Now!
-                                </a>
-                            <?php } else { ?>
-                                <a href="<?php echo esc_url(get_permalink($child->ID)); ?>" 
-                                   class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
-                                    ¡Reserva ya!
-                                </a>
-                            <?php } ?>
-                        </div>
-                        </div>
-                    </div>
-            <?php
-                }
-            } else {
-                if (ICL_LANGUAGE_CODE == 'en') {
-                    echo '<div class="swiper-slide"><p class="text-center w-full">No related tours found.</p></div>';
-                } else {
-                    echo '<div class="swiper-slide"><p class="text-center w-full">No se encontraron tours relacionados.</p></div>';
-                }
-            }
-            ?>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    } else {
+                        if (ICL_LANGUAGE_CODE == 'en') {
+                            echo '<div class="swiper-slide"><p class="text-center w-full">No related tours found.</p></div>';
+                        } else {
+                            echo '<div class="swiper-slide"><p class="text-center w-full">No se encontraron tours relacionados.</p></div>';
+                        }
+                    }
+                    ?>
                 </div>
-                
+
                 <!-- Navigation buttons -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                
+
                 <!-- Pagination -->
                 <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
-    
+
     <style>
         .toursRelatedSwiper .swiper-button-next,
         .toursRelatedSwiper .swiper-button-prev {
@@ -336,46 +352,46 @@ if (ICL_LANGUAGE_CODE == 'en') {
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             top: 35%;
         }
-        
+
         .toursRelatedSwiper .swiper-button-next:after,
         .toursRelatedSwiper .swiper-button-prev:after {
             font-size: 20px;
             font-weight: bold;
             color: #ff8800;
         }
-        
+
         .toursRelatedSwiper .swiper-button-next:hover,
         .toursRelatedSwiper .swiper-button-prev:hover {
             background: #f5f5f5;
         }
     </style>
-    
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const swiper = new Swiper('.toursRelatedSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.toursRelatedSwiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
                 },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
-            },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
         });
-    });
     </script>
 </section>
 
