@@ -30,12 +30,14 @@
 
                         <div class="hidden lg:flex flex-row items-center">
                             <div class="flex items-center gap-3">
-                                <a href="<?php the_field('whatsapp_link', 'option'); ?>" class="text-[14px] font-bold leading-[20px] text-[#5c5c5c] hover:text-[#f57921] transition-colors"><?php the_field('whatsapp_numero', 'option'); ?></a>
+                              
                                 
                                 <?php
                                 if( have_rows('box_top','option') ):
                                 while( have_rows('box_top','option') ) : the_row(); ?>
-                                    <span class="text-[#5c5c5c]">|</span>
+                                    <?php if( get_row_index() > 1 ): ?>
+                                        <span class="text-[#5c5c5c]">|</span>
+                                    <?php endif; ?>
                                     <a href="<?php echo get_sub_field('url'); ?>" class="text-[14px] font-bold leading-[20px] text-[#5c5c5c] hover:text-[#f57921] transition-colors"><?php echo get_sub_field('texto'); ?></a>
                                 <?php
                                 endwhile;
