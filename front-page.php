@@ -153,9 +153,9 @@ if (ICL_LANGUAGE_CODE == 'en') {
 <section class="mb-[88px] container-related-tours">
     <div class="container">
         <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-            <h2 class="text-center text-[28px] md:text-[36px] font-bold mb-[32px] text-[#5c5c5c]">Related Tours</h2>
+            <h2 class="text-[28px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Things to do in Cusco</h2>
         <?php } else { ?>
-            <h2 class="text-center text-[28px] md:text-[36px] font-bold mb-[32px] text-[#5c5c5c]">Tours Relacionados</h2>
+            <h2 class="text-[28px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Qué hacer en Cusco</h2>
         <?php } ?>
 
         <div class="w-full relative">
