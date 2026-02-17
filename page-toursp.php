@@ -33,7 +33,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
 ?>
 
 
-<main class="container mx-auto px-4 md:px-0">
+<main class="container mx-auto px-4 md:px-0 mt-[20px] md:mt-[48px]">
     <section class="w-full">
           <?php
     if (function_exists('yoast_breadcrumb')) {
@@ -45,7 +45,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             <?php the_title(); ?>
 
                         </h1>
-                        
+
         <div class="flex flex-col lg:flex-row gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
 
