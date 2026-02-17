@@ -172,10 +172,7 @@ h4 {
     margin-bottom: 8px !important;
 }
 
-.responsive-tabs .responsive-tabs__heading:focus,
-.responsive-tabs .responsive-tabs__list__item:focus {
-    outline: 1px solid #ddd !important;
-}
+
 
 @media (max-width: 991px) {
 .responsive-tabs-wrapper .responsive-tabs__panel--active {

@@ -1747,6 +1747,17 @@ video {
   border-bottom: 2px solid #ff8110 !important;
 }
 
+.responsive-tabs .responsive-tabs__list__item
+{
+  border:0px !important;
+  background:#efede7 !important;
+}
+
+.responsive-tabs .responsive-tabs__heading:focus, .responsive-tabs .responsive-tabs__list__item:focus
+{
+  outline: 0px solid #ddd !important;
+}
+
 .responsive-tabs .responsive-tabs__list__item--active, .responsive-tabs .responsive-tabs__list__item--active:hover {
   --tw-text-opacity: 1 !important;
   color: rgb(255 129 16 / var(--tw-text-opacity, 1)) !important;
