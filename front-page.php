@@ -279,7 +279,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                     <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/4-4.png"
                                         class="w-[20px] h-[20px]" alt="rating" />
                                     <div class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
-                                        <?php echo do_shortcode('[comentarios_resumen post_id="' . $child->ID . '"]'); ?>
+                                        <?php echo do_shortcode('[comentarios_resumen_simple post_id="' . $child->ID . '"]'); ?>
                                     </div>
                                 </li>
                             </ul>
