@@ -132,7 +132,7 @@
                 'theme_location' => 'header-main-menu',
                 'container' => false,
                 'menu_id' => 'mobileMenu',
-                'menu_class' => 'w-full hidden top-3 left-0 z-50 flex-col md:flex-row items-center justify-center bg-white md:h-[56px] font-inter gap-5 md:static md:flex shadow-lg md:shadow-none rounded-lg md:rounded-none md:w-auto',
+                'menu_class' => 'w-full hidden top-3 left-0 z-50 flex-col md:flex-row items-center justify-center bg-white md:h-[56px] font-inter px-5 md:static md:flex shadow-lg md:shadow-none rounded-lg md:rounded-none md:w-auto',
                 'fallback_cb' => false,
             ]);
             ?>
