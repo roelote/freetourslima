@@ -201,12 +201,12 @@ if (ICL_LANGUAGE_CODE == 'en') {
 </section>
 
 <!-- Related Tours Section -->
-<section class="py-[32px] md:py-[48px]">
+<section class="mb-[88px] container-related-tours">
     <div class="container">
         <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-            <h2 class="text-center text-[28px] md:text-[36px] font-bold mb-[32px] text-[#5c5c5c]">Related Tours</h2>
+            <h2 class="text-[24px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Things to do in Cusco</h2>
         <?php } else { ?>
-            <h2 class="text-center text-[28px] md:text-[36px] font-bold mb-[32px] text-[#5c5c5c]">Tours Relacionados</h2>
+            <h2 class="text-[24px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Qué hacer en Cusco</h2>
         <?php } ?>
 
         <div class="w-full relative">
@@ -284,7 +284,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                     ));
                                     ?>
                                     <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
-                                        <h2 class="text-center"><?php echo get_the_title($child->ID); ?></h2>
+                                        <h2 class="text-center font-inter !text-[20px]"><?php echo get_the_title($child->ID); ?></h2>
                                         <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
                                             <?php if ($duration) : ?>
                                                 <li class="flex">
@@ -340,12 +340,12 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                                 </li>
                                             <?php endif; ?>
 
-                                            <li class="flex">
+                                            <li class="flex items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                     <path d="M18 0H2C0.9 0 0 0.968054 0 2.15123V18.9201C0 19.8774 1.08 20.3614 1.71 19.6838L4 17.2098H18C19.1 17.2098 20 16.2418 20 15.0586V2.15123C20 0.968054 19.1 0 18 0ZM11.57 10.2936L10.45 12.9181C10.4102 13.012 10.3462 13.0916 10.2655 13.1475C10.1848 13.2033 10.0909 13.233 9.995 13.233C9.89907 13.233 9.80517 13.2033 9.72449 13.1475C9.64382 13.0916 9.57977 13.012 9.54 12.9181L8.42 10.2936L5.98 9.08895C5.89271 9.04617 5.8187 8.97728 5.7668 8.8905C5.7149 8.80373 5.6873 8.70272 5.6873 8.59954C5.6873 8.49636 5.7149 8.39536 5.7668 8.30858C5.8187 8.2218 5.89271 8.15292 5.98 8.11014L8.42 6.90545L9.54 4.28095C9.57977 4.18705 9.64382 4.10745 9.72449 4.05162C9.80517 3.9958 9.89907 3.96612 9.995 3.96612C10.0909 3.96612 10.1848 3.9958 10.2655 4.05162C10.3462 4.10745 10.4102 4.18705 10.45 4.28095L11.57 6.90545L14.01 8.11014C14.0973 8.15292 14.1713 8.2218 14.2232 8.30858C14.2751 8.39536 14.3027 8.49636 14.3027 8.59954C14.3027 8.70272 14.2751 8.80373 14.2232 8.8905C14.1713 8.97728 14.0973 9.04617 14.01 9.08895L11.57 10.2936Z" fill="#FF8110" />
                                                 </svg>
                                                 <div class="text-[16px] !mb-0 font-normal leading-[22px] text-[#5c5c5c] font-['Nunito_Sans'] ml-[8px]">
-                                                    <?php echo do_shortcode('[comentarios_resumen post_id="' . $child->ID . '"]'); ?>
+                                                    <?php echo do_shortcode('[comentarios_resumen_simple post_id="' . $child->ID . '"]'); ?>
                                                 </div>
                                             </li>
                                         </ul>
@@ -384,6 +384,30 @@ if (ICL_LANGUAGE_CODE == 'en') {
             </div>
         </div>
     </div>
+
+    <style>
+        .toursRelatedSwiper .swiper-button-next,
+        .toursRelatedSwiper .swiper-button-prev {
+            background: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            top: 35%;
+        }
+
+        .toursRelatedSwiper .swiper-button-next:after,
+        .toursRelatedSwiper .swiper-button-prev:after {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff8800;
+        }
+
+        .toursRelatedSwiper .swiper-button-next:hover,
+        .toursRelatedSwiper .swiper-button-prev:hover {
+            background: #f5f5f5;
+        }
+    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

@@ -73,6 +73,7 @@ function theme_setup()
 add_action('after_setup_theme', 'theme_setup');
 
 
+// Permitir subir SVG al media de WordPress
 function add_svg_to_upload_mimes($mimes)
 {
     $mimes['svg'] = 'image/svg+xml';
@@ -80,6 +81,56 @@ function add_svg_to_upload_mimes($mimes)
     return $mimes;
 }
 add_filter('upload_mimes', 'add_svg_to_upload_mimes');
+
+// Corregir la detección de tipo MIME para SVG
+function fix_svg_mime_type($data, $file, $filename, $mimes)
+{
+    $ext = isset($data['ext']) ? $data['ext'] : '';
+    if (strlen($ext) < 1) {
+        $exploded = explode('.', $filename);
+        $ext = strtolower(end($exploded));
+    }
+    if ($ext === 'svg') {
+        $data['type'] = 'image/svg+xml';
+        $data['ext'] = 'svg';
+    } elseif ($ext === 'svgz') {
+        $data['type'] = 'image/svg+xml';
+        $data['ext'] = 'svgz';
+    }
+    return $data;
+}
+add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 4);
+
+// Habilitar vista previa de SVG en la biblioteca de medios
+function svg_media_thumbnails($response, $attachment, $meta)
+{
+    if ($response['type'] === 'image' && $response['subtype'] === 'svg+xml' && class_exists('SimpleXMLElement')) {
+        try {
+            $path = get_attached_file($attachment->ID);
+            if (file_exists($path)) {
+                $svg = file_get_contents($path);
+                $svg = simplexml_load_string($svg);
+                if ($svg !== false) {
+                    $response['image'] = array(
+                        'src' => $response['url'],
+                    );
+                    $response['thumb'] = array(
+                        'src' => $response['url'],
+                    );
+                    $response['sizes'] = array(
+                        'full' => array(
+                            'url' => $response['url'],
+                        ),
+                    );
+                }
+            }
+        } catch (Exception $e) {
+            // Error al procesar SVG
+        }
+    }
+    return $response;
+}
+add_filter('wp_prepare_attachment_for_js', 'svg_media_thumbnails', 10, 3);
 
 
 add_theme_support('post-thumbnails');
