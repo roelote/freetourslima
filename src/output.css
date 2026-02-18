@@ -2026,6 +2026,10 @@ video {
     margin-top: 80px;
   }
 
+  .md\:mt-\[3\.7em\] {
+    margin-top: 3.7em;
+  }
+
   .md\:inline {
     display: inline;
   }
