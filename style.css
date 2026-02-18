@@ -494,17 +494,6 @@ h4 {
     margin-bottom: 24px;
 }
 
-.formcss .btnsendf {
-    width: 157px;
-    height: 64px;
-    font-size: 16px !important;
-    background: transparent;
-    color: #5C5C5C;
-    border: 1px solid #CFD1D3;
-    border-radius: 8px;
-    font-weight: 500;
-    font-family: var(--font-nunito-sans);
-}
 
 .content-pages p {
     margin-bottom: 16px !important;

@@ -1823,6 +1823,21 @@ video {
   --tw-ring-color: rgb(255 129 16 / var(--tw-ring-opacity, 1));
 }
 
+.formcss .btnsendf {
+  width: 157px;
+  height: 64px;
+  font-size: 16px !important;
+  background: transparent;
+  color: #5C5C5C;
+  border: 1px solid #CFD1D3;
+  background-color:#1ab6b6;
+  color: white;
+  text-decoration: initial !important;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: var(--font-nunito-sans);
+}
+
 .formcss .wpcf7-acceptance label {
   font-size: 0.875rem;
   line-height: 1.25rem;
