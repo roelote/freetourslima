@@ -6,14 +6,16 @@ get_header();
 
 <main>
     <div class="container mx-auto px-5 md:px-0 content-blogs md-[48px] md:mb-[88px] mt-[48px]">
-        <div class="flex flex-col md:flex-row gap-[40px] md:gap-[81px]">
-            <div class="w-full md:w-[640px]">
-                <?php
+          <?php
                 if (function_exists('yoast_breadcrumb')) {
                     yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
                 }
-                the_title('<h1 class="!mb-[24px] md:!mb-[32px]">', '</h1>');
-
+                the_title('<h1 class="!mb-[24px] md:!mb-[32px] max-w-[640px]">', '</h1>');
+                ?>
+        <div class="flex flex-col md:flex-row gap-[40px] md:gap-[81px]">
+            <div class="w-full md:w-[640px]">
+              
+            <?php
                 if (have_posts()) :
                     while (have_posts()) : the_post();
                         the_content();
