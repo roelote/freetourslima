@@ -44,7 +44,7 @@ get_header();
                             <h2 class="!mb-0">
                                 <a class="text-[18px] !font-semibold md:text-[24px] no-underline" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
-                            <p class="!my-[16px]"><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
+                            <p class="!my-[16px]"><?php echo wp_trim_words(get_the_excerpt(), 25, '...'); ?></p>
                             <span class="text-[14px] text-[#A49D9D] font-nunito"><?php echo get_the_date('F j, Y'); ?></span>
                         </div>
                     </div>
