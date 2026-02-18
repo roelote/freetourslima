@@ -153,14 +153,22 @@
 
         /* Hover */
         #mobileMenu .menu-item a:hover {
-            border-bottom: 3px solid #f57921;
+           
+text-decoration: underline;
+            text-decoration-color: #f57921;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+
             
         }
 
         /* Active - página actual */
         #mobileMenu .menu-item.current-menu-item a,
         #mobileMenu .menu-item.current_page_item a {
-            border-bottom: 3px solid #f57921;
+           text-decoration: underline;
+            text-decoration-color: #f57921;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
             
         }
     </style>
