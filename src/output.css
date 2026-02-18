@@ -1938,6 +1938,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-\[\#ff8110\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 129 16 / var(--tw-text-opacity, 1));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }

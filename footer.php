@@ -44,7 +44,19 @@
                 <h4 class="text-[14px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px] w-full">TrustPilot</h4>
                 <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/Trustpilot.svg"
                     class="w-[150px] h-[28px]  mt-[15px] mx-auto md:mr-auto md:ml-0" alt="trustpilot stars" />
-                <p class="text-[14px] text-center md:text-start font-normal leading-[20px] text-[#f5f5f5] font-['Nunito_Sans'] mt-[6px]">TrustScore 4.9 <span class="underline">55 reviews</span></p>
+                <p class="text-[14px] text-center md:text-start font-normal leading-[20px] text-[#f5f5f5] font-['Nunito_Sans'] mt-[6px]">
+                    TrustScore 4.9 
+                    <?php 
+                    $trustpilot_link = get_field('trustpilot_link', 'option');
+                    $trustpilot_reviews = get_field('trustpilot_reviews', 'option') ?: '55 reviews';
+                    if ($trustpilot_link) : ?>
+                        <a href="<?php echo esc_url($trustpilot_link); ?>" target="_blank" rel="noopener noreferrer" class="underline text-white transition-colors">
+                            <?php echo esc_html($trustpilot_reviews); ?>
+                        </a>
+                    <?php else : ?>
+                        <span class="underline"><?php echo esc_html($trustpilot_reviews); ?></span>
+                    <?php endif; ?>
+                </p>
             </div>
 
             <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
