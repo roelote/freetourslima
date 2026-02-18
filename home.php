@@ -42,7 +42,7 @@ get_header();
                         </div>
                         <div class="pt-[16px] px-[12px] pb-[24px] md:p-[20px]">
                             <h2 class="!mb-0">
-                                <a class="text-[18px] font-bold md:text-[24px]" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a class="text-[18px] !font-semibold md:text-[24px] no-underline" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
                             <p class="!my-[16px]"><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
                             <span class="text-[14px] text-[#A49D9D] font-nunito"><?php echo get_the_date('F j, Y'); ?></span>
