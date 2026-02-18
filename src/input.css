@@ -29,7 +29,7 @@
 }
 
 .responsive-tabs .responsive-tabs__list__item:hover {
-  color: #ff8110 !important;
+  
   border-bottom: 2px solid #ff8110 !important;
 }
 .responsive-tabs .responsive-tabs__list__item
@@ -43,7 +43,7 @@
 }
 .responsive-tabs .responsive-tabs__list__item--active, .responsive-tabs .responsive-tabs__list__item--active:hover
 {
-    @apply text-[#ff8110] !important;
+   
 }
 
 .formcss textarea {
