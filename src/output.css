@@ -1836,6 +1836,12 @@ video {
   border-radius: 8px;
   font-weight: 500;
   font-family: var(--font-nunito-sans);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formcss .btnsendf:hover {
+  background-color: #159999;
 }
 
 .formcss .wpcf7-acceptance label {
@@ -1843,31 +1849,6 @@ video {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-}
-
-.formcss .btnsendf {
-  width: 100%;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 129 16 / var(--tw-bg-opacity, 1));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
-
-.formcss .btnsendf:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(230 116 16 / var(--tw-bg-opacity, 1));
 }
 
 .formcss .wpcf7-not-valid-tip {

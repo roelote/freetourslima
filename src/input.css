@@ -92,16 +92,19 @@
     border-radius: 8px;
     font-weight: 500;
     font-family: var(--font-nunito-sans);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
 }
+.formcss .btnsendf:hover {
+    background-color: #159999;
+    }
 
 .formcss .wpcf7-acceptance label {
     @apply text-sm text-gray-600;
 }
 
-.formcss .btnsendf {
-    @apply w-full bg-[#ff8110] hover:bg-[#e67410] text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 cursor-pointer text-lg;
-}
+
 
 .formcss .wpcf7-not-valid-tip {
     @apply text-red-600 text-sm mt-1 block;
