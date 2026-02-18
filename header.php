@@ -142,25 +142,26 @@
     <style>
         /* Estilos para el menú */
         #mobileMenu .menu-item a {
-            padding: 12px 20px;
+            padding: 12px 0px;
           
             transition: all 0.3s ease;
             display: block;
             color: #5c5c5c;
             font-weight: 500;
+            margin: 0 15px;
         }
 
         /* Hover */
         #mobileMenu .menu-item a:hover {
-            background-color: #5c5c5c;
-            color: #ffffff;
+            border-bottom: 3px solid #f57921;
+            
         }
 
         /* Active - página actual */
         #mobileMenu .menu-item.current-menu-item a,
         #mobileMenu .menu-item.current_page_item a {
-            background-color: #5c5c5c;
-            color: #ffffff;
+            border-bottom: 3px solid #f57921;
+            
         }
     </style>
 
