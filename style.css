@@ -498,6 +498,9 @@ h4 {
 .content-pages p {
     margin-bottom: 16px !important;
 }
+.advgb-list li {
+  margin-bottom: 5px !important;
+}
 
 @media (max-width: 767px) {
     .formcss {
