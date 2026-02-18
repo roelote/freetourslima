@@ -1405,11 +1405,6 @@ video {
   padding-bottom: 20px;
 }
 
-.py-\[32px\] {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .pb-\[24px\] {
   padding-bottom: 24px;
 }
@@ -1512,10 +1507,6 @@ video {
   font-size: 24px;
 }
 
-.text-\[28px\] {
-  font-size: 28px;
-}
-
 .text-\[32px\] {
   font-size: 32px;
 }
@@ -1528,6 +1519,10 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.\!font-semibold {
+  font-weight: 600 !important;
 }
 
 .font-bold {
@@ -1544,10 +1539,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.\!font-semibold {
-  font-weight: 600 !important;
 }
 
 .capitalize {
@@ -1577,11 +1568,6 @@ video {
 .\!text-white {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
-}
-
-.text-\[\#1ab6b6\] {
-  --tw-text-opacity: 1;
-  color: rgb(26 182 182 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#5C5C5C\] {
@@ -1728,8 +1714,8 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.70rem;
+  padding-bottom: 0.70rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -1770,7 +1756,7 @@ video {
 }
 
 .formcss textarea {
-  min-height: 120px;
+  height: 104px;
   resize: vertical;
 }
 
@@ -1938,11 +1924,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-\[\#ff8110\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 129 16 / var(--tw-text-opacity, 1));
-}
-
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -2015,12 +1996,12 @@ video {
     margin-top: 105px;
   }
 
-  .md\:mt-\[3\.5em\] {
-    margin-top: 3.5em;
-  }
-
   .md\:mt-\[3\.6em\] {
     margin-top: 3.6em;
+  }
+
+  .md\:mt-\[3\.7em\] {
+    margin-top: 3.7em;
   }
 
   .md\:mt-\[32px\] {
@@ -2037,10 +2018,6 @@ video {
 
   .md\:mt-\[80px\] {
     margin-top: 80px;
-  }
-
-  .md\:mt-\[3\.7em\] {
-    margin-top: 3.7em;
   }
 
   .md\:inline {
@@ -2174,11 +2151,6 @@ video {
   .md\:py-\[32px\] {
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-
-  .md\:py-\[48px\] {
-    padding-top: 48px;
-    padding-bottom: 48px;
   }
 
   .md\:pb-0 {
