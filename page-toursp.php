@@ -351,12 +351,12 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                         </ul>
                                         <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
                                             <a href="<?php echo esc_url(get_permalink($child->ID)); ?>"
-                                                class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
+                                                class="bg-[#1ab6b6] no-underline rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
                                                 Book Now!
                                             </a>
                                         <?php } else { ?>
                                             <a href="<?php echo esc_url(get_permalink($child->ID)); ?>"
-                                                class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
+                                                class="bg-[#1ab6b6] no-underline rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] font-nunito inline-block hover:bg-[#159999] transition-colors">
                                                 ¡Reserva ya!
                                             </a>
                                         <?php } ?>
