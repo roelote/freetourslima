@@ -89,10 +89,10 @@
 /* Inputs personalizados */
 .calendar-wrapper input[type="text"],
 .calendar-wrapper input[type="number"] {
-    background-color: #e2e8f0 !important;
-    border: none !important;
-    color: #4a5568 !important;
-    font-weight: 500 !important;
+    background-color: #EFEDE7 !important;
+  color: #5C5C5C !important;
+  font-weight: 500 !important;
+  border: 1px solid #dadada !important;
 }
 
 .calendar-wrapper input[type="text"]::placeholder,
