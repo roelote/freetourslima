@@ -30,7 +30,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
             </div>
             <div class="w-full md:w-[374px]">
                 <div class="w-full mt-0 md:mt-[3.6em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[100px]">
-                    <div class="w-[522px]">
+                    <div class="h-[522px]">
                         <div class="calendar-wrapper">
                             <form class="flex flex-col gap-[16px]" action="<?= $ruta ?>" method="get" id="bookingForm">
                                 <input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
@@ -38,7 +38,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                 <div id="calendar-inline" class="w-full"></div>
                                 <input type="text" id="date-selected" name="date" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
                                 <input type="number" name="personas" class="w-full p-3 rounded-[8px]" min="0" max="30" placeholder="Personas">
-                                <button type="submit" class="w-full rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-white">Reservar</button>
+                                <button type="submit" class="w-[113px] rounded-[8px]  py-[18px] text-[16px] font-bold leading-[20px] text-white">Reservar</button>
                             </form>
                         </div>
                     </div>
