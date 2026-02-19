@@ -40,6 +40,11 @@ p {
     font-size: 16px;
     letter-spacing: 0.1px;
 }
+.has-background
+{
+    border-radius: 10px;
+  border: 1px solid #DAD9D6;
+}
 
 .advgb-list
 {
