@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container mx-auto px-[12px] md:px-0 content-main-blog mb-[48px] md:mb-[88px] mt-[48px]">
+<div class="container mx-auto px-[12px] md:px-0 content-main-blog mb-[48px] md:mb-[88px] mt-[48px] container-blog">
     <?php
     if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] mb-[16px] text-[#A49D9D]">', '</nav>');
@@ -21,9 +21,9 @@ get_header();
                 if (have_posts()) :
                     while (have_posts()) : the_post();
                 ?>
-                    <div class="w-full flex flex-col md:flex-row rounded-[8px] overflow-hidden bg-white">
+                    <div class="w-full flex flex-col md:flex-row rounded-[8px] overflow-hidden bg-white content-card">
                         <div>
-                            <div class="w-full md:w-[286px] h-[194px]">
+                            <div class="w-full md:w-[286px] h-[214px]">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium', array('class' => 'w-full h-full object-cover object-center', 'alt' => get_the_title())); ?>
@@ -35,9 +35,9 @@ get_header();
                         </div>
                         <div class="pt-[16px] px-[12px] pb-[24px] md:p-[20px]">
                             <h2 class="!mb-0">
-                                <a class="text-[18px] font-bold md:text-[24px]" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a class="text-[18px] !font-semibold md:text-[24px] no-underline" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
-                            <p class="!my-[16px]"><?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?></p>
+                            <p class="!my-[16px]"><?php echo wp_trim_words(get_the_excerpt(), 25, '...'); ?></p>
                             <span class="text-[14px] text-[#A49D9D] font-nunito"><?php echo get_the_date('F j, Y'); ?></span>
                         </div>
                     </div>
@@ -92,7 +92,8 @@ get_header();
             </div>
             <?php endif; ?>
         </div>
-        <div>
+        <div class="aside-blog ">
+          <div class="md:sticky top-0 right-0">
             <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
                 <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
                 <ul>
@@ -114,23 +115,25 @@ get_header();
             </div>
 
             <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-                <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                    <h2 class="!mb-[16px]">Free tour in Cusco</h2>
-                    <ul>
-                        <li><a href="/en/things-to-do-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
-                    </ul>
-                </div>
-            <?php }
-            if (ICL_LANGUAGE_CODE == 'es') { ?>
-                <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                    <h2 class="!mb-[16px]">Free tour por Cusco</h2>
-                    <ul>
-                        <li><a href="/es/que-hacer-en-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
-                    </ul>
-                </div>
-            <?php } ?>
+                      <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+                <h2 class="!mb-[16px]">Free tour in Cusco</h2>
+                <ul>
+                    <li><a href="/en/things-to-do-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
+                </ul>
+            </div>
+                <?php }
+                if (ICL_LANGUAGE_CODE == 'es') { ?>
+                      <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
+                        <h2 class="!mb-[16px]">Free tour por Cusco</h2>
+                        <ul>
+                            <li><a href="/es/que-hacer-en-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
+                        </ul>
+                    </div>
 
-            <!-- seccion hijos de paginas -->
+                <?php }
+                ?>
+
+         <!-- seccion hijos de paginas -->
             <?php
             // Obtener todas las páginas padre (páginas sin parent)
             $parent_pages = get_pages(array(
@@ -167,6 +170,7 @@ get_header();
             }
             ?>
 
+        </div>
         </div>
     </div>
 </div>
