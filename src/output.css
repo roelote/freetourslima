@@ -1423,6 +1423,11 @@ video {
   padding-bottom: 9px;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .pb-\[24px\] {
   padding-bottom: 24px;
 }
@@ -2247,5 +2252,10 @@ video {
 
   .xl\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

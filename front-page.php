@@ -165,7 +165,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
 </main>
 
 <section>
-    <div class="container continer-reviews">
+    <div class="container continer-reviews px-4 md:px-0">
         <?php echo do_shortcode('[comentarios_free]'); ?>
     </div>
 </section>
