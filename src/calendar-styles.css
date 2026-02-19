@@ -16,12 +16,16 @@
 }
 .air-datepicker-nav--title i {
   font-style: normal;
-  color: #232020 !important;
+  color: #FF8110 !important;
   margin-left: .3em;
 }
 .air-datepicker-nav--action path
 {
     stroke: #FF8110 !important;
+}
+.air-datepicker-nav--title, .air-datepicker-nav--action {
+  color: #FF8110 !important;
+  font-weight: 600;
 }
 /* Navegación del calendario */
 .air-datepicker-nav {
