@@ -91,12 +91,24 @@
     <div class="w-full mt-[40px] mb-[32px] md:mb-0 md:mt-[32px]">
         <p class="text-[14px] text-center font-normal md:!m-0 leading-[20px] text-[#f5f5f5] font-['Nunito_Sans']">FreeWalkingTourCusco.Org <span class="block md:inline"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Copyright © 2023 - 2026, All Rights Reserved' : 'Copyright © 2023 - 2026, Todos los derechos reservados'; ?></span></p>
     </div>
-    <div class="block md:hidden w-full bg-[#FF8110] p-3">
-        <div class="bg-[#1AB6B6] p-2 text-center">
-            <span class="text-white text-base font-semibold"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Check availability' : 'Ver disponibilidad'; ?></span>
-        </div>
-    </div>
+    
 </footer>
+
+<?php if (ICL_LANGUAGE_CODE == 'en') { ?>
+    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#1ab6b6] z-50  text-center border-t-2 border-white border-x-2 border-solid ">
+        <a href="#bookingForm" class="text-xl no-underline text-white font-semibold ">Check availability</a>
+    </section>
+<?php }
+if (ICL_LANGUAGE_CODE == 'es') { ?>
+    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#1ab6b6] z-50  text-center border-t-2 border-white border-x-2 border-solid ">
+        <a href="#bookingForm" class="text-xl no-underline text-white font-semibold ">Ver disponibilidad</a>
+    </section>
+
+<?php }
+?>
+
+
+
 <?php wp_footer(); ?>
 </body>
 
