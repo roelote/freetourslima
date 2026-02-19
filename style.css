@@ -30,7 +30,14 @@ body {
     background-color: #EFEDE7;
     overflow-x: hidden;
 }
+.aside-blog ul li a {
+  text-decoration: none;
+}
 
+.aside-blog ul li a:hover {
+
+  color: var(--color-primary);
+}
 p {
     color: var(--color-secondary);
     line-height: 27.2px;
