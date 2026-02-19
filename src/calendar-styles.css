@@ -1,7 +1,7 @@
 /* Estilos personalizados para el calendario */
 .calendar-wrapper {
     background-color: #F5F5F5;
-    padding: 30px;
+    padding: 20px 30px 30px 30px;
     border-radius: 12px;
     height: 522px;
     border:1px solid #DAD9D6;
