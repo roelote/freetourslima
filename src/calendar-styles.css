@@ -26,6 +26,8 @@
 .air-datepicker-nav--title, .air-datepicker-nav--action {
   color: #FF8110 !important;
   font-weight: 600;
+  font-size: 16px;
+  font-family: var(--font-nunito-sans);
 }
 /* Navegación del calendario */
 .air-datepicker-nav {
