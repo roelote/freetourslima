@@ -30,7 +30,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
             </div>
             <div class="w-full md:w-[374px]">
                 <div class="w-full mt-0 md:mt-[3.6em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[100px]">
-                    <div class="w-full">
+                    <div class="w-[522px]">
                         <div class="calendar-wrapper">
                             <form class="flex flex-col gap-[16px]" action="<?= $ruta ?>" method="get" id="bookingForm">
                                 <input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
