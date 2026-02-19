@@ -66,15 +66,15 @@
 
 /* Día seleccionado */
 .air-datepicker-cell.-selected- {
-    background: #1ab6b6 !important;
+    background: #FF8110 !important;
     color: #ffffff !important;
 }
 
 /* Día actual */
-.air-datepicker-cell.-current- {
+/* .air-datepicker-cell.-current- {
     background-color: #FF8110 !important;
   color: white !important;
-}
+} */
 
 /* Días de otros meses */
 .air-datepicker-cell.-other-month- {
