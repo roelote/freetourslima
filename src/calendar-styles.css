@@ -35,10 +35,7 @@
     margin-bottom: 2xpx !important;
 }
 
-.air-datepicker-nav--title,
-.air-datepicker-nav--action {
-    color: #2d3748 !important;
-}
+
 
 /* Días de la semana */
 .air-datepicker-body--day-name {
