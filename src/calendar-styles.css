@@ -1,7 +1,7 @@
 /* Estilos personalizados para el calendario */
 .calendar-wrapper {
     background-color: #F5F5F5;
-    padding: 20px;
+    padding: 30px;
     border-radius: 12px;
     height: 522px;
     border:1px solid #DAD9D6;
@@ -51,8 +51,9 @@
     background: #5C5C5C !important;
     color: white !important;
     border-radius: 8px !important;
-    margin: 2px !important;
+    margin: 4px !important;
     font-weight: 500 !important;
+    font-size: 13px !important;
 }
 
 .-disabled- {
