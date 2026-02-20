@@ -162,7 +162,7 @@ get_header();
         ?>
     </div>
     <div class="w-full mt-[48px] md:mt-[80px] mb-[48px] md:mb-[88px]">
-        <h3 class="text-[18px] xl:text-[20px] !text-[24px] !mb-[20px] md:!mb-[32px]">>Guía de viaje Cusco</h3>
+        <h3 class="!mb-[20px] md:!mb-[32px]">>Guía de viaje Cusco</h3>
         <?php echo do_shortcode('[EntradasRecientes]'); ?>
     </div>
 

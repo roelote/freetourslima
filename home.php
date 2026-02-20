@@ -42,7 +42,7 @@ get_header();
                         </div>
                         <div class="pt-[16px] px-[12px] pb-[24px] md:p-[20px]">
                             <h2 class="!mb-0 text-[22px] md:text-[24px]">
-                                <a class="text-[18px] !font-semibold md:text-[24px] no-underline" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a class="!font-semibold no-underline" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
                             <p class="!my-[16px]"><?php echo wp_trim_words(get_the_excerpt(), 25, '...'); ?></p>
                             <span class="text-[14px] text-[#A49D9D] font-nunito"><?php echo get_the_date('F j, Y'); ?></span>
@@ -99,7 +99,7 @@ get_header();
         <div class="aside-blog ">
           <div class="md:sticky top-0 right-0">
             <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px] text-[22px] md:text-[24px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
+                <h3 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h3>
                 <ul>
                     <?php
                     $categories = get_categories(array(
@@ -120,7 +120,7 @@ get_header();
 
             <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
                       <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px] text-[22px] md:text-[24px]">Free tour in Cusco</h2>
+                <h3 class="!mb-[16px]">Free tour in Cusco</h3>
                 <ul>
                     <li><a href="/en/things-to-do-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
                 </ul>
@@ -128,7 +128,7 @@ get_header();
                 <?php }
                 if (ICL_LANGUAGE_CODE == 'es') { ?>
                       <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                        <h2 class="!mb-[16px] text-[22px] md:text-[24px]">Free tour por Cusco</h2>
+                        <h3 class="!mb-[16px]">Free tour por Cusco</h3>
                         <ul>
                             <li><a href="/es/que-hacer-en-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
                         </ul>

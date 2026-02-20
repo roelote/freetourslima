@@ -49,7 +49,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                 </div>
             </div>
             <div class="w-full md:w-[374px]">
-                <div class="w-full mt-[2em] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[90px]">
+                <div class="w-full mt-[6.6rem] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[90px]">
                     <div class="w-full">
                         <div class="calendar-wrapper">
                             <form class="flex flex-col gap-[16px]" action="<?= $ruta ?>" method="get" id="bookingForm">
@@ -63,7 +63,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                         </div>
                     </div>
                     <div>
-                        <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[60px] sticky top-[20px]">
+                        <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[25px] sticky top-[20px]">
                             <!-- Details Card -->
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
                                 <div class="flex flex-col gap-[12px]">
@@ -264,7 +264,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                     ));
                                     ?>
                                     <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
-                                        <h2 class="text-center font-inter !text-[22px] md:!text-[24px]"><?php echo get_the_title($child->ID); ?></h2>
+                                        <h2 class="text-center font-inter"><?php echo get_the_title($child->ID); ?></h2>
                                         <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
                                             <?php if ($duration) : ?>
                                                 <li class="flex">
