@@ -49,7 +49,7 @@
                         </li>
                     </ul>
                     <button
-                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#159999] transition-colors">
+                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#FF8110] transition-colors">
                         ¡Reserva ya!
                     </button>
                 </div>
@@ -94,7 +94,7 @@
                         </li>
                     </ul>
                     <button
-                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#159999] transition-colors">
+                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#FF8110] transition-colors">
                         ¡Reserva ya!
                     </button>
                 </div>
@@ -139,7 +139,7 @@
                         </li>
                     </ul>
                     <button
-                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#159999] transition-colors">
+                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#FF8110] transition-colors">
                         ¡Reserva ya!
                     </button>
                 </div>
@@ -184,7 +184,7 @@
                         </li>
                     </ul>
                     <button
-                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#159999] transition-colors">
+                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#FF8110] transition-colors">
                         ¡Reserva ya!
                     </button>
                 </div>
@@ -229,7 +229,7 @@
                         </li>
                     </ul>
                     <button
-                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#159999] transition-colors">
+                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#FF8110] transition-colors">
                         ¡Reserva ya!
                     </button>
                 </div>
@@ -274,7 +274,7 @@
                         </li>
                     </ul>
                     <button
-                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#159999] transition-colors">
+                        class="bg-[#1ab6b6] rounded-[8px] px-[28px] py-[10px] text-[16px] font-bold leading-[22px] text-[#fefefe] mb-[12px] font-nunito self-start hover:bg-[#FF8110] transition-colors">
                         ¡Reserva ya!
                     </button>
                 </div>

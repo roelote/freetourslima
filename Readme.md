@@ -532,7 +532,7 @@ Tema propietario para uso interno.
                 id="590_548_1218_650_310_40" />
 
             <button
-                class="w-full bg-[#1ab6b6] rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-[#f5f5f5] font-['Inter'] mt-[24px] mb-[10px] hover:bg-[#159999] transition-colors">
+                class="w-full bg-[#1ab6b6] rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-[#f5f5f5] font-['Inter'] mt-[24px] mb-[10px] hover:bg-[#FF8110] transition-colors">
                 Reservar
             </button>
         </div>

@@ -3,7 +3,7 @@
         <form action="#" method="post" class="flex flex-col gap-[16px]">
             <input type="number" name="personas" class="w-full p-2 rounded-[8px] border border-[#bbbbbb]" min="0" max="30" placeholder="Personas">
             <input type="text" id="calendar" name="date" placeholder="Select Date.." class="flatpickr w-full p-2 rounded-[8px] border border-[#bbbbbb]">
-            <button class="w-full bg-[#1ab6b6] rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-[#f5f5f5] mt-[24px] font-['Inter'] mb-[10px] hover:bg-[#159999] transition-colors">Reservar</button>
+            <button class="w-full bg-[#1ab6b6] rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-[#f5f5f5] mt-[24px] font-['Inter'] mb-[10px] hover:bg-[#FF8110] transition-colors">Reservar</button>
         </form>
     </div>
     <div>
