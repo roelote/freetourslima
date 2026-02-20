@@ -98,6 +98,7 @@
 }
 .formcss .btnsendf:hover {
     background-color: #FF8110;
+}
 
 .formcss .wpcf7-acceptance label {
     @apply text-sm text-gray-600;
