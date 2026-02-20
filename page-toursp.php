@@ -66,8 +66,8 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                 <input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
                                 <input type="hidden" name="nametour" value="<?= the_title(); ?>">
                                 <div id="calendar-inline" class="w-full"></div>
-                                <input type="text" id="date-selected" name="date" placeholder="Fecha seleccionada" class="w-full p-3 rounded-[8px]" readonly>
-                                <input type="number" name="personas" class="w-full p-3 rounded-[8px]" min="0" max="30" placeholder="Personas">
+                                <input type="text" id="date-selected" name="date" placeholder="<?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Selected Date' : 'Fecha seleccionada'; ?>" class="w-full px-3 py-[9px] rounded-[8px]" readonly required>
+                                <input type="number" name="personas" class="w-full px-3 py-[9px] rounded-[8px]" min="0" max="30" placeholder="<?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Number of attendees' : 'Número de asistentes'; ?>" required>
                                 <button type="submit" class="w-full rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-white">Reservar</button>
                             </form>
                         </div>
