@@ -27,7 +27,7 @@ get_header();
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
     }
     ?>
-    <h1 class="text-[26px] xl:text-[32px] !mb-[24px] md:!mb-[32px]"><?= the_title(); ?></h1>
+    <h1 class="text-[26px] xl:text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[24px] md:!mb-[32px]"><?= the_title(); ?></h1>
 
     <div class="w-full">
         <div class="w-full grid grid-cols-1 gap-y-[32px] md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] mb-[32px]">
