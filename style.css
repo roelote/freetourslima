@@ -377,9 +377,7 @@ h4 {
 
 /* Reviews  */
 
-.continer-reviews .cf-filters-stats-bar {
-    padding: 32px 32px 38px 32px;
-}
+
 
 .continer-reviews .cf-filter-group label {
     margin-bottom: 8px;
@@ -414,6 +412,7 @@ h4 {
 
 .continer-reviews .cf-center-column {
     font-family: var(--font-nunito-sans);
+    border-right: 1px solid #DAD9D6;
 }
 
 .continer-reviews .cf-comment-text {
@@ -427,6 +426,7 @@ h4 {
 .continer-reviews .cf-comment-content h5 {
     font-family: var(--font-nunito-sans) !important;
     font-weight: bold;
+    color: #5C5C5C;
 }
 
 .continer-reviews .cf-comment-content {
