@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar Air Datepicker
     const calendarContainer = document.getElementById('calendar-inline');
     const calendarInput = document.getElementById('date-selected');
+    const bookingForm = document.getElementById('bookingForm');
     
     if (calendarContainer && calendarInput) {
         new AirDatepicker(calendarContainer, {
@@ -27,8 +28,43 @@ document.addEventListener('DOMContentLoaded', function() {
                     const month = String(date.getMonth() + 1).padStart(2, '0');
                     const year = date.getFullYear();
                     calendarInput.value = `${day}/${month}/${year}`;
+                    // Remover mensaje de error si existe
+                    calendarInput.setCustomValidity('');
                 }
             }
+        });
+    }
+
+    // Validar que se haya seleccionado una fecha antes de enviar el formulario
+    if (bookingForm && calendarInput) {
+        // Prevenir envío si no hay fecha seleccionada
+        bookingForm.addEventListener('submit', function(e) {
+            if (!calendarInput.value || calendarInput.value.trim() === '') {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const lang = document.documentElement.lang || 'es';
+                const message = lang.includes('en') 
+                    ? 'Please select a date from the calendar' 
+                    : 'Selecciona una fecha';
+                
+                // Mostrar alerta
+                alert(message);
+                
+                // Hacer scroll al calendario
+                calendarContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                return false;
+            }
+        });
+
+        // Limpiar mensaje de validación cuando el usuario seleccione una fecha
+        calendarInput.addEventListener('input', function() {
+            this.setCustomValidity('');
+        });
+
+        calendarInput.addEventListener('change', function() {
+            this.setCustomValidity('');
         });
     }
 });
