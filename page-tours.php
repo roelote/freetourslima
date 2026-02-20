@@ -52,7 +52,7 @@ get_header();
                                 <div id="calendar-inline" class="w-full"></div>
                                 <input type="text" id="date-selected" name="date" placeholder="<?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Selected Date' : 'Fecha seleccionada'; ?>" class="w-full px-3 py-[9px] rounded-[8px]" readonly required>
                                 <input type="number" name="personas" class="w-full px-3 py-[9px] rounded-[8px]" min="0" max="30" placeholder="<?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Number of attendees' : 'Número de asistentes'; ?>" required>
-                                <button type="submit" class="w-full rounded-[8px] px-[34px] py-[16px] text-[16px] font-bold leading-[20px] text-white">Reservar</button>
+                                <button type="submit" class="w-[113px] rounded-[8px]  py-[18px] text-[16px] font-bold leading-[20px] text-white"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Book Now' : 'Reservar'; ?></button>
                             </form>
                         </div>
                     </div>
