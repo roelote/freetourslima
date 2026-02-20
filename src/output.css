@@ -814,6 +814,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
 .mt-\[15px\] {
   margin-top: 15px;
 }
@@ -840,10 +844,6 @@ video {
 
 .mt-\[6px\] {
   margin-top: 6px;
-}
-
-.mt-\[8px\] {
-  margin-top: 8px;
 }
 
 .block {
