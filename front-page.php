@@ -11,12 +11,6 @@ if (ICL_LANGUAGE_CODE == 'en') {
 <main class="container mx-auto px-4 mt-[20px] md:mt-[48px] md:px-0">
     <section class="w-full">
 
-        <h1
-            class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
-            <?php the_title(); ?>
-
-        </h1>
-
         <div class="flex flex-col lg:flex-row justify-between gap-0 md:gap-[40px] items-start">
             <div class="w-full md:w-[783px]">
                 <div class="main-content-tour">
