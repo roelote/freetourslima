@@ -1,15 +1,15 @@
                 <div class="flex flex-col-reverse md:flex-col md:mb-[40px]">
                     <div class="flex flex-col items-start mb-[24px] md:mb-[32px]">
                          <?php
-        if (function_exists('yoast_breadcrumb')) {
-            yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
-        }
-        ?>
-        <h1
-            class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
-            <?php the_title(); ?>
+                            if (function_exists('yoast_breadcrumb') && !is_front_page()) {
+                                yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
+                            }
+                            ?>
+                            <h1
+                                class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
+                                <?php the_title(); ?>
 
-        </h1>
+                            </h1>
                         
                         <?php echo do_shortcode('[comentarios_resumen]'); ?>
                         <div class="flex flex-row items-start gap-[40px]">
