@@ -74,7 +74,13 @@ a {
     top: 18% !important;
 }
 
-
+h1 {
+    
+    color: var(--color-secondary);
+    font-family: var(--font-inter);
+    font-weight: bold !important;
+    margin-bottom: 16px !important;
+}
 
 h2 {
     font-size: 24px !important;
