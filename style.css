@@ -76,6 +76,30 @@ a {
 
 
 
+h2 {
+    font-size: 24px !important;
+    color: var(--color-secondary);
+    font-family: var(--font-inter);
+    font-weight: bold !important;
+    margin-bottom: 16px !important;
+}
+
+h3 {
+    font-size: 20px !important;
+    color: #5C5C5C;
+    font-family: var(--font-inter);
+    font-weight: bold !important;
+    margin-bottom: 16px !important;
+}
+
+h4 {
+    font-size: 18px;
+    color: #5C5C5C;
+    font-family: var(--font-inter);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
 
 @media (max-width: 991px) {
     .content-main-blog h2 {
