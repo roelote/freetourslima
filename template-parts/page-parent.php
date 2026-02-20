@@ -4,7 +4,7 @@
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px] md:mb-0">', '</nav>');
     }
     ?>
-    <h1 class="!mb-[24px] md:mb-0"><?= the_title(); ?></h1>
+    <h1 class="text-[26px] xl:text-[32px] !mb-[24px] md:mb-0"><?= the_title(); ?></h1>
 
     <div class="w-full">
         <!-- <div class="flex flex-col lg:flex-row md:flex-wrap lg:flex-nowrap gap-[30px] w-full "> -->
@@ -14,7 +14,7 @@
                 <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
                     class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
                 <div class="bg-white rounded-b-[8px] px-[12px] py-[20px] md:px-[24px] w-full">
-                    <h2 class="text-center">Free tour por San Blas Bohemio</h2>
+                    <h2 class="text-center text-[22px] md:text-[24px]">Free tour por San Blas Bohemio</h2>
                     <ul class="flex flex-col gap-[12px] my-[1px] md:my-[24px]">
                         <li class="flex">
                             <img src="http://web.freewalking/wp-content/uploads/2026/01/1-4.png"
@@ -59,7 +59,7 @@
                 <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
                     class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
                 <div class="bg-white rounded-b-[8px] px-[12px] py-[20px] md:px-[24px] w-full">
-                    <h2 class="text-center">Free tour por San Blas Bohemio</h2>
+                    <h2 class="text-center text-[22px] md:text-[24px]">Free tour por San Blas Bohemio</h2>
                     <ul class="flex flex-col gap-[12px] my-[1px] md:my-[24px]">
                         <li class="flex">
                             <img src="http://web.freewalking/wp-content/uploads/2026/01/1-4.png"
@@ -104,7 +104,7 @@
                 <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
                     class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
                 <div class="bg-white rounded-b-[8px] px-[12px] py-[20px] md:px-[24px] w-full">
-                    <h2 class="text-center">Free tour por San Blas Bohemio</h2>
+                    <h2 class="text-center text-[22px] md:text-[24px]">Free tour por San Blas Bohemio</h2>
                     <ul class="flex flex-col gap-[12px] my-[1px] md:my-[24px]">
                         <li class="flex">
                             <img src="http://web.freewalking/wp-content/uploads/2026/01/1-4.png"
@@ -149,7 +149,7 @@
                 <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
                     class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
                 <div class="bg-white rounded-b-[8px] px-[12px] py-[20px] md:px-[24px] w-full">
-                    <h2 class="text-center">Free tour por San Blas Bohemio</h2>
+                    <h2 class="text-center text-[22px] md:text-[24px]">Free tour por San Blas Bohemio</h2>
                     <ul class="flex flex-col gap-[12px] my-[1px] md:my-[24px]">
                         <li class="flex">
                             <img src="http://web.freewalking/wp-content/uploads/2026/01/1-4.png"
@@ -194,7 +194,7 @@
                 <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
                     class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
                 <div class="bg-white rounded-b-[8px] px-[12px] py-[20px] md:px-[24px] w-full">
-                    <h2 class="text-center">Free tour por San Blas Bohemio</h2>
+                    <h2 class="text-center text-[22px] md:text-[24px]">Free tour por San Blas Bohemio</h2>
                     <ul class="flex flex-col gap-[12px] my-[1px] md:my-[24px]">
                         <li class="flex">
                             <img src="http://web.freewalking/wp-content/uploads/2026/01/1-4.png"
@@ -239,7 +239,7 @@
                 <img src="https://www.perurail.com/wp-content/uploads/2022/06/banner-machu-picchu-1024x576.jpg"
                     class="w-full h-[252px] rounded-t-[8px] object-cover" alt="Free tour por San Blas" />
                 <div class="bg-white rounded-b-[8px] px-[12px] py-[20px] md:px-[24px] w-full">
-                    <h2 class="text-center">Free tour por San Blas Bohemio</h2>
+                    <h2 class="text-center text-[22px] md:text-[24px]">Free tour por San Blas Bohemio</h2>
                     <ul class="flex flex-col gap-[12px] my-[1px] md:my-[24px]">
                         <li class="flex">
                             <img src="http://web.freewalking/wp-content/uploads/2026/01/1-4.png"
@@ -326,3 +326,4 @@
     </div>
 
 </div>
+

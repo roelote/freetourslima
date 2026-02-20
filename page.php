@@ -25,7 +25,7 @@ get_header();
 					if (function_exists('yoast_breadcrumb')) {
 						yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
 					}
-					the_title("<h1 class=\"!mb-[24px] md:!mb-[32px]\">", '</h1>');
+					the_title("<h1 class=\"text-[26px] xl:text-[32px] !mb-[24px] md:!mb-[32px]\">>", '</h1>');
 					while (have_posts()):
 					?>
 					<?php
@@ -37,7 +37,7 @@ get_header();
 				<div>
 					<div class="aside-blog aside-blog-page">
 						<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-							<h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
+							<h2 class="!mb-[16px] text-[22px] md:text-[24px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
 							<ul>
 								<?php
 								$categories = get_categories(array(
@@ -58,7 +58,7 @@ get_header();
 
 						<?php if (ICL_LANGUAGE_CODE == 'en') { ?>
 							<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-								<h2 class="!mb-[16px]">Free tour in Cusco</h2>
+							<h2 class="!mb-[16px] text-[22px] md:text-[24px]">Free tour in Cusco</h2>
 								<ul>
 									<li><a href="/en/things-to-do-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
 								</ul>
@@ -66,7 +66,7 @@ get_header();
 						<?php }
 						if (ICL_LANGUAGE_CODE == 'es') { ?>
 							<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-								<h2 class="!mb-[16px]">Free tour por Cusco</h2>
+							<h2 class="!mb-[16px] text-[22px] md:text-[24px]">Free tour por Cusco</h2>
 								<ul>
 									<li><a href="/es/que-hacer-en-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
 								</ul>
@@ -97,7 +97,7 @@ get_header();
 							// Solo mostrar si tiene hijos
 							if ($child_pages) : ?>
 								<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-									<h2 class="!mb-[16px]"><?php echo esc_html($parent->post_title); ?></h2>
+									<h2 class="!mb-[16px] text-[22px] md:text-[24px]"><?php echo esc_html($parent->post_title); ?></h2>
 									<ul>
 										<?php foreach ($child_pages as $child) : ?>
 											<li>

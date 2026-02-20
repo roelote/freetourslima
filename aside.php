@@ -11,7 +11,7 @@
             <!-- Details Card -->
             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
                 <div class="flex flex-col gap-[12px]">
-                    <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center" id="590:818">
+                    <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center" id="590:818">
                         Detalles</h4>
                     <div class="w-full h-[1px] bg-[#dad9d6]" id="590:827"></div>
 
@@ -38,7 +38,7 @@
             <!-- Contact Card -->
             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
                 <div class="flex flex-col gap-[10px]">
-                    <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center" id="590:830">
+                    <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center" id="590:830">
                         ¿Alguna consulta?</h4>
                     <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]" id="590:831"></div>
                     <div class="flex flex-row items-center gap-[8px]">

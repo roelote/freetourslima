@@ -10,7 +10,7 @@
             ?>
                 <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
                     <div class="flex flex-col justify-center md:justify-start items-start">
-                        <h4 class="w-full text-[14px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Company' : 'Compañía'; ?></h4>
+                        <h4 class="w-full text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Company' : 'Compañía'; ?></h4>
                         <ul class="w-full text-center md:text-start">
                             <?php foreach ($repeater as $value) { ?>
                                 <li><a href="<?php echo esc_url($value['url']); ?>" class="text-white no-underline font-normal text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
@@ -29,7 +29,7 @@
                 <!-- Tours Section -->
                 <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
                     <div class="flex flex-col justify-start items-start">
-                        <h4 class="w-full text-[14px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]">Tours</h4>
+                        <h4 class="w-full text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]">Tours</h4>
                         <ul class="w-full text-center md:text-start">
                             <?php foreach ($repeater2 as $value) { ?>
                                 <li><a href="<?php echo esc_url($value['url']); ?>" class="text-white no-underline font-normal text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
@@ -41,7 +41,7 @@
 
             <!-- TrustPilot Section -->
             <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
-                <h4 class="text-[14px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px] w-full">TrustPilot</h4>
+                <h4 class="text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px] w-full">TrustPilot</h4>
                 <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/Trustpilot.svg"
                     class="w-[150px] h-[28px]  mt-[15px] mx-auto md:mr-auto md:ml-0" alt="trustpilot stars" />
                 <p class="text-[14px] text-center md:text-start font-normal leading-[20px] text-[#f5f5f5] font-['Nunito_Sans'] mt-[6px]">
@@ -60,7 +60,7 @@
             </div>
 
             <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
-                <h4 class="text-[14px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px] w-full"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Payment' : 'Pago'; ?></h4>
+                <h4 class="text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px] w-full"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Payment' : 'Pago'; ?></h4>
                 <div class="flex flex-row gap-3 justify-center md:justify-start items-center mt-2">
                     <div class="flex flex-col justify-start items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="28" viewBox="0 0 42 28" fill="none">

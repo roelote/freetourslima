@@ -6,7 +6,7 @@
                             }
                             ?>
                             <h1
-                                class="text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
+                                class="text-[26px] xl:text-[32px] font-bold leading-[39px] text-[#5c5c5c] font-['Inter'] !mb-[8px]">
                                 <?php the_title(); ?>
 
                             </h1>

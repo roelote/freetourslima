@@ -230,7 +230,7 @@ function dcms_entradasrecientes( $atts , $content )
 	query_posts(['orderby' => 'date', 'order' => 'DESC' , 'showposts' => $quantity]);
 	if ( have_posts() ) {
 		if($title) {
-			$str  .= '<h3 class="mb-4">'.$title.'</h3>';
+			$str  .= '<h3 class="text-[18px] xl:text-[20px] mb-4">'.$title.'</h3>';
 		}
 		$str .='<div class="">';
 		$counter = 1;

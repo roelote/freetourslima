@@ -9,7 +9,7 @@ get_header();
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D]">', '</nav>');
     }
     ?>
-    <h1><?php single_post_title(); ?></h1>
+    <h1 class="text-[26px] xl:text-[32px]"><?php single_post_title(); ?></h1>
 
     <div class="flex flex-col md:flex-row gap-[43px]">
         <div class="">
@@ -35,7 +35,7 @@ get_header();
                         </div>
                     </div>
                     <div class="p-[20px]">
-                        <h2 class="!mb-0">Cusco en temporada baja: ¿una buena idea?</h2>
+                        <h2 class="!mb-0 text-[22px] md:text-[24px]">Cusco en temporada baja: ¿una buena idea?</h2>
                         <p class="!my-[16px]">Viajar en temporada baja: menos gente, mejores precios. Suena tentador, pero, antes de armar la mochila o la maleta es necesario averiguar por qué el número de visitantes...</p>
                         <span class="text-[14px] text-[#A49D9D] font-nunito">November 19, 2025</span>
                     </div>
@@ -47,7 +47,7 @@ get_header();
                         </div>
                     </div>
                     <div class="p-[20px]">
-                        <h2 class="!mb-0">Cusco en temporada baja: ¿una buena idea?</h2>
+                        <h2 class="!mb-0 text-[22px] md:text-[24px]">Cusco en temporada baja: ¿una buena idea?</h2>
                         <p class="!my-[16px]">Viajar en temporada baja: menos gente, mejores precios. Suena tentador, pero, antes de armar la mochila o la maleta es necesario averiguar por qué el número de visitantes...</p>
                         <span class="text-[14px] text-[#A49D9D] font-nunito">November 19, 2025</span>
                     </div>
@@ -65,7 +65,7 @@ get_header();
         </div>
         <div>
             <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
+                <h2 class="!mb-[16px] text-[22px] md:text-[24px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
                 <ul>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Gastronomía</a></li>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Historia</a></li>
@@ -73,13 +73,13 @@ get_header();
                 </ul>
             </div>
             <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Free tour in Cusco' : 'Free tour por Cusco'; ?></h2>
+                <h2 class="!mb-[16px] text-[22px] md:text-[24px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Free tour in Cusco' : 'Free tour por Cusco'; ?></h2>
                 <ul>
                     <li><a href="<?php echo (ICL_LANGUAGE_CODE == 'en') ? '/en/things-to-do-cusco/' : '/es/que-hacer-en-cusco/'; ?>" class="underline inline-block mb-[8px] text-[#5C5C5C]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Book Now!' : '¡Reserva aquí!'; ?></a></li>
                 </ul>
             </div>
             <div class="border-l-2 border-[#CFD1D3] pl-[20px] mb-[48px]">
-                <h2 class="!mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Things to do in Cusco?' : '¿Qué hacer en Cusco?'; ?></h2>
+                <h2 class="!mb-[16px] text-[22px] md:text-[24px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Things to do in Cusco?' : '¿Qué hacer en Cusco?'; ?></h2>
                 <ul>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">City tour Cusco: Huellas de un Imperio</a></li>
                     <li><a href="" class="underline inline-block mb-[8px] text-[#5C5C5C]">Caminata a Laguna Humantay</a></li>
@@ -96,3 +96,4 @@ get_header();
 <?php
 
 get_footer();
+

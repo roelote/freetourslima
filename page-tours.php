@@ -53,9 +53,9 @@ get_header();
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
                                 <div class="flex flex-col gap-[12px]">
                                     <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-                                        <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Details</h4>
+                                        <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Details</h4>
                                     <?php } else { ?>
-                                        <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Detalles</h4>
+                                        <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Detalles</h4>
                                     <?php } ?>
                                     <div class="w-full h-[1px] bg-[#dad9d6]"></div>
 
@@ -129,7 +129,7 @@ get_header();
                                 <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
                                     <div class="flex flex-col gap-[10px]">
                                         <?php if (!empty($details2['consult'])) { ?>
-                                            <h4 class="text-[24px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
+                                            <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
                                                 <?php echo esc_html($details2['consult']); ?></h4>
                                         <?php } ?>
                                         <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
@@ -250,7 +250,7 @@ get_header();
                                     ));
                                     ?>
                                     <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
-                                        <h2 class="text-center font-inter !text-[20px]"><?php echo get_the_title($child->ID); ?></h2>
+                                        <h2 class="text-center font-inter !text-[22px] md:!text-[24px]"><?php echo get_the_title($child->ID); ?></h2>
                                         <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
                                             <?php if ($duration) : ?>
                                                 <li class="flex">
@@ -422,4 +422,5 @@ if (ICL_LANGUAGE_CODE == 'es') { ?>
 <?php
 
 get_footer();
+
 

@@ -200,7 +200,7 @@ jQuery(document).ready(function($) {
     <div class="cf-modal-backdrop"></div>
     <div class="cf-modal-content">
         <div class="cf-modal-header">
-            <h3 id="cf-auth-modal-title"><?php echo fw_trans('login_title', 'Iniciar sesión'); ?></h3>
+            <h3 class="text-[18px] xl:text-[20px]" id="cf-auth-modal-title"><?php echo fw_trans('login_title', 'Iniciar sesión'); ?></h3>
             <button class="cf-modal-close">×</button>
         </div>
         

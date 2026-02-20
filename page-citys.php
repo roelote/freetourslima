@@ -27,7 +27,7 @@ get_header();
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
     }
     ?>
-    <h1 class="!mb-[24px] md:!mb-[32px]"><?= the_title(); ?></h1>
+    <h1 class="text-[26px] xl:text-[32px] !mb-[24px] md:!mb-[32px]"><?= the_title(); ?></h1>
 
     <div class="w-full">
         <div class="w-full grid grid-cols-1 gap-y-[32px] md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] mb-[32px]">
@@ -65,7 +65,7 @@ get_header();
                         ));
                         ?>
                         <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
-                            <h2 class="text-center"><?php echo get_the_title($child->ID); ?></h2>
+                            <h2 class="text-center text-[22px] md:text-[24px]"><?php echo get_the_title($child->ID); ?></h2>
                             <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
                                 <?php if ($duration) : ?>
                                     <li class="flex">
@@ -162,7 +162,7 @@ get_header();
         ?>
     </div>
     <div class="w-full mt-[48px] md:mt-[80px] mb-[48px] md:mb-[88px]">
-        <h3 class="!text-[24px] !mb-[20px] md:!mb-[32px]">Guía de viaje Cusco</h3>
+        <h3 class="text-[18px] xl:text-[20px] !text-[24px] !mb-[20px] md:!mb-[32px]">>Guía de viaje Cusco</h3>
         <?php echo do_shortcode('[EntradasRecientes]'); ?>
     </div>
 
@@ -172,4 +172,5 @@ get_header();
 <?php
 
 get_footer();
+
 
