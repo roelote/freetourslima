@@ -25,7 +25,7 @@ get_header();
 					if (function_exists('yoast_breadcrumb')) {
 						yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');
 					}
-					the_title("<h1 class=\"text-[26px] xl:text-[32px] !mb-[24px] md:!mb-[32px]\">>", '</h1>');
+					the_title("<h1 class=\"text-[26px] xl:text-[32px] !mb-[24px] md:!mb-[32px]\">", '</h1>');
 					while (have_posts()):
 					?>
 					<?php
