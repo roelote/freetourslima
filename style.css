@@ -415,6 +415,12 @@ h4 {
     border-right: 1px solid #DAD9D6;
 }
 
+@media (max-width: 991px) {
+    .continer-reviews .cf-center-column {
+        font-family: var(--font-nunito-sans);
+        border-right: 0px solid #DAD9D6;
+    }
+}
 .continer-reviews .cf-comment-text {
     font-size: 16px !important;
 }
@@ -625,3 +631,4 @@ h4 {
 .wpml-ls-slot-shortcode_actions{
  padding: .5em 0 !important;   
 }
+
