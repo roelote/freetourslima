@@ -116,8 +116,8 @@
                         </div>
                         <div class="block lg:hidden">
                             <button id="menuToggle" class="inline-flex flex-col justify-center items-center p-2 w-10 h-10 rounded-md hover:bg-gray-100 transition-colors">
-                                <span class="hamburger-line w-6 h-0.5 bg-[#5c5c5c] transition-all duration-300 ease-in-out"></span>
-                                <span class="hamburger-line w-6 h-0.5 bg-[#5c5c5c] my-1 transition-all duration-300 ease-in-out"></span>
+                                <span class="hamburger-line w-6 h-0.5 mb-[3px] bg-[#5c5c5c] transition-all duration-300 ease-in-out"></span>
+                                <span class="hamburger-line w-6 h-0.5 mb-[6px] bg-[#5c5c5c] my-1 transition-all duration-300 ease-in-out"></span>
                                 <span class="hamburger-line w-6 h-0.5 bg-[#5c5c5c] transition-all duration-300 ease-in-out"></span>
                             </button>
                         </div>
