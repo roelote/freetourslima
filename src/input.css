@@ -25,7 +25,7 @@
 .formcss input[type="email"],
 .formcss input[type="tel"],
 .formcss textarea {
-    @apply w-full px-4 py-[0.70rem] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff8110] focus:border-transparent transition-all;
+    @apply w-full px-4 py-[0.69rem] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff8110] focus:border-transparent transition-all;
 }
 
 .responsive-tabs .responsive-tabs__list__item:hover {

@@ -1736,8 +1736,8 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0.70rem;
-  padding-bottom: 0.70rem;
+  padding-top: 0.69rem;
+  padding-bottom: 0.69rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
