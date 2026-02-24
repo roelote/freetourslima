@@ -65,7 +65,7 @@ get_header();
                         ));
                         ?>
                         <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
-                            <h2 class="text-center text-[22px] md:text-[24px]"><?php echo get_the_title($child->ID); ?></h2>
+                            <h3 class="text-center text-[22px] md:text-[24px]"><?php echo get_the_title($child->ID); ?></h3>
                             <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
                                 <?php if ($duration) : ?>
                                     <li class="flex">
