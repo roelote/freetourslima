@@ -2057,6 +2057,10 @@ video {
     margin-top: 8.2rem;
   }
 
+  .md\:mt-\[8\.4rem\] {
+    margin-top: 8.4rem;
+  }
+
   .md\:inline {
     display: inline;
   }
