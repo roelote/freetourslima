@@ -162,7 +162,7 @@ get_header();
         ?>
     </div>
     <div class="w-full mt-[48px] md:mt-[80px] mb-[48px] md:mb-[88px]">
-        <h3 class="!mb-[20px] md:!mb-[32px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Travel Guide Cusco' : 'Guía de viaje Cusco'; ?></h3>
+        <h2 class=""><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Travel Guide Cusco' : 'Guía de viaje Cusco'; ?></h2>
         <?php echo do_shortcode('[EntradasRecientes]'); ?>
     </div>
 
