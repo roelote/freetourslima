@@ -642,6 +642,10 @@ video {
   top: -107px;
 }
 
+.top-\[24px\] {
+  top: 24px;
+}
+
 .z-10 {
   z-index: 10;
 }
