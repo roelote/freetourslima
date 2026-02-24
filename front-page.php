@@ -23,7 +23,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                 </div>
             </div>
             <div class="w-full md:w-[374px]">
-                <div class="w-full mt-0 md:mt-[6.5rem] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[100px]">
+                <div class="w-full mt-0 md:mt-[5.8rem] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[100px]">
                     <div class="h-[522px]">
                         <div class="calendar-wrapper">
                             <form class="flex flex-col gap-[16px]" action="<?= $ruta ?>" method="get" id="bookingForm">
@@ -42,9 +42,9 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
                                 <div class="flex flex-col gap-[12px]">
                                     <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-                                        <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Details</h4>
+                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Details</h2>
                                     <?php } else { ?>
-                                        <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Detalles</h4>
+                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Detalles</h2>
                                     <?php } ?>
                                     <div class="w-full h-[1px] bg-[#dad9d6]"></div>
 
@@ -118,8 +118,8 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                 <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
                                     <div class="flex flex-col gap-[10px]">
                                         <?php if (!empty($details2['consult'])) { ?>
-                                            <h4 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
-                                                <?php echo esc_html($details2['consult']); ?></h4>
+                                            <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
+                                                <?php echo esc_html($details2['consult']); ?></h2>
                                         <?php } ?>
                                         <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
                                         <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
