@@ -34,8 +34,9 @@ get_header();
 					endwhile;
 					?>
 				</div>
-				<div>
-					<div class="aside-blog aside-blog-page">
+				<div class="md:sticky top-[-107px] right-0">
+					 <div class="">
+						<div class="aside-blog aside-blog-page ">
 						<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
 							<h2 class="!mb-[16px] text-[22px] md:text-[24px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Blog Categories' : 'Categorías del Blog'; ?></h2>
 							<ul>
@@ -113,6 +114,9 @@ get_header();
 						?>
 
 					</div>
+
+					</div>
+					
 				</div>
 			</div>
 		</main>
