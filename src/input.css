@@ -45,6 +45,11 @@
 {
    
 }
+@media (max-width: 767px) {
+  .responsive-tabs .responsive-tabs__heading {
+    padding-left: 12px !important;
+    }
+}
 
 .formcss textarea {
     @apply h-[104px] resize-y;

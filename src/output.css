@@ -642,10 +642,6 @@ video {
   top: -107px;
 }
 
-.top-\[24px\] {
-  top: 24px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -712,10 +708,6 @@ video {
 
 .\!mb-\[16px\] {
   margin-bottom: 16px !important;
-}
-
-.\!mb-\[20px\] {
-  margin-bottom: 20px !important;
 }
 
 .\!mb-\[24px\] {
@@ -1328,6 +1320,10 @@ video {
   padding: 1rem;
 }
 
+.p-\[12px\] {
+  padding: 12px;
+}
+
 .p-\[16px\] {
   padding: 16px;
 }
@@ -1779,6 +1775,12 @@ video {
 
 .responsive-tabs .responsive-tabs__list__item--active, .responsive-tabs .responsive-tabs__list__item--active:hover
 {
+}
+
+@media (max-width: 767px) {
+  .responsive-tabs .responsive-tabs__heading {
+    padding-left: 12px !important;
+  }
 }
 
 .formcss textarea {
@@ -2250,6 +2252,14 @@ video {
 
   .xl\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .xl\:p-\[20px\] {
+    padding: 20px;
+  }
+
+  .xl\:p-\[22px\] {
+    padding: 22px;
   }
 
   .xl\:text-\[18px\] {
