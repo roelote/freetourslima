@@ -1783,7 +1783,7 @@ video {
     font-family: var(--font-inter) !important;
     padding-top: 10.4px !important;
     padding-bottom: 10.4px !important;
-    margin: 10px !important;
+    margin-bottom: 10px !important;
   }
 }
 
