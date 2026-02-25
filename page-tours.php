@@ -167,7 +167,7 @@ get_header();
 
 
 <!-- Related Tours Section -->
-<section class="mb-[88px] container-related-tours">
+<section class="mb-[88px] container-related-tours md:px-0 px-4">
     <div class="container">
         <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
             <h2 class="text-[24px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Things to do in Cusco</h2>
