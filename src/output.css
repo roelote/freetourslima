@@ -1780,6 +1780,8 @@ video {
 @media (max-width: 767px) {
   .responsive-tabs .responsive-tabs__heading {
     padding-left: 12px !important;
+    font-family: var(--font-inter) !important;
+    font-weight: 600 !important;
   }
 }
 
