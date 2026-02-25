@@ -240,7 +240,7 @@ function dcms_entradasrecientes( $atts , $content )
 			'
 			<div class="flex bg-white rounded-[8px] overflow-hidden float-left mr-[16px] mb-[16px]">
 				<div class="bg-orange text-[16px] font-bold md:h-[40px] flex px-[16px] items-center text-white">'.$counter.'</div>
-				<a href="'.get_permalink().'" class="underline md:h-[40px] flex px-[16px] items-center">
+				<a href="'.get_permalink().'" class="underline md:h-[40px] flex px-[16px] py-[8px] xl:py-[auto] items-center">
 					'.get_the_title().'
 				</a>
 			</div>

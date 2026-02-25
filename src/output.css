@@ -1431,6 +1431,11 @@ video {
   padding-bottom: 9px;
 }
 
+.py-\[8px\] {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .pb-\[24px\] {
   padding-bottom: 24px;
 }
@@ -2268,6 +2273,16 @@ video {
 
   .xl\:p-\[22px\] {
     padding: 22px;
+  }
+
+  .xl\:px-\[auto\] {
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  .xl\:py-\[auto\] {
+    padding-top: auto;
+    padding-bottom: auto;
   }
 
   .xl\:text-center {
