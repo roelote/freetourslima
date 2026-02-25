@@ -156,6 +156,7 @@ p {
     .responsive-tabs .responsive-tabs__panel--active h2 {
         font-size: 22px !important;
         font-weight: 600 !important;
+        font-family: var(--font-inter) !important;
     }
 }
 
