@@ -95,12 +95,12 @@
 </footer>
 
 <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-[9px] rounded-t-md  bg-[#1ab6b6] z-50  text-center border-t-2 border-white border-x-2 border-solid ">
+    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-[9px] rounded-t-xl  bg-[#1ab6b6] z-50  text-center border-t-2 border-white border-x-2 border-solid ">
         <a href="#bookingForm" class="text-xl no-underline text-white font-semibold ">Check availability</a>
     </section>
 <?php }
 if (ICL_LANGUAGE_CODE == 'es') { ?>
-    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-[9px] rounded-t-md  bg-[#1ab6b6] z-50  text-center border-t-2 border-white border-x-2 border-solid ">
+    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-[9px] rounded-t-xl  bg-[#1ab6b6] z-50  text-center border-t-2 border-white border-x-2 border-solid ">
         <a href="#bookingForm" class="text-xl no-underline text-white font-semibold ">Ver disponibilidad</a>
     </section>
 
