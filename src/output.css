@@ -2246,6 +2246,10 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:m-0 {
+    margin: 0px;
+  }
+
   .xl\:hidden {
     display: none;
   }
