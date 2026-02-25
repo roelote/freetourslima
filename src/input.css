@@ -49,6 +49,7 @@
   .responsive-tabs .responsive-tabs__heading {
     padding-left: 12px !important;
     font-family: var(--font-inter) !important;
+    padding: 10.4px 0 !important;
 
     }
 }
