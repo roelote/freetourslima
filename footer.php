@@ -40,7 +40,7 @@
             <?php endif; ?>
 
             <!-- TrustPilot Section -->
-            <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
+            <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-0 xl:pl-5">
                 <h4 class="text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px] w-full">TrustPilot</h4>
                 <img src="<?php echo esc_url(get_template_directory_uri()) ?>/img/Trustpilot.svg"
                     class="w-[150px] h-[28px]  mt-[15px] mx-auto md:mr-auto md:ml-0" alt="trustpilot stars" />
