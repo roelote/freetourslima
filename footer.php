@@ -13,7 +13,7 @@
                         <h4 class="w-full text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Company' : 'Compañía'; ?></h4>
                         <ul class="w-full text-center md:text-start">
                             <?php foreach ($repeater as $value) { ?>
-                                <li><a href="<?php echo esc_url($value['url']); ?>" class="text-white no-underline font-normal mb-4 xl:mb-1 text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
+                                <li class="xl:mb-0 mb-2"><a href="<?php echo esc_url($value['url']); ?>" class="text-white no-underline font-normal text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
                             <?php } ?>
                         </ul>
                     </div>
@@ -32,7 +32,7 @@
                         <h4 class="w-full text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]">Tours</h4>
                         <ul class="w-full text-center md:text-start">
                             <?php foreach ($repeater2 as $value) { ?>
-                                <li><a href="<?php echo esc_url($value['url']); ?>" class="text-white no-underline font-normal mb-4 xl:mb-1 text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
+                                <li class="xl:mb-0 mb-2"><a href="<?php echo esc_url($value['url']); ?>" class="text-white no-underline font-normal text-[14px]"><?php echo esc_html($value['item']); ?></a></li>
                             <?php } ?>
                         </ul>
                     </div>
