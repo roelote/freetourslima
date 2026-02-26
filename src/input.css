@@ -56,6 +56,11 @@
     }
 }
 
+.responsive-tabs
+{
+    margin-bottom: 22px !important;
+}
+
 .formcss textarea {
     @apply h-[104px] resize-y;
 }
