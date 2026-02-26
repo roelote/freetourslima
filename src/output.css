@@ -854,6 +854,10 @@ video {
   margin-bottom: 46px;
 }
 
+.mb-\[1px\] {
+  margin-bottom: 1px;
+}
+
 .block {
   display: block;
 }
@@ -1502,6 +1506,26 @@ video {
 
 .pt-\[24px\] {
   padding-top: 24px;
+}
+
+.pb-\[1px\] {
+  padding-bottom: 1px;
+}
+
+.pb-\[32px\] {
+  padding-bottom: 32px;
+}
+
+.pb-\[5px\] {
+  padding-bottom: 5px;
+}
+
+.pb-\[10px\] {
+  padding-bottom: 10px;
+}
+
+.pb-\[60px\] {
+  padding-bottom: 60px;
 }
 
 .text-left {
