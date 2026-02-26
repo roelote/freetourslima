@@ -39,7 +39,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                     <div class="">
                         <div class="w-full flex flex-col gap-[8px] space-y-3 xl:space-y-0 md:gap-[30px] mt-0 md:mt-[53px]">
                             <!-- Details Card -->
-                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[12px] xl:p-[20px]">
+                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                 <div class="flex flex-col gap-[12px]">
                                     <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
                                         <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Details</h2>
@@ -115,7 +115,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             $details2 = get_field('details_2');
                             if ($details2) {
                             ?>
-                                <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[12px] xl:p-[22px]">
+                                <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                     <div class="flex flex-col gap-[10px]">
                                         <?php if (!empty($details2['consult'])) { ?>
                                             <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">
