@@ -121,7 +121,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                             <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">
                                                 <?php echo esc_html($details2['consult']); ?></h2>
                                         <?php } ?>
-                                        <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
+                                        <div class="w-full h-[1px] bg-[#dad9d6]"></div>
                                         <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
                                             <div class="flex flex-row items-center gap-[8px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
