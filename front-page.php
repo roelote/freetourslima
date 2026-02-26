@@ -37,7 +37,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                         </div>
                     </div>
                     <div class="">
-                        <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[53px]">
+                        <div class="w-full flex flex-col gap-[8px] space-y-3 xl:space-y-0 md:gap-[30px] mt-0 md:mt-[53px]">
                             <!-- Details Card -->
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[12px] xl:p-[20px]">
                                 <div class="flex flex-col gap-[12px]">
