@@ -49,7 +49,7 @@ get_header();
                     </div>
                     <div>
                        <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[53px]">
-                            <!-- Details Card -->
+                           
                            <!-- Details Card -->
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                 <div class="flex flex-col gap-[12px]">
