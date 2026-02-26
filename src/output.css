@@ -1451,6 +1451,11 @@ video {
   padding-bottom: 9px;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .pb-\[16px\] {
   padding-bottom: 16px;
 }
