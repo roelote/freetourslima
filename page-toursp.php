@@ -419,19 +419,6 @@ if (ICL_LANGUAGE_CODE == 'en') {
 </section>
 
 
-<?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
-        <a href="#datepicker2" class="text-2xl text-white font-semibold ">Check availability</a>
-    </section>
-<?php }
-if (ICL_LANGUAGE_CODE == 'es') { ?>
-    <section class="fixed bottom-0 left-0 right-0 block xl:hidden py-2  bg-[#333333] z-50  text-center">
-        <a href="#datepicker2" class="text-2xl text-white font-semibold ">Ver disponibilidad</a>
-    </section>
-
-<?php }
-?>
-
 <?php
 
 get_footer();
