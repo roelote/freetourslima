@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <main>
-    <div class="container mx-auto px-5 md:px-0 content-blogs md-[48px] md:mb-[88px] mt-[48px]">
+    <div class="container mx-auto px-4 md:px-0 content-blogs md-[48px] md:mb-[88px] mt-[48px]">
           <?php
                 if (function_exists('yoast_breadcrumb')) {
                     yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');

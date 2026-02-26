@@ -3,7 +3,7 @@ get_header();
 
 
 ?>
-<div class="container mx-auto px-[12px] md:px-0 content-main-blog mb-[48px] md:mb-[88px] mt-[48px] container-blog">
+<div class="container mx-auto px-4 md:px-0 content-main-blog mb-[48px] md:mb-[88px] mt-[48px] container-blog">
     <?php
     if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] mb-[16px] text-[#A49D9D]">', '</nav>');

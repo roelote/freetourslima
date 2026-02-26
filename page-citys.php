@@ -21,7 +21,7 @@ get_header();
 
 
 
-<div class="container mx-auto px-5 md:px-0 mt-[48px] page-citys">
+<div class="container mx-auto px-4 md:px-0 mt-[48px] page-citys">
     <?php
     if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav class="breadcrumbs text-[14px] text-[#A49D9D] mb-[16px]">', '</nav>');

@@ -139,6 +139,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                     </div>
                                 </div>
                             <?php } ?>
+                            
                         </div>
                     </div>
                 </div>
