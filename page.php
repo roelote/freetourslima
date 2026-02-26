@@ -17,7 +17,7 @@ get_header();
 ?>
 
 <section class="mt-[48px] mb-[88px] content-pages">
-	<div class="container px-5 md:px-0">
+	<div class="container px-4 md:px-0">
 		<main id="primary" class="site-main">
 			<div class="flex items-start gap-[40px] md:gap-[81px] flex-col lg:flex-row">
 				<div class="w-full md:w-[640px]">
