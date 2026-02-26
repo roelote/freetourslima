@@ -706,6 +706,10 @@ video {
   margin-bottom: 0px !important;
 }
 
+.\!mb-8 {
+  margin-bottom: 2rem !important;
+}
+
 .\!mb-\[16px\] {
   margin-bottom: 16px !important;
 }
@@ -844,6 +848,14 @@ video {
 
 .mt-\[6px\] {
   margin-top: 6px;
+}
+
+.\!mb-\[4px\] {
+  margin-bottom: 4px !important;
+}
+
+.\!mb-\[0px\] {
+  margin-bottom: 0px !important;
 }
 
 .block {
@@ -1131,18 +1143,6 @@ video {
 
 .gap-y-\[32px\] {
   row-gap: 32px;
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -2279,6 +2279,14 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:mb-\[16px\] {
+    margin-bottom: 16px;
+  }
+
+  .xl\:\!mb-\[16px\] {
+    margin-bottom: 16px !important;
+  }
+
   .xl\:hidden {
     display: none;
   }
@@ -2289,12 +2297,6 @@ video {
 
   .xl\:w-8\/12 {
     width: 66.666667%;
-  }
-
-  .xl\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
   .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {

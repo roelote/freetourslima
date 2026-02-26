@@ -42,9 +42,9 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[12px] xl:p-[20px]">
                                 <div class="flex flex-col gap-[12px]">
                                     <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Details</h2>
+                                        <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Details</h2>
                                     <?php } else { ?>
-                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Detalles</h2>
+                                        <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Detalles</h2>
                                     <?php } ?>
                                     <div class="w-full h-[1px] bg-[#dad9d6]"></div>
 
@@ -118,7 +118,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                 <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[12px] xl:p-[22px]">
                                     <div class="flex flex-col gap-[10px]">
                                         <?php if (!empty($details2['consult'])) { ?>
-                                            <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">
+                                            <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">
                                                 <?php echo esc_html($details2['consult']); ?></h2>
                                         <?php } ?>
                                         <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
