@@ -90,9 +90,15 @@
 }
 
 .formcss .wpcf7-acceptance input[type="checkbox"] {
-    @apply w-5 h-5 mt-1 text-[#ff8110] border-gray-300 rounded focus:ring-[#ff8110] cursor-pointer;
+    @apply w-5 h-5 mt-0 text-[#ff8110] border-gray-300 rounded focus:ring-[#ff8110] cursor-pointer;
 }
 
+
+.formcss .wpcf7-acceptance label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
 .formcss .btnsendf {
     width: 157px;

@@ -27,19 +27,20 @@ get_header();
 
 			$paxss = str_replace("/", "", $paxs);
 ?>
-<section class="bg-gray-100">
-	<div class="container">
+<section class="bg-[#efede7]">
+	<div class="py-[48px] mx-auto max-w-[848px]"> 
+		<h1 class="text-fwt text-2xl font-bold !mb-[24px] w-full xl:max-w-[400px]"><?=htmlspecialchars($nametour)?></h1>
 	<div class="flex flex-wrap">
-		<div class="w-full xl:w-4/12">
-			<div class="py-5">
-				 <h1 class="text-fwt text-2xl font-bold mb-2"><?=htmlspecialchars($nametour)?></h1>
+		<div class="w-full xl:w-[400px]">
+			<div class="">
+				
 				 <img src="<?=$urlfoto?>" alt="book tour">
 			</div>
 		</div>	
-		<div class="w-full xl:w-8/12">
-			<div class="py-14 px-10">
-
-						<?php if (ICL_LANGUAGE_CODE == 'en') { ?>
+		<div class="w-full xl:w-[448px]">
+			<div class="py-1 px-12">
+				<div class="w-[400px]">
+					<?php if (ICL_LANGUAGE_CODE == 'en') { ?>
 							<p>Booking for the <b><?=htmlspecialchars($fechat)?></b></p>
 							<p>People: <b><?=htmlspecialchars($paxss)?></b> </p>
                         <?php }
@@ -51,7 +52,7 @@ get_header();
                         ?>
 
 				<div>
-						<main id="primary" class="site-main">
+						<main id="primary" class="site-main ">
 
 						 <?php
                             while (have_posts()):
@@ -63,6 +64,10 @@ get_header();
 						</main><!-- #main -->
 
 				</div>
+
+				</div>
+
+						
 
 			</div>
 
