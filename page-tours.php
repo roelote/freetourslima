@@ -50,12 +50,13 @@ get_header();
                     <div>
                        <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[53px]">
                             <!-- Details Card -->
-                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
+                           <!-- Details Card -->
+                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                 <div class="flex flex-col gap-[12px]">
                                     <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Details</h2>
+                                        <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Details</h2>
                                     <?php } else { ?>
-                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Detalles</h2>
+                                        <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Detalles</h2>
                                     <?php } ?>
                                     <div class="w-full h-[1px] bg-[#dad9d6]"></div>
 
@@ -126,13 +127,13 @@ get_header();
                             $details2 = get_field('details_2');
                             if ($details2) {
                             ?>
-                                <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
+                                <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                     <div class="flex flex-col gap-[10px]">
                                         <?php if (!empty($details2['consult'])) { ?>
-                                            <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
+                                            <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">
                                                 <?php echo esc_html($details2['consult']); ?></h2>
                                         <?php } ?>
-                                        <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
+                                        <div class="w-full h-[1px] bg-[#dad9d6]"></div>
                                         <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
                                             <div class="flex flex-row items-center gap-[8px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">

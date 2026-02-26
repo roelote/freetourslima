@@ -65,12 +65,12 @@ if (ICL_LANGUAGE_CODE == 'en') {
                     <div>
                         <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[53px]">
                             <!-- Details Card -->
-                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[20px]">
+                            <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                 <div class="flex flex-col gap-[12px]">
                                     <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Details</h2>
+                                        <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Details</h2>
                                     <?php } else { ?>
-                                        <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">Detalles</h2>
+                                        <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">Detalles</h2>
                                     <?php } ?>
                                     <div class="w-full h-[1px] bg-[#dad9d6]"></div>
 
@@ -81,7 +81,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                                         if (!empty($details['title_price']) || !empty($details['price'])) {
                                     ?>
                                             <div class="flex flex-row items-center gap-[8px]">
-                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.137 2.72821L15.967 4.55819C18.656 7.24816 20 8.59214 20 10.2621C20 11.9331 18.656 13.2771 15.967 15.966C13.277 18.656 11.9329 20 10.2619 20C8.59192 20 7.24691 18.656 4.5579 15.967L2.72788 14.1371C1.18287 12.5911 0.409869 11.8191 0.122867 10.8161C-0.165135 9.81312 0.0808668 8.74814 0.57287 6.61916L0.855872 5.39118C1.26887 3.5992 1.47588 2.70321 2.08888 2.08922C2.70188 1.47523 3.59889 1.26923 5.3909 0.856235L6.61891 0.572238C8.74893 0.0812444 9.81293 -0.164753 10.8159 0.122244C11.8189 0.41024 12.5919 1.18323 14.137 2.72821ZM9.14593 12.3281C8.47292 11.6561 8.47792 10.6901 8.88093 9.92512C8.78116 9.78102 8.73501 9.60652 8.7505 9.43194C8.76599 9.25735 8.84213 9.09371 8.96571 8.96942C9.08929 8.84513 9.2525 8.76804 9.427 8.75155C9.60149 8.73506 9.77625 8.7802 9.92093 8.87914C10.2609 8.69914 10.6339 8.60314 11.0059 8.60714C11.2049 8.609 11.3949 8.68979 11.5342 8.83176C11.6736 8.97372 11.7508 9.16522 11.7489 9.36413C11.7471 9.56304 11.6663 9.75307 11.5243 9.8924C11.3824 10.0317 11.1909 10.109 10.9919 10.1071C10.7604 10.1157 10.5416 10.2152 10.3829 10.3841C9.99593 10.7711 10.0969 11.1591 10.2059 11.2681C10.3159 11.3771 10.7029 11.4781 11.0899 11.0911C11.8739 10.3071 13.228 10.0471 14.095 10.9141C14.768 11.5871 14.763 12.5531 14.36 13.3181C14.4591 13.4622 14.5047 13.6365 14.489 13.8107C14.4732 13.9849 14.397 14.1482 14.2736 14.2722C14.1502 14.3961 13.9873 14.4731 13.8132 14.4897C13.639 14.5063 13.4646 14.4615 13.32 14.3631C12.8712 14.6093 12.3507 14.6913 11.8479 14.5951C11.653 14.555 11.482 14.4392 11.3724 14.273C11.2629 14.1069 11.2239 13.904 11.2639 13.7091C11.304 13.5141 11.4198 13.3431 11.586 13.2336C11.7522 13.1241 11.955 13.085 12.1499 13.1251C12.3269 13.1621 12.613 13.1041 12.858 12.8591C13.245 12.4711 13.144 12.0841 13.035 11.9751C12.925 11.8661 12.538 11.7651 12.1509 12.1521C11.3669 12.9361 10.0129 13.1961 9.14593 12.3281ZM8.01992 8.29314C8.20561 8.10739 8.35289 7.88688 8.45336 7.64421C8.55383 7.40154 8.60552 7.14146 8.60548 6.87881C8.60543 6.61616 8.55365 6.35609 8.45309 6.11346C8.35254 5.87082 8.20518 5.65037 8.01942 5.46468C7.83366 5.27899 7.61315 5.13171 7.37048 5.03124C7.1278 4.93077 6.86771 4.87909 6.60506 4.87913C6.3424 4.87918 6.08233 4.93096 5.83969 5.03151C5.59705 5.13207 5.37659 5.27943 5.1909 5.46518C4.81588 5.84032 4.60525 6.34907 4.60535 6.87951C4.60544 7.40995 4.81625 7.91863 5.1914 8.29364C5.56655 8.66865 6.07531 8.87928 6.60576 8.87919C7.13621 8.87909 7.6449 8.66829 8.01992 8.29314Z" fill="#FF8110"></path>
                                                 </svg>
                                                 <div class="flex flex-nowrap gap-2">
@@ -141,13 +141,13 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             $details2 = get_field('details_2');
                             if ($details2) {
                             ?>
-                                <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] p-[22px]">
+                                <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                     <div class="flex flex-col gap-[10px]">
                                         <?php if (!empty($details2['consult'])) { ?>
-                                            <h2 class="text-[16px] xl:text-[18px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-center">
+                                            <h2 class="text-[16px] xl:text-[18px] !mb-[0px] xl:!mb-[16px] font-bold leading-[30px] text-[#5c5c5c] font-['Inter'] text-left xl:text-center">
                                                 <?php echo esc_html($details2['consult']); ?></h2>
                                         <?php } ?>
-                                        <div class="w-full h-[1px] bg-[#dad9d6] mb-[8px]"></div>
+                                        <div class="w-full h-[1px] bg-[#dad9d6]"></div>
                                         <?php if (!empty($details2['question']) || !empty($details2['link'])) { ?>
                                             <div class="flex flex-row items-center gap-[8px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
