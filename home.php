@@ -122,7 +122,7 @@ get_header();
                       <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
                 <h3 class="!mb-[16px]">Free tour in Cusco</h3>
                 <ul>
-                    <li><a href="/en/things-to-do-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
+                    <li><a href="/en/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
                 </ul>
             </div>
                 <?php }
@@ -130,7 +130,7 @@ get_header();
                       <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
                         <h3 class="!mb-[16px]">Free tour por Cusco</h3>
                         <ul>
-                            <li><a href="/es/que-hacer-en-cusco/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
+                            <li><a href="/es/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
                         </ul>
                     </div>
 
