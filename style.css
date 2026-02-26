@@ -75,7 +75,7 @@ h1 {
     font-family: var(--font-inter);
     font-weight: bold !important;
     margin-bottom: 16px !important;
-    line-height: 32px !important;
+    line-height: 35px !important;
 }
 
 h2 {
@@ -84,7 +84,7 @@ h2 {
     font-family: var(--font-inter);
     font-weight: bold !important;
     margin-bottom: 16px !important;
-    line-height: 32px !important;
+    line-height: 35px !important;
 }
 
 h3 {
@@ -93,7 +93,7 @@ h3 {
     font-family: var(--font-inter);
     font-weight: bold !important;
     margin-bottom: 16px !important;
-    line-height: 32px !important;
+    line-height: 35px !important;
 }
 
 h4 {
@@ -102,7 +102,7 @@ h4 {
     font-family: var(--font-inter);
     font-weight: bold;
     margin-bottom: 16px;
-    line-height: 32px !important;
+    line-height: 35px !important;
 }
 
 p {
