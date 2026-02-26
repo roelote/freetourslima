@@ -27,7 +27,7 @@
                 $repeater2 = $group2['list'];
             ?>
                 <!-- Tours Section -->
-                <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
+                <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-0 xl:pl-5">
                     <div class="flex flex-col justify-start items-start">
                         <h4 class="w-full text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px]">Tours</h4>
                         <ul class="w-full text-center md:text-start">
@@ -59,7 +59,7 @@
                 </p>
             </div>
 
-            <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-5">
+            <div class="w-full border-0 md:border-l md:border-[#ff8110] pl-0 xl:pl-5">
                 <h4 class="text-[16px] xl:text-[18px] font-bold leading-[17px] text-[#f5f5f5] font-['Inter'] border-b border-[#ff8110] md:border-0 text-center md:text-start mb-[8px] pb-[8px] md:pb-0 md:mb-[16px] w-full"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Payment' : 'Pago'; ?></h4>
                 <div class="flex flex-row gap-3 justify-center md:justify-start items-center mt-2">
                     <div class="flex flex-col justify-start items-center">
