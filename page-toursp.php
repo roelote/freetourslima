@@ -63,7 +63,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                         </div>
                     </div>
                     <div>
-                        <div class="w-full flex flex-col gap-[8px] md:gap-[30px] mt-0 md:mt-[53px]">
+                        <div class="w-full flex flex-col gap-[8px] space-y-3 xl:space-y-0 md:gap-[30px] mt-0 md:mt-[53px]">
                             <!-- Details Card -->
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">
                                 <div class="flex flex-col gap-[12px]">
