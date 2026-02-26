@@ -312,7 +312,7 @@ p {
 
 .content-blogs .wp-block-image img {
     margin-bottom: 40px !important;
-    border-radius: 16px;
+    border-radius: 12px;
     width: 640px;
     height: 395px;
     object-fit: cover;
