@@ -850,6 +850,14 @@ video {
   margin-top: 6px;
 }
 
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
+.mt-\[0px\] {
+  margin-top: 0px;
+}
+
 .block {
   display: block;
 }
@@ -985,10 +993,6 @@ video {
 
 .w-\[20px\] {
   width: 20px;
-}
-
-.w-\[400px\] {
-  width: 400px;
 }
 
 .w-\[40px\] {
@@ -1447,6 +1451,16 @@ video {
 .py-\[9px\] {
   padding-top: 9px;
   padding-bottom: 9px;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-\[10px\] {
@@ -2295,6 +2309,14 @@ video {
     margin-bottom: 0px;
   }
 
+  .xl\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .xl\:mt-\[100px\] {
+    margin-top: 100px;
+  }
+
   .xl\:hidden {
     display: none;
   }
@@ -2311,6 +2333,10 @@ video {
     max-width: 400px;
   }
 
+  .xl\:flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+
   .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -2321,9 +2347,24 @@ video {
     padding: 22px;
   }
 
+  .xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .xl\:py-\[auto\] {
     padding-top: auto;
     padding-bottom: auto;
+  }
+
+  .xl\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .xl\:py-\[48px\] {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .xl\:pb-\[22px\] {
@@ -2348,5 +2389,16 @@ video {
 
   .xl\:text-\[32px\] {
     font-size: 32px;
+  }
+
+  .\*\:xl\:py-\[48px\] > * {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:flex-col {
+    flex-direction: column;
   }
 }
