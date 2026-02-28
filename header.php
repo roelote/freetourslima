@@ -11,9 +11,8 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-<!-- header nuevo -->
-
-    <header class="w-full">
+<!-- header -->
+    <header class="w-full sticky top-0 z-40 bg-[#efede7] lg:static lg:z-auto">
         <div class="container mx-auto mt-[14px] md:my-[16px] px-4 md:px-0 relative">
             <div class="flex flex-col gap-[18px] justify-start items-center">
                 <div class="w-full">

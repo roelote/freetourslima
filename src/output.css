@@ -662,6 +662,10 @@ video {
   z-index: 50;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .col-span-full {
   grid-column: 1 / -1;
 }
@@ -2312,6 +2316,14 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:static {
+    position: static;
+  }
+
+  .lg\:z-auto {
+    z-index: auto;
+  }
+
   .lg\:flex {
     display: flex;
   }
