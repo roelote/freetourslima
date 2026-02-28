@@ -34,7 +34,7 @@ get_header();
 					<div class="w-full xl:w-[400px]">
 						<div class="flex flex-col-reverse md:flex-col xl:flex-col-reverse 2xl:flex-col">
 							<h1 class="text-fwt text-2xl font-bold !mb-[24px] mt-[24px] xl:mt-0 w-full xl:max-w-[400px]"><?=htmlspecialchars($nametour)?></h1>
-							<img src="<?=$urlfoto?>" alt="book tour">
+							<img src="<?=$urlfoto?>" class="rounded-lg" alt="book tour">
 						</div>
 					</div>	
 					<div class="w-full xl:w-[448px] mt-[0px] xl:mt-[100px]">
