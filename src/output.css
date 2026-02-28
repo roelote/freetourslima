@@ -2038,6 +2038,17 @@ video {
           backdrop-filter: blur(6px);
 }
 
+@media (max-width: 1023px) {
+  #fwt-nav-bar.fwt-scrolled #mobileMenu {
+    top: 3.2rem;
+    transition: top 0.3s ease;
+  }
+
+  #fwt-nav-bar #mobileMenu {
+    transition: top 0.3s ease;
+  }
+}
+
 .hover\:bg-\[\#FF8110\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 129 16 / var(--tw-bg-opacity, 1));

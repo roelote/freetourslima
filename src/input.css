@@ -192,3 +192,13 @@
     background: rgba(255,255,255,0.97);
     backdrop-filter: blur(6px);
 }
+
+@media (max-width: 1023px) {
+    #fwt-nav-bar.fwt-scrolled #mobileMenu {
+        top: 3.2rem;
+        transition: top 0.3s ease;
+    }
+    #fwt-nav-bar #mobileMenu {
+        transition: top 0.3s ease;
+    }
+}
