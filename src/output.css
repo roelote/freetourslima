@@ -2099,6 +2099,10 @@ video {
     margin-top: 9rem;
   }
 
+  .md\:mt-\[9\.3rem\] {
+    margin-top: 9.3rem;
+  }
+
   .md\:inline {
     display: inline;
   }
