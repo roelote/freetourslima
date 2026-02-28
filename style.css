@@ -543,6 +543,13 @@ p {
     padding-bottom: 40px !important;
     background-color: #F5F5F5 !important;
 }
+.formcss input[type="radio"] {
+  accent-color: var(--color-primary)
+}
+
+.formcss input[type="checkbox"] {
+  accent-color: var(--color-primary);
+}
 
 .formcss input, .formcss textarea, .formcss select
 {
