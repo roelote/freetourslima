@@ -142,12 +142,14 @@
     <script>
     (function(){
         var bar = document.getElementById('fwt-nav-bar');
-        if (!bar) return;
+        var hdr = document.querySelector('header');
         window.addEventListener('scroll', function(){
             if (window.scrollY > 10) {
-                bar.classList.add('fwt-scrolled');
+                if (bar) bar.classList.add('fwt-scrolled');
+                if (hdr) hdr.classList.add('fwt-header-scrolled');
             } else {
-                bar.classList.remove('fwt-scrolled');
+                if (bar) bar.classList.remove('fwt-scrolled');
+                if (hdr) hdr.classList.remove('fwt-header-scrolled');
             }
         }, { passive: true });
     })();

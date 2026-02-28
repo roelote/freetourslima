@@ -143,6 +143,17 @@
     @apply border-green-500 bg-green-50 text-green-700;
 }
 
+/* ===== Logo scroll shrink (mobile only) ===== */
+@media (max-width: 1023px) {
+    .fwt-header-scrolled .custom-logo img {
+        width: 150px;
+        transition: width 0.3s ease;
+    }
+    .custom-logo img {
+        transition: width 0.3s ease;
+    }
+}
+
 /* ===== Menu items ===== */
 #mobileMenu .menu-item a {
     padding: 12px 0px;
