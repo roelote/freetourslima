@@ -822,6 +822,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-\[0px\] {
+  margin-top: 0px;
+}
+
 .mt-\[14px\] {
   margin-top: 14px;
 }
@@ -848,14 +852,6 @@ video {
 
 .mt-\[6px\] {
   margin-top: 6px;
-}
-
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
-.mt-\[0px\] {
-  margin-top: 0px;
 }
 
 .block {
@@ -1358,11 +1354,6 @@ video {
   padding-right: 0px;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1418,6 +1409,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1438,11 +1434,6 @@ video {
   padding-bottom: 20px;
 }
 
-.py-\[48px\] {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -1451,16 +1442,6 @@ video {
 .py-\[9px\] {
   padding-top: 9px;
   padding-bottom: 9px;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .pb-\[10px\] {
@@ -2015,6 +1996,10 @@ video {
     position: sticky;
   }
 
+  .md\:top-6 {
+    top: 1.5rem;
+  }
+
   .md\:\!m-0 {
     margin: 0px !important;
   }
@@ -2100,6 +2085,18 @@ video {
 
   .md\:mt-\[80px\] {
     margin-top: 80px;
+  }
+
+  .md\:mt-\[6\.5rem\] {
+    margin-top: 6.5rem;
+  }
+
+  .md\:mt-\[9\.1rem\] {
+    margin-top: 9.1rem;
+  }
+
+  .md\:mt-\[9rem\] {
+    margin-top: 9rem;
   }
 
   .md\:inline {
@@ -2188,6 +2185,10 @@ video {
 
   .md\:gap-\[81px\] {
     gap: 81px;
+  }
+
+  .md\:self-start {
+    align-self: flex-start;
   }
 
   .md\:rounded-none {
@@ -2352,11 +2353,6 @@ video {
     padding-right: 0px;
   }
 
-  .xl\:py-\[auto\] {
-    padding-top: auto;
-    padding-bottom: auto;
-  }
-
   .xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -2365,6 +2361,11 @@ video {
   .xl\:py-\[48px\] {
     padding-top: 48px;
     padding-bottom: 48px;
+  }
+
+  .xl\:py-\[auto\] {
+    padding-top: auto;
+    padding-bottom: auto;
   }
 
   .xl\:pb-\[22px\] {
@@ -2389,11 +2390,6 @@ video {
 
   .xl\:text-\[32px\] {
     font-size: 32px;
-  }
-
-  .\*\:xl\:py-\[48px\] > * {
-    padding-top: 48px;
-    padding-bottom: 48px;
   }
 }
 
