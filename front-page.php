@@ -22,7 +22,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                     ?>
                 </div>
             </div>
-            <div class="w-full md:w-[374px]">
+            <div class="w-full md:w-[374px] md:sticky md:top-[-100px]">
                 <div class="w-full mt-0 md:mt-[6.5rem] flex flex-col-reverse md:flex-col gap-[32px] md:gap-[100px]">
                     <div class="h-[522px]">
                         <div class="calendar-wrapper">
@@ -36,7 +36,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             </form>
                         </div>
                     </div>
-                    <div class="md:sticky md:top-6">
+                    <div class="">
                         <div class="w-full flex flex-col gap-[8px] space-y-3 xl:space-y-0 md:gap-[30px] mt-0 md:mt-[53px]">
                             <!-- Details Card -->
                             <div class="bg-[#efede7] border border-[#dad9d6] rounded-[8px] pb-[16px] xl:pb-[22px] p-[12px] xl:p-[22px]">

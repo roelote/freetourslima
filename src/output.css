@@ -2004,6 +2004,22 @@ video {
     top: 1.5rem;
   }
 
+  .md\:top-0 {
+    top: 0px;
+  }
+
+  .md\:top-\[-70px\] {
+    top: -70px;
+  }
+
+  .md\:top-\[-80px\] {
+    top: -80px;
+  }
+
+  .md\:top-\[-100px\] {
+    top: -100px;
+  }
+
   .md\:\!m-0 {
     margin: 0px !important;
   }
