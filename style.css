@@ -538,7 +538,7 @@ p {
 .formcss {
     margin-top: 40px;
     border: 1px solid #ddd;
-    padding: 24px !important;
+    padding: 32px !important;
     border-radius: 8px;
     padding-bottom: 40px !important;
     background-color: #F5F5F5 !important;
@@ -554,7 +554,7 @@ p {
     border: 1px solid #DAD9D6;
     font-family: var(--font-nunito-sans);
     font-size: 16px;
-    
+    padding: 12px 12px;
     color: var(--color-secondary);
 }
 
