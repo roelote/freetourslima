@@ -97,7 +97,7 @@
 .formcss .wpcf7-acceptance label {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 12px;
 }
 
 .formcss .btnsendf {

@@ -1888,7 +1888,7 @@ video {
 .formcss .wpcf7-acceptance label {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 12px;
 }
 
 .formcss .btnsendf {
@@ -2067,40 +2067,24 @@ video {
     margin-top: 48px;
   }
 
-  .md\:mt-\[5\.8rem\] {
-    margin-top: 5.8rem;
-  }
-
   .md\:mt-\[53px\] {
     margin-top: 53px;
-  }
-
-  .md\:mt-\[8\.4rem\] {
-    margin-top: 8.4rem;
-  }
-
-  .md\:mt-\[8\.6rem\] {
-    margin-top: 8.6rem;
-  }
-
-  .md\:mt-\[80px\] {
-    margin-top: 80px;
   }
 
   .md\:mt-\[6\.5rem\] {
     margin-top: 6.5rem;
   }
 
-  .md\:mt-\[9\.1rem\] {
-    margin-top: 9.1rem;
-  }
-
-  .md\:mt-\[9rem\] {
-    margin-top: 9rem;
+  .md\:mt-\[80px\] {
+    margin-top: 80px;
   }
 
   .md\:mt-\[9\.3rem\] {
     margin-top: 9.3rem;
+  }
+
+  .md\:mt-\[9rem\] {
+    margin-top: 9rem;
   }
 
   .md\:inline {
@@ -2189,10 +2173,6 @@ video {
 
   .md\:gap-\[81px\] {
     gap: 81px;
-  }
-
-  .md\:self-start {
-    align-self: flex-start;
   }
 
   .md\:rounded-none {
