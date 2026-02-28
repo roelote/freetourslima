@@ -30,7 +30,7 @@ get_header();
                 ?>
                     <div class="w-full flex flex-col md:flex-row rounded-[8px] overflow-hidden bg-white content-card">
                         <div>
-                            <div class="w-full md:w-[286px] h-[214px]">
+                            <div class="w-full md:w-[286px] h-[216px]">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium', array('class' => 'w-full h-full object-cover object-center', 'alt' => get_the_title())); ?>
