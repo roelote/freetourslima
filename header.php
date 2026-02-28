@@ -126,7 +126,9 @@
                 </div>
             </div>
         </div>
-        <div class="relative">
+       
+    </header>
+     <div class="relative" id="fwt-nav-bar">
             <?php
             wp_nav_menu([
                 'theme_location' => 'header-main-menu',
@@ -137,7 +139,34 @@
             ]);
             ?>
         </div>
-    </header>
+
+    <style>
+        #fwt-nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #fff;
+            transition: box-shadow 0.3s ease, background 0.3s ease;
+        }
+        #fwt-nav-bar.fwt-scrolled {
+            box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+    <script>
+    (function(){
+        var bar = document.getElementById('fwt-nav-bar');
+        if (!bar) return;
+        window.addEventListener('scroll', function(){
+            if (window.scrollY > 10) {
+                bar.classList.add('fwt-scrolled');
+            } else {
+                bar.classList.remove('fwt-scrolled');
+            }
+        }, { passive: true });
+    })();
+    </script>
 
     <style>
         /* Estilos para el menú */
