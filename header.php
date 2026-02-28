@@ -140,20 +140,6 @@
             ?>
         </div>
 
-    <style>
-        #fwt-nav-bar {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: #fff;
-            transition: box-shadow 0.3s ease, background 0.3s ease;
-        }
-        #fwt-nav-bar.fwt-scrolled {
-            box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-            background: rgba(255,255,255,0.97);
-            backdrop-filter: blur(6px);
-        }
-    </style>
     <script>
     (function(){
         var bar = document.getElementById('fwt-nav-bar');
@@ -168,39 +154,6 @@
     })();
     </script>
 
-    <style>
-        /* Estilos para el menú */
-        #mobileMenu .menu-item a {
-            padding: 12px 0px;
-          
-            transition: all 0.3s ease;
-            display: block;
-            color: #5c5c5c;
-            font-weight: 500;
-            margin: 0 15px;
-        }
-
-        /* Hover */
-        #mobileMenu .menu-item a:hover {
-           
-text-decoration: underline;
-            text-decoration-color: #FF8110;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 8px;
-
-            
-        }
-
-        /* Active - página actual */
-        #mobileMenu .menu-item.current-menu-item a,
-        #mobileMenu .menu-item.current_page_item a {
-           text-decoration: underline;
-            text-decoration-color: #FF8110;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 8px;
-            
-        }
-    </style>
 
 <!-- Script del dropdown de usuario (debe estar fuera del condicional para funcionar con usuarios logueados) -->
 <script>

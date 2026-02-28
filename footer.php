@@ -115,6 +115,29 @@
 
 
 
+<!-- Scroll Up Button -->
+<button id="scrollUpBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+    class="fixed bottom-[80px] xl:bottom-[30px] right-[20px] z-50 w-[44px] h-[44px] rounded-full bg-[#ff8110] text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300"
+    aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+    (function() {
+        var btn = document.getElementById('scrollUpBtn');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                btn.classList.remove('opacity-0', 'pointer-events-none');
+                btn.classList.add('opacity-100');
+            } else {
+                btn.classList.add('opacity-0', 'pointer-events-none');
+                btn.classList.remove('opacity-100');
+            }
+        });
+    })();
+</script>
+
 <?php wp_footer(); ?>
 </body>
 
