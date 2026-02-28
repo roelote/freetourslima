@@ -544,7 +544,7 @@ p {
     background-color: #F5F5F5 !important;
 }
 .formcss input[type="radio"] {
-  accent-color: var(--color-primary)
+  accent-color: #df700c !important;
 }
 
 .formcss input[type="checkbox"] {
