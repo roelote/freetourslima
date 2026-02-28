@@ -61,20 +61,20 @@
   background-color: #F5F5F5 !important;
 }
 .air-datepicker-cell:hover {
-    background: #FF8110 !important;
+    background: #1ab6b6 !important;
 }
 
 /* Día seleccionado */
 .air-datepicker-cell.-selected- {
-    background: #FF8110 !important;
+    background: #1ab6b6 !important;
     color: #ffffff !important;
 }
 
 /* Día actual */
-/* .air-datepicker-cell.-current- {
+.air-datepicker-cell.-current- {
     background-color: #FF8110 !important;
   color: white !important;
-} */
+}
 
 /* Días de otros meses */
 .air-datepicker-cell.-other-month- {
