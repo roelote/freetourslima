@@ -94,7 +94,7 @@
                                         </svg>
                                     </button>
                                     <!-- Dropdown menu -->
-                                    <div id="user-dropdown-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 hidden z-50">
+                                    <div id="user-dropdown-menu" class="absolute right-0 mt-2 w-48 z-[999] bg-white rounded-lg shadow-lg border border-gray-200 hidden">
                                         <div class="py-2">
                                             <button id="open-login-modal" class="w-full text-left flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
                                                 <svg class="w-5 h-5 mr-3 text-[#FF8110]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -133,7 +133,7 @@
                 'theme_location' => 'header-main-menu',
                 'container' => false,
                 'menu_id' => 'mobileMenu',
-                'menu_class' => 'w-full hidden top-3 left-0 z-50 flex-col md:flex-row items-center justify-center bg-white md:h-[56px] font-inter gap-1 md:static md:flex shadow-lg md:shadow-none rounded-lg md:rounded-none md:w-auto',
+                'menu_class' => 'w-full hidden top-3 left-0 flex-col md:flex-row items-center justify-center bg-white md:h-[56px] font-inter gap-1 md:static md:flex shadow-lg md:shadow-none rounded-lg md:rounded-none md:w-auto',
                 'fallback_cb' => false,
             ]);
             ?>
