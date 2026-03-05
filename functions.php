@@ -53,6 +53,20 @@ function fwt_register_lang_widget() {
 }
 add_action( 'widgets_init', 'fwt_register_lang_widget' );
 
+// Sidebar para el widget Lang (menú móvil)
+function fwt_register_sidebars() {
+    register_sidebar( array(
+        'name'          => 'Lang (Menú móvil)',
+        'id'            => 'fwt-lang-area',
+        'description'   => 'Área para el widget Lang en el menú móvil.',
+        'before_widget' => '<div class="fwt-widget-lang">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<span class="fwt-widget-title">',
+        'after_title'   => '</span>',
+    ) );
+}
+add_action( 'widgets_init', 'fwt_register_sidebars' );
+
 function enqueue_styles()
 {
     // Tailwind CSS compilado
