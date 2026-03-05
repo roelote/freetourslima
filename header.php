@@ -136,7 +136,7 @@
     </header>
     <div class="relative" id="fwt-nav-bar">
         <?php
-        $api_url = "http://web.freewalking/wp-json/wp/v2/top-nav";
+        $api_url = "https://freewalkingtourcusco.org/wp-json/wp/v2/top-nav";
         $response = file_get_contents($api_url);
         $menu_items = json_decode($response, true);
 
