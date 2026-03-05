@@ -64,7 +64,7 @@
                                         </svg>
                                     </button>
                                     <!-- Dropdown menu -->
-                                    <div id="user-dropdown-menu" class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 hidden z-50">
+                                    <div id="user-dropdown-menu" class="absolute right-0 mt-2 w-56 z-[9999] bg-white rounded-lg shadow-lg border border-gray-200 hidden">
                                         <div class="py-2">
                                             <a href="<?php echo admin_url('admin.php?page=comentarios-free-user-panel'); ?>" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
                                                 <svg class="w-5 h-5 mr-3 text-[#FF8110]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -277,46 +277,51 @@
 
             <?php dynamic_sidebar( 'fwt-lang-area' ); ?>
 
-                <!-- <div class="flex items-center justify-center gap-3">
-                    <div class="w-full">
-                        <a href="tel:+51987654321" class="font-medium flex items-center justify-center gap-1 bg-green outline-1 outline-green py-3 w-full text-white text-center rounded-lg text-[14px]">
-                            <svg fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                                <path d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z" />
-                            </svg> +51 987 654 321</a>
+            <!-- login  - sing up -->
+            <?php if ( is_user_logged_in() ) :
+                $current_user  = wp_get_current_user();
+                $user_name     = $current_user->display_name;
+                $user_initial  = mb_strtoupper( mb_substr( $user_name, 0, 1 ) );
+            ?>
+                <!-- Usuario logueado -->
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="flex items-center gap-3 px-1 mb-2">
+                        <div class="w-8 h-8 rounded-full bg-[#FF8110] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                            <?php echo esc_html( $user_initial ); ?>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700 truncate"><?php echo esc_html( $user_name ); ?></span>
                     </div>
-                    <div class="w-full">
-                        <a href="tel:+51987654321" class="font-medium flex items-center justify-center outline outline-[#25d366] py-3 w-full text-black text-center rounded-lg text-[14px]">
-                            <svg fill="#25d366" width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                                <path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" />
-                            </svg> +51 987 654 321</a>
-                    </div>
-                </div> -->
-              
-                <!-- <div class="my-5 text-center">
-                    <a href="" class="uppercase bg-[linear-gradient(135deg,#3E593C_0%,#FACC15_100%)] text-white py-3 px-7 inline-block rounded-lg font-medium"> Plan Your Trip</a>
-                </div> -->
-                <!-- <div class="w-full flex items-center justify-center space-x-3">
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#3E593C] hover:text-white transition-colors" aria-label="Facebook">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    <a href="<?php echo admin_url('admin.php?page=comentarios-free-user-panel'); ?>" class="flex items-center gap-2 w-full px-4 py-3 rounded-lg border border-[#FF8110] text-[#FF8110] font-medium text-sm hover:bg-[#FF8110] hover:text-white transition-colors">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                         </svg>
+                        <?php _e('Mis comentarios', 'freewalking'); ?>
                     </a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#3E593C] hover:text-white transition-colors" aria-label="Instagram">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    <a href="<?php echo wp_logout_url( home_url() ); ?>" class="flex items-center gap-2 w-full px-4 py-3 rounded-lg border border-red-400 text-red-500 font-medium text-sm hover:bg-red-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
                         </svg>
+                        <?php _e('Cerrar sesión', 'freewalking'); ?>
                     </a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#3E593C] hover:text-white transition-colors" aria-label="Pinterest">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
+                </div>
+            <?php else : ?>
+                <!-- Usuario no logueado -->
+                <div class="flex flex-col gap-2 mt-4">
+                    <button id="mobile-open-login-modal" class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-[#FF8110] text-white font-medium text-sm hover:bg-[#e07010] transition-colors">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
                         </svg>
-                    </a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#3E593C] hover:text-white transition-colors" aria-label="TikTok">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                        <?php echo fw_trans('login_title'); ?>
+                    </button>
+                    <button id="mobile-open-register-modal" class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg border-2 border-[#FF8110] text-[#FF8110] font-medium text-sm hover:bg-[#FF8110] hover:text-white transition-colors">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
                         </svg>
-                    </a>
-                </div> -->
+                        <?php echo fw_trans('register_title'); ?>
+                    </button>
+                </div>
+            <?php endif; ?>
+
                 <hr class="my-5 text-gray-icon" />
                 <div class="w-full">
                     <p class="text-gray-icon font-sm text-center">FreeWalkingTourCusco.Org Copyright © 2023 - 2026, All Rights Reserved</p>
@@ -415,12 +420,15 @@
         <script>
             jQuery(document).ready(function($) {
                 // Abrir modal cuando se hace clic en login/registro del header
-                $('#header-login-btn, #header-register-btn, #open-login-modal, #open-register-modal').on('click', function(e) {
+                $('#header-login-btn, #header-register-btn, #open-login-modal, #open-register-modal, #mobile-open-login-modal, #mobile-open-register-modal').on('click', function(e) {
                     e.preventDefault();
 
                     // Cerrar dropdown primero
                     $('#user-dropdown-menu').addClass('hidden');
                     $('#dropdown-arrow').removeClass('rotate-180');
+
+                    // Cerrar menú móvil si está abierto
+                    if (typeof closeMenu === 'function') closeMenu();
 
                     // Abrir el modal de autenticación del header (shortcode único)
                     $('#cf-auth-modal').fadeIn(300);
