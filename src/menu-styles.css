@@ -24,32 +24,32 @@
 }
 
 /* Estilos para el menú principal */
-#mobileMenu {
+#desktopMenu {
     transition: all 0.3s ease-in-out;
 }
 
-#mobileMenu li {
+#desktopMenu li {
     list-style: none;
 }
 
 @media (max-width: 768px) {
-    #mobileMenu li {
+    #desktopMenu li {
         width: 100%;
         text-align: center;
         padding: 12px 20px;
         border-bottom: 1px solid #f0f0f0;
     }
     
-    #mobileMenu li:last-child {
+    #desktopMenu li:last-child {
         border-bottom: none;
     }
     
-    #mobileMenu li:hover {
+    #desktopMenu li:hover {
         background-color: #f9f9f9;
     }
 }
 
-#mobileMenu a {
+#desktopMenu a {
     font-size: 16px;
     font-weight: 500;
     color: #5c5c5c;
@@ -61,16 +61,16 @@
 }
 
 @media (max-width: 900px){
-    #mobileMenu a {font-size: 14px;}
+    #desktopMenu a {font-size: 14px;}
 }
 
-#mobileMenu a:hover {
+#desktopMenu a:hover {
     color: #333;
 }
 
 /* Estado activo del menú */
 #menu-menu-superior-header .current-menu-item a,
-#mobileMenu .current-menu-item a {
+#desktopMenu .current-menu-item a {
     color: #6e6d6d;
     font-weight: 700;
 }

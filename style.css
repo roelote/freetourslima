@@ -695,3 +695,41 @@ p {
 .wpml-ls-slot-shortcode_actions {
     padding: .2em 0 !important;
 }
+
+
+#desktopMenu .menu-link {
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+#desktopMenu .menu-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #FF8110;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
+
+/* Activo */
+#desktopMenu .menu-link,
+.desktopMenu .menu-link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#desktopMenu .menu-link:hover,
+.desktopMenu .menu-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #FF8110;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
+
+#desktopMenu .menu-link.menu-active,
+.desktopMenu .menu-link.menu-active {
+    text-decoration: underline;
+    text-decoration-color: #FF8110;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}

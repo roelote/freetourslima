@@ -616,3 +616,53 @@ if (function_exists('acf_add_options_page')) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 }
+
+
+function top_nav_menu() {
+
+    $menu = wp_get_nav_menu_items('menu-en');
+
+    if ( empty($menu) ) {
+        return [];
+    }
+
+    $items = [];
+    $tree  = [];
+
+    // Paso 1: normalizar items
+    foreach ( $menu as $item ) {
+        $items[ $item->ID ] = [
+            'id'       => $item->ID,
+            'parent'   => (int) $item->menu_item_parent,
+            'name'     => $item->title,
+            'href'     => $item->url,
+            'children' => []
+        ];
+    }
+
+    // Paso 2: construir jerarquía
+    foreach ( $items as $id => &$item ) {
+        if ( $item['parent'] === 0 ) {
+            // Es padre
+            $tree[] = &$item;
+        } else {
+            // Es hijo
+            if ( isset( $items[ $item['parent'] ] ) ) {
+                $items[ $item['parent'] ]['children'][] = &$item;
+            }
+        }
+    }
+
+    return $tree;
+}
+
+// add endpoint
+add_action( 'rest_api_init', function() {
+
+    // top-nav menu
+    register_rest_route( 'wp/v2', 'top-nav', array(
+        'methods' => 'GET',
+        'callback' => 'top_nav_menu',
+    ) );
+
+});
