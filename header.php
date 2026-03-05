@@ -295,13 +295,13 @@
                         <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                         </svg>
-                        <?php _e('Mis comentarios', 'freewalking'); ?>
+                        <?php echo (defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE == 'en') ? 'My comments' : 'Mis comentarios'; ?>
                     </a>
                     <a href="<?php echo wp_logout_url( home_url() ); ?>" class="flex items-center gap-2 w-full px-4 py-3 rounded-lg border border-red-400 text-red-500 font-medium text-sm hover:bg-red-500 hover:text-white transition-colors">
                         <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
                         </svg>
-                        <?php _e('Cerrar sesión', 'freewalking'); ?>
+                        <?php echo (defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE == 'en') ? 'Log out' : 'Cerrar sesión'; ?>
                     </a>
                 </div>
             <?php else : ?>
