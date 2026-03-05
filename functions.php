@@ -1,4 +1,58 @@
 <?php
+
+// Widget: Lang
+class FWT_Lang_Widget extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct(
+            'fwt_lang_widget',
+            'Lang',
+            array( 'description' => 'Widget de idiomas (Lang)' )
+        );
+    }
+
+    public function widget( $args, $instance ) {
+        echo $args['before_widget'];
+
+        if ( ! empty( $instance['title'] ) ) {
+            echo $args['before_title'] . apply_filters( 'widget_title', esc_html( $instance['title'] ) ) . $args['after_title'];
+        }
+
+        if ( ! empty( $instance['content'] ) ) {
+            echo '<div class="fwt-lang-content">' . wp_kses_post( $instance['content'] ) . '</div>';
+        }
+
+        echo $args['after_widget'];
+    }
+
+    public function form( $instance ) {
+        $title   = isset( $instance['title'] )   ? $instance['title']   : '';
+        $content = isset( $instance['content'] ) ? $instance['content'] : '';
+        ?>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">Título:</label>
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>">Texto / HTML:</label>
+            <textarea class="widefat" rows="5" id="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content' ) ); ?>"><?php echo esc_textarea( $content ); ?></textarea>
+        </p>
+        <?php
+    }
+
+    public function update( $new_instance, $old_instance ) {
+        return array(
+            'title'   => sanitize_text_field( $new_instance['title'] ),
+            'content' => wp_kses_post( $new_instance['content'] ),
+        );
+    }
+}
+
+function fwt_register_lang_widget() {
+    register_widget( 'FWT_Lang_Widget' );
+}
+add_action( 'widgets_init', 'fwt_register_lang_widget' );
+
 function enqueue_styles()
 {
     // Tailwind CSS compilado

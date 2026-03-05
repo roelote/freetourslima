@@ -15,6 +15,10 @@
 .formcss p:first-child {
     @apply text-lg font-semibold mb-6 text-gray-800;
 }
+.mobilelogo img
+{
+ @apply w-48;
+}
 
 .formcss .wpcf7-form-control-wrap {
     @apply block w-full mb-4;

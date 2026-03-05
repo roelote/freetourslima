@@ -255,7 +255,7 @@
         class="fixed top-0 right-0 w-full min-h-screen bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
 
         <div class="flex items-center justify-between p-6 border-b">
-            <div class="text-2xl font-bold">
+            <div class="text-2xl font-bold mobilelogo">
                 <?php
                 if (has_custom_logo()) {
                     the_custom_logo();
@@ -274,6 +274,7 @@
             <?php renderMenuMobile($menu_items, $current_url); ?>
             <!-- contenido adicional menu -->
             <div class="py-5">
+                
                 <div class="flex items-center justify-center gap-3">
                     <div class="w-full">
                         <a href="tel:+51987654321" class="font-medium flex items-center justify-center gap-1 bg-green outline-1 outline-green py-3 w-full text-white text-center rounded-lg text-[14px]">
@@ -288,11 +289,11 @@
                             </svg> +51 987 654 321</a>
                     </div>
                 </div>
-                <!-- <hr class="my-5 text-gray-icon"> -->
-                <div class="my-5 text-center">
+              
+                <!-- <div class="my-5 text-center">
                     <a href="" class="uppercase bg-[linear-gradient(135deg,#3E593C_0%,#FACC15_100%)] text-white py-3 px-7 inline-block rounded-lg font-medium"> Plan Your Trip</a>
-                </div>
-                <div class="w-full flex items-center justify-center space-x-3">
+                </div> -->
+                <!-- <div class="w-full flex items-center justify-center space-x-3">
                     <a href="#" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#3E593C] hover:text-white transition-colors" aria-label="Facebook">
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -313,10 +314,10 @@
                             <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                         </svg>
                     </a>
-                </div>
+                </div> -->
                 <hr class="my-5 text-gray-icon" />
                 <div class="w-full">
-                    <p class="text-gray-icon font-sm text-center">© 2026 Explora Peru Tours. Todos los derechos reservados.</p>
+                    <p class="text-gray-icon font-sm text-center">FreeWalkingTourCusco.Org Copyright © 2023 - 2026, All Rights Reserved</p>
                 </div>
             </div>
         </div>
