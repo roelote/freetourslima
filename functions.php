@@ -686,9 +686,21 @@ if (function_exists('acf_add_options_page')) {
 }
 
 
-function top_nav_menu() {
+function top_nav_menu( $request ) {
 
-    $menu = wp_get_nav_menu_items('menu-en');
+    // Prioridad: parámetro ?lang= > ICL_LANGUAGE_CODE > 'en'
+    $lang = $request->get_param('lang');
+    if ( empty($lang) ) {
+        $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'en';
+    }
+    $lang = sanitize_key( $lang );
+
+    $menu = wp_get_nav_menu_items('menu-' . $lang);
+
+    // Fallback a inglés si no existe el menú del idioma actual
+    if ( empty($menu) ) {
+        $menu = wp_get_nav_menu_items('menu-en');
+    }
 
     if ( empty($menu) ) {
         return [];
@@ -729,8 +741,17 @@ add_action( 'rest_api_init', function() {
 
     // top-nav menu
     register_rest_route( 'wp/v2', 'top-nav', array(
-        'methods' => 'GET',
-        'callback' => 'top_nav_menu',
+        'methods'             => 'GET',
+        'callback'            => 'top_nav_menu',
+        'permission_callback' => '__return_true',
+        'args'                => array(
+            'lang' => array(
+                'description'       => 'Código de idioma (ej: en, es, pt-br)',
+                'type'              => 'string',
+                'sanitize_callback' => 'sanitize_key',
+                'required'          => false,
+            ),
+        ),
     ) );
 
 });

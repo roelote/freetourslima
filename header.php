@@ -136,7 +136,8 @@
     </header>
     <div class="relative" id="fwt-nav-bar">
         <?php
-        $api_url = "https://freewalkingtourcusco.org/wp-json/wp/v2/top-nav";
+        $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'en';
+        $api_url = "https://freewalkingtourcusco.org/wp-json/wp/v2/top-nav?lang=" . $current_lang;
         $response = file_get_contents($api_url);
         $menu_items = json_decode($response, true);
 
