@@ -705,11 +705,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .my-\[16px\] {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -1316,6 +1311,11 @@ video {
 .border-\[\#CFD1D3\] {
   --tw-border-opacity: 1;
   border-color: rgb(207 209 211 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#FEB370\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 179 112 / var(--tw-border-opacity, 1));
 }
 
 .border-\[\#FF8110\] {
