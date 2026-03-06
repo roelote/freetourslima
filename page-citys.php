@@ -56,16 +56,14 @@ get_header();
                     $lang = isset($details['lang']) ? $details['lang'] : '';
                     $hours_tour = isset($details['hours_tour']) ? $details['hours_tour'] : '';
             ?>
-                    <div class="w-full flex flex-col justify-start items-center group">
-                        <div class="w-full overflow-hidden rounded-t-[8px]">
+                    <div class="w-full flex flex-col justify-start items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl rounded-[8px]">
                         <?php
                         echo get_the_post_thumbnail($child->ID, 'boxst', array(
                             'alt' => get_the_title($child->ID),
                             'title' => get_the_title($child->ID),
-                            'class' => 'w-full h-[252px] object-cover transition-transform duration-500 group-hover:scale-110'
+                            'class' => 'w-full h-[252px] rounded-t-[8px] object-cover'
                         ));
                         ?>
-                        </div>
                         <div class=" w-full md:h-full bg-white rounded-b-[8px] px-[12px] pt-[16px] pb-[28px] md:py-[20px] md:px-[24px]">
                             <h3 class="text-center text-[22px] md:text-[24px]"><?php echo get_the_title($child->ID); ?></h3>
                             <ul class="flex flex-col gap-[12px] my-[16px] md:my-[24px]">
