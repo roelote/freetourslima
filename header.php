@@ -351,13 +351,21 @@
         (function() {
             var bar = document.getElementById('fwt-nav-bar');
             var hdr = document.querySelector('header');
+            var mobileMenu = document.getElementById('mobileMenu');
+            var isLoggedIn = <?php echo is_user_logged_in() ? 'true' : 'false'; ?>;
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 10) {
                     if (bar) bar.classList.add('fwt-scrolled');
                     if (hdr) hdr.classList.add('fwt-header-scrolled');
+                    if (mobileMenu && isLoggedIn) {
+                        mobileMenu.style.top = '0px';
+                    }
                 } else {
                     if (bar) bar.classList.remove('fwt-scrolled');
                     if (hdr) hdr.classList.remove('fwt-header-scrolled');
+                    if (mobileMenu && isLoggedIn) {
+                        mobileMenu.style.top = '30px';
+                    }
                 }
             }, {
                 passive: true
