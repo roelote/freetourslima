@@ -120,7 +120,7 @@
                                         <?php renderMenuDesktop($menu_items, $current_url); ?>
                                     </div>
 
-                                    <button onclick="openMenu()" class="lg:hidden text-3xl">
+                                    <button onclick="openMenu()" class="lg:hidden text-3xl text-[#5c5c5c]">
                                         ☰
                                     </button>
 
