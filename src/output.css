@@ -2213,14 +2213,19 @@ video {
   }
 }
 
+.hover\:border-\[\#1ab6b6\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(26 182 182 / var(--tw-border-opacity, 1));
+}
+
+.hover\:bg-\[\#1ab6b6\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 182 182 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-\[\#FF8110\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 129 16 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-\[\#e07010\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(224 112 16 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-gray-100:hover {
