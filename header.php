@@ -229,7 +229,7 @@
                     } else {
 
                         echo "<a href='" . htmlspecialchars($item['href']) . "' 
-                        class='menu-link block border-b border-neutral-200 text-lg font-medium py-3 $active_class'>";
+                        class='menu-link block border-b border-neutral-200 text-lg font-medium py-[23.5px] $active_class'>";
                         echo htmlspecialchars($item['name']);
                         echo "</a>";
                     }
@@ -271,7 +271,7 @@
             </div>
             <button onclick="closeMenu()" class="text-3xl">✕</button>
         </div>
-        <div class="p-5 overflow-auto">
+        <div class="px-5 overflow-auto">
             <?php renderMenuMobile($menu_items, $current_url); ?>
             <!-- contenido adicional menu -->
             <div class="py-5">
