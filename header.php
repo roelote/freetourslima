@@ -242,7 +242,7 @@
         }
         ?>
 
-        <nav class="bg-white border-b absolute top-[10px] right-0 lg:relative hidden lg:flex lg:items-center h-[56px]">
+        <nav class="bg-white border-b absolute right-0 lg:relative hidden lg:flex lg:items-center h-[56px]">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex items-center justify-between">
                     <div class="justify-center flex-1">
