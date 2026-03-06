@@ -1796,6 +1796,11 @@ video {
   color: rgb(164 157 157 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#FEB370\] {
+  --tw-text-opacity: 1;
+  color: rgb(254 179 112 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#FF8110\] {
   --tw-text-opacity: 1;
   color: rgb(255 129 16 / var(--tw-text-opacity, 1));
