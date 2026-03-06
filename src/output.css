@@ -1911,6 +1911,11 @@ video {
   width: 100%;
 }
 
+.wpml-ls-sidebars-fwt-lang-area
+{
+  text-align: center;
+}
+
 .formcss select,
 .formcss input[type="text"],
 .formcss input[type="email"],

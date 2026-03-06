@@ -23,7 +23,10 @@
 .formcss .wpcf7-form-control-wrap {
     @apply block w-full mb-4;
 }
-
+.wpml-ls-sidebars-fwt-lang-area
+{
+    text-align: center;
+}
 .formcss select,
 .formcss input[type="text"],
 .formcss input[type="email"],
