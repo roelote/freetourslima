@@ -539,6 +539,7 @@ p {
     margin-top: 40px;
     border: 1px solid #ddd;
     padding: 32px !important;
+    padding-top: 0px !important;
     border-radius: 8px;
     padding-bottom: 40px !important;
     background-color: #F5F5F5 !important;
