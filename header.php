@@ -229,7 +229,7 @@
                     } else {
 
                         echo "<a href='" . htmlspecialchars($item['href']) . "' 
-                        class='menu-link block border-b border-neutral-200 text-lg font-medium py-[23.5px] $active_class'>";
+                        class='menu-link block border-b border-neutral-200 no-underline text-base font-inter text-[#5c5c5c] uppercase font-medium py-[23.5px] $active_class'>";
                         echo htmlspecialchars($item['name']);
                         echo "</a>";
                     }
