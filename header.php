@@ -253,7 +253,7 @@
         </nav>
     </div>
     <div id="mobileMenu"
-        class="fixed top-0 right-0 w-full min-h-screen bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
+        class="fixed <?php echo is_user_logged_in() ? 'top-[30px]' : 'top-0'; ?> right-0 w-full min-h-screen bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
 
         <div class="flex items-center justify-between p-6 border-b">
             <div class="text-2xl font-bold mobilelogo">
