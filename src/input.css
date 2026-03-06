@@ -27,6 +27,12 @@
 {
     text-align: center;
 }
+.wpml-ls-legacy-list-horizontal > ul
+{
+    display: flex;
+  justify-content: center;
+  gap: 5px;
+}
 .formcss select,
 .formcss input[type="text"],
 .formcss input[type="email"],
