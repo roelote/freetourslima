@@ -269,7 +269,7 @@
                 }
                 ?>
             </div>
-            <button onclick="closeMenu()" class="text-3xl">✕</button>
+            <button onclick="closeMenu()" class="text-3xl text-[#5c5c5c]">✕</button>
         </div>
         <div class="px-5 overflow-auto">
             <?php renderMenuMobile($menu_items, $current_url); ?>
