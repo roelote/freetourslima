@@ -1373,13 +1373,14 @@ video {
   background-color: rgb(92 92 92 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#FEB370\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 179 112 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#FF8110\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 129 16 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#FF8110\]\/80 {
-  background-color: rgb(255 129 16 / 0.8);
 }
 
 .bg-\[\#dad9d6\] {
