@@ -245,7 +245,7 @@ get_header();
                             $hours_tour = isset($details['hours_tour']) ? $details['hours_tour'] : '';
                     ?>
                             <div class="swiper-slide">
-                                <div class="w-full flex flex-col justify-start items-center">
+                                <div class="w-full flex flex-col justify-start items-center ransition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
                                     <?php
                                     echo get_the_post_thumbnail($child->ID, 'boxst', array(
                                         'alt' => get_the_title($child->ID),
