@@ -61,7 +61,7 @@ get_header();
 							<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
 							<h2 class="!mb-[16px] text-[22px] md:text-[24px]">Free tour in Lima</h2>
 								<ul>
-									<li><a href="/en/things-to-do-lima/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
+									<li><a href="/en/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
 								</ul>
 							</div>
 						<?php }
@@ -69,7 +69,7 @@ get_header();
 							<div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
 							<h2 class="!mb-[16px] text-[22px] md:text-[24px]">Free tour por Lima</h2>
 								<ul>
-									<li><a href="/es/que-hacer-en-lima/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
+									<li><a href="/es/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
 								</ul>
 							</div>
 
