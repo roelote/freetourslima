@@ -120,7 +120,7 @@ get_header();
 
             <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
                       <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                <h3 class="!mb-[16px]">Free tour in Cusco</h3>
+                <h3 class="!mb-[16px]">Free tour in Lima</h3>
                 <ul>
                     <li><a href="/en/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Book Now!</a></li>
                 </ul>
@@ -128,7 +128,7 @@ get_header();
                 <?php }
                 if (ICL_LANGUAGE_CODE == 'es') { ?>
                       <div class="border-l-2 border-[#CFD1D3] pl-[12px] md:pl-[20px] mb-[48px]">
-                        <h3 class="!mb-[16px]">Free tour por Cusco</h3>
+                        <h3 class="!mb-[16px]">Free tour por Lima</h3>
                         <ul>
                             <li><a href="/es/" class="underline inline-block mb-[8px] text-[#5C5C5C]">¡Reserva aquí!</a></li>
                         </ul>
