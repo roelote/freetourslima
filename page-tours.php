@@ -174,9 +174,9 @@ get_header();
 <section class="mb-[88px] container-related-tours md:px-0 px-4">
     <div class="container">
         <?php if (ICL_LANGUAGE_CODE == 'en') { ?>
-            <h2 class="text-[24px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Things to do in Cusco</h2>
+            <h2 class="text-[24px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Things to do in Lima</h2>
         <?php } else { ?>
-            <h2 class="text-[24px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Qué hacer en Cusco</h2>
+            <h2 class="text-[24px] md:text-[36px] font-inter mb-[32px] text-[#5c5c5c]">Qué hacer en Lima</h2>
         <?php } ?>
 
         <div class="w-full relative">

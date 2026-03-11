@@ -3,7 +3,7 @@ name: Deploy Theme freeorg (FTP Incremental)
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:

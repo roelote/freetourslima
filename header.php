@@ -141,8 +141,10 @@
         <?php
         $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'en';
         $api_url = "https://freewalkingtourcusco.org/wp-json/wp/v2/top-nav?lang=" . $current_lang;
-        $response = file_get_contents($api_url);
-        $menu_items = json_decode($response, true);
+        $response  = wp_remote_get( $api_url, [ 'timeout' => 10, 'sslverify' => false ] );
+        $menu_items = ( ! is_wp_error( $response ) )
+            ? json_decode( wp_remote_retrieve_body( $response ), true )
+            : [];
 
         $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
         $current_url = rtrim($current_url, '/');
