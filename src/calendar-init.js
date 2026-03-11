@@ -5,10 +5,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookingForm = document.getElementById('bookingForm');
     
     if (calendarContainer && calendarInput) {
+        const disableSundays = calendarContainer.dataset.disableSundays === 'true';
         new AirDatepicker(calendarContainer, {
             inline: true,
             minDate: new Date(),
             dateFormat: 'yyyy-MM-dd',
+            onRenderCell: function({date, cellType}) {
+                if (disableSundays && cellType === 'day' && date.getDay() === 0) {
+                    return { disabled: true };
+                }
+            },
             locale: {
                 days: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
                 daysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],

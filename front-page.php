@@ -29,7 +29,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                             <form class="flex flex-col gap-[16px]" action="<?= $ruta ?>" method="get" id="bookingForm">
                                 <input type="hidden" name="urlfoto" value="<?= urlencode(the_post_thumbnail_url()) ?>">
                                 <input type="hidden" name="nametour" value="<?= the_title(); ?>">
-                                <div id="calendar-inline" class="w-full"></div>
+                                <div id="calendar-inline" class="w-full" data-disable-sundays="true"></div>
                                 <input type="text" id="date-selected" name="date" placeholder="<?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Selected Date' : 'Fecha seleccionada'; ?>" class="w-full px-3 py-[9px] rounded-[8px]" readonly required>
                                 <input type="number" name="personas" class="w-full px-3 py-[9px] rounded-[8px]" min="0" max="30" placeholder="<?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Number of attendees' : 'Número de asistentes'; ?>" required>
                                 <button type="submit" class="w-[113px] rounded-[8px]  py-[18px] text-[16px] font-bold leading-[20px] text-white"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Book Now' : 'Reservar'; ?></button>
