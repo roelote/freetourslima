@@ -140,7 +140,7 @@
     <div class="relative" id="fwt-nav-bar">
         <?php
         $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'en';
-        $api_url = "https://freewalkingtourcusco.org/wp-json/wp/v2/top-nav?lang=" . $current_lang;
+        $api_url = "https://freewalkingtourslima.org/wp-json/wp/v2/top-nav?lang=" . $current_lang;
         $response  = wp_remote_get( $api_url, [ 'timeout' => 10, 'sslverify' => false ] );
         $menu_items = ( ! is_wp_error( $response ) )
             ? json_decode( wp_remote_retrieve_body( $response ), true )
