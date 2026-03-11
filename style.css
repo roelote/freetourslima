@@ -538,7 +538,7 @@ p {
 .formcss {
     margin-top: 40px;
     border: 1px solid #ddd;
-    padding: 32px !important;
+    padding: 32px;
     padding-top: 32px !important;
     padding-bottom: 48px !important;
     border-radius: 8px;
