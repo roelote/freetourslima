@@ -90,11 +90,11 @@
     </div>
     <?php if (is_front_page() || is_page_template('page-tours.php') || is_page_template('page-toursp.php')) : ?>
     <div class="w-full mt-[40px] pb-[60px] md:mb-0 md:mt-[32px]">
-        <span class="block text-[14px] text-center font-normal md:!m-0 leading-[20px] text-[#f5f5f5] font-['Nunito_Sans']">FreeWalkingTourCusco.Org <span class="block md:inline"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Copyright © 2023 - 2026, All Rights Reserved' : 'Copyright © 2023 - 2026, Todos los derechos reservados'; ?></span></span>
+        <span class="block text-[14px] text-center font-normal md:!m-0 leading-[20px] text-[#f5f5f5] font-['Nunito_Sans']">FreeWalkingToursLima.Org <span class="block md:inline"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Copyright © 2023 - 2026, All Rights Reserved' : 'Copyright © 2023 - 2026, Todos los derechos reservados'; ?></span></span>
     </div>
     <?php else : ?>
     <div class="w-full mt-[40px] pb-[10px] md:mb-0 md:mt-[32px]">
-        <span class="block text-[14px] text-center font-normal md:!m-0 leading-[20px] text-[#f5f5f5] font-['Nunito_Sans']">FreeWalkingTourCusco.Org <span class="block md:inline"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Copyright © 2023 - 2026, All Rights Reserved' : 'Copyright © 2023 - 2026, Todos los derechos reservados'; ?></span></span>
+        <span class="block text-[14px] text-center font-normal md:!m-0 leading-[20px] text-[#f5f5f5] font-['Nunito_Sans']">FreeWalkingToursLima.Org <span class="block md:inline"><?php echo (ICL_LANGUAGE_CODE == 'en') ? 'Copyright © 2023 - 2026, All Rights Reserved' : 'Copyright © 2023 - 2026, Todos los derechos reservados'; ?></span></span>
     </div>
     <?php endif; ?>
     
