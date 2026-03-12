@@ -125,6 +125,8 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 function theme_setup()
 {
+    add_theme_support('title-tag');
+
     add_theme_support('custom-logo', [
         'height' => 80,
         'width' => 240,
